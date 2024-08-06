@@ -1,0 +1,38 @@
+﻿<Window x:Class="Projeto_Educa_Sonho_Meu.Paginas.PaginaInicial"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projeto_Educa_Sonho_Meu.Paginas"
+        mc:Ignorable="d"
+        Title="PaginaInicial" Height="450" Width="800">
+    <Grid>
+
+        <!-- Botões do Menu, para consertar-->
+
+        <TextBlock Text="Educa" FontSize="30" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1"/>
+        <TextBlock Text="ADMIM A" FontSize="12" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" Margin="0 50 0 0"/>
+        <TextBlock Text="Marcus Vinycius..." FontSize="12" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" Margin="0 70 0 0"/>
+
+        <Button Content="Inicio" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 100 0 0"/>
+        <Button Content="Alunos" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 130 0 0"/>
+        <Button Content="Cadastrar Alunos" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 170 0 0"/>
+        <Button Content="Consultar Alunos Cadastrados" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 200 0 0"/>
+        <Button Content="Matricular Alunos" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 230 0 0"/>
+        <Button Content="Consultar Alunos Matriculados" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 260 0 0"/>
+        <Button Content="Relatório de Alunos Cadastrados" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 290 0 0"/>
+        <Button Content="Relatórios de Alunos Matriculados" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 320 0 0"/>
+        <Button Content="Turmas" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 370 0 0"/>
+        <Button Content="Funcionário" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 400 0 0"/>
+        <Button Content="Salas" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 430 0 0"/>
+        <Button Content="Sonhos" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 460 0 0"/>
+        <Button Content="Estoque Pedagógico" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 490 0 0"/>
+        <Button Content="Biblioteca" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 520 0 0"/>
+        <Button Content="Instrumentos" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 550 0 0"/>
+        <Button Content="Projetos" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 580 0 0"/>
+        <Button Content="Recursos Financeiros" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 610 0 0"/>
+
+       
+
+    </Grid>
+</Window>
