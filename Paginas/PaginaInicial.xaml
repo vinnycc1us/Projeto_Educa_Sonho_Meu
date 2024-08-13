@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:Projeto_Educa_Sonho_Meu.Paginas"
         mc:Ignorable="d"
         Title="PaginaInicial" Height="450" Width="800">
-    <Grid>
+    <Grid Background="White">
 
-        <!-- Botões do Menu, para consertar-->
-
+        <!-- Botões do Menu, para consertar
+        
         <TextBlock Text="Educa" FontSize="30" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1"/>
         <TextBlock Text="ADMIM A" FontSize="12" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" Margin="0 50 0 0"/>
         <TextBlock Text="Marcus Vinycius..." FontSize="12" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" Margin="0 70 0 0"/>
@@ -31,8 +31,45 @@
         <Button Content="Instrumentos" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 550 0 0"/>
         <Button Content="Projetos" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 580 0 0"/>
         <Button Content="Recursos Financeiros" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 610 0 0"/>
+        -->
 
-       
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="123*"/>
+            <ColumnDefinition Width="677*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Background="#c6ece1" Grid.Column="0"></Border>
+
+
+
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <TextBlock Text="Bem Vindo!!" FontSize="50" Height="75" Width="310"  FontFamily="Segoe UI" />
+
+        </StackPanel>
+
+        <Frame Grid.Column="1" x:Name="framePage" NavigationUIVisibility="Hidden"></Frame>
+
+        <StackPanel Grid.Column="0" VerticalAlignment="Center">
+            
+            <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="15" Click="Button_Click4">
+                <StackPanel>
+                    <TextBlock Text="Escola"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="15" Click="Button_Click4">
+                <StackPanel>
+                    <TextBlock Text="Escola"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+
+        </StackPanel>
+
+
 
     </Grid>
 </Window>
