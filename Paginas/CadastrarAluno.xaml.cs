@@ -39,12 +39,6 @@ namespace Projeto_Educa_Sonho_Meu.Paginas
             leftMenu.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
             leftMenu.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
 
-            // Logo
-            Image logoImage = new Image();
-            logoImage.Source = new BitmapImage(new Uri("pack://application:,,,/Images/educa.png"));
-            logoImage.Margin = new Thickness(10);
-            Grid.SetRow(logoImage, 0);
-            leftMenu.Children.Add(logoImage);
 
             // Menu Items
             Label menuItemsLabel = new Label();

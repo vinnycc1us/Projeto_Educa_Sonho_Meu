@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto_Educa_Sonho_Meu.Arquivos
 {
-    internal class Classe_de_Teste
+    class Conexao
     {
     }
 }
