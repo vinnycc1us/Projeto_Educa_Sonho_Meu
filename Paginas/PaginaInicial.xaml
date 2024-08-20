@@ -5,34 +5,126 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projeto_Educa_Sonho_Meu.Paginas"
         mc:Ignorable="d"
-        Title="PaginaInicial" Height="450" Width="800">
+        Title="PaginaInicial" Height="876" Width="1111">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
 
-        <!-- Botões do Menu, para consertar-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="677*"/>
+        </Grid.ColumnDefinitions>
 
-        <TextBlock Text="Educa" FontSize="30" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1"/>
-        <TextBlock Text="ADMIM A" FontSize="12" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" Margin="0 50 0 0"/>
-        <TextBlock Text="Marcus Vinycius..." FontSize="12" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" Margin="0 70 0 0"/>
 
-        <Button Content="Inicio" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 100 0 0"/>
-        <Button Content="Alunos" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 130 0 0"/>
-        <Button Content="Cadastrar Alunos" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 170 0 0"/>
-        <Button Content="Consultar Alunos Cadastrados" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 200 0 0"/>
-        <Button Content="Matricular Alunos" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 230 0 0"/>
-        <Button Content="Consultar Alunos Matriculados" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 260 0 0"/>
-        <Button Content="Relatório de Alunos Cadastrados" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 290 0 0"/>
-        <Button Content="Relatórios de Alunos Matriculados" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 320 0 0"/>
-        <Button Content="Turmas" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 370 0 0"/>
-        <Button Content="Funcionário" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 400 0 0"/>
-        <Button Content="Salas" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 430 0 0"/>
-        <Button Content="Sonhos" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 460 0 0"/>
-        <Button Content="Estoque Pedagógico" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 490 0 0"/>
-        <Button Content="Biblioteca" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 520 0 0"/>
-        <Button Content="Instrumentos" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 550 0 0"/>
-        <Button Content="Projetos" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 580 0 0"/>
-        <Button Content="Recursos Financeiros" FontSize="12" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Margin="0 610 0 0"/>
+        <Border Background="#68d49b" Grid.Row="0"></Border>
 
+        <Border Background="#68d49b" Grid.Column="0" Grid.RowSpan="2"></Border>
+
+        <Border Grid.Column="1">
+
+
+        </Border>
+        
+        
+        <Grid Grid.Row="0" Grid.Column="1">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Início"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                <Image Source="/Imagens/botao-de-inicio.png" Width="20" Margin="5 11 0 5" ></Image>
+            </StackPanel>
+        </Grid>
+        
+        <Frame Grid.Column="1" x:Name="framePage" NavigationUIVisibility="Hidden"></Frame>
+
+        <StackPanel Grid.Column="0" Grid.RowSpan="2" VerticalAlignment="Center">
+
+            <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                     
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Início"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    <Image Source="/Imagens/botao-de-inicio.png" Width="20" Margin="5 11 0 5" ></Image>
+                </StackPanel>
+
+            </Button>
+
+            <Button BorderBrush="Black" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                <StackPanel>
+                    <TextBlock Text="Alunos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                <StackPanel>
+                    <TextBlock Text="Cadastrar Alunos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" 
+HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
        
+            <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                <StackPanel>
+                    <TextBlock Text="Turmas"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" 
+HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                <StackPanel>
+                    <TextBlock Text="Funcionários"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" 
+HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                <StackPanel>
+                    <TextBlock Text="Salas"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" 
+HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                <StackPanel>
+                    <TextBlock Text="Sonhos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" 
+HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                <StackPanel>
+                    <TextBlock Text="Estoque Pedagógico"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" 
+HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                <StackPanel>
+                    <TextBlock Text="Biblioteca"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" 
+HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                <StackPanel>
+                    <TextBlock Text="Instrumentos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" 
+HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                <StackPanel>
+                    <TextBlock Text="Projetos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" 
+HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                <StackPanel>
+                    <TextBlock Text="Recursos Financeiros"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" 
+HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+        </StackPanel>
 
     </Grid>
 </Window>
