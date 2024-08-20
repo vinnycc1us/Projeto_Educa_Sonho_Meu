@@ -4,6 +4,18 @@
              xmlns:local="clr-namespace:Projeto_Educa_Sonho_Meu"
              StartupUri="Paginas/PaginaInicial.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <Style x:Key="LabelBorder" TargetType="Border">
+                <Setter Property="Padding" Value="5"></Setter>
+                <Setter Property="Margin" Value="0 5"></Setter>
+                <Setter Property="CornerRadius" Value="0 10 0 10"></Setter>
+                <Setter Property="Background" Value="Salmon"></Setter>
+            </Style>
+
+            <Style x:Key="LabelText" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="FontWeight" Value="SemiBold"/>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

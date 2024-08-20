@@ -29,55 +29,69 @@
             <!--TextBlock Text="Cadastro de Turmas" FontSize="30" Padding="15 0" VerticalAlignment="Center" /-->
             <TextBox Margin="10" Background="Transparent" Text="Cadastro de Turmas" FontSize="30"/>
         </Border>
-       
 
 
-        <TextBlock Text="Turma" FontSize="30" Grid.Row="1" Grid.Column="0"  HorizontalAlignment="Left" VerticalAlignment="Top" Background="Azure"/>
-        <TextBox Height="50" Padding="2 15" Grid.Row="1" Grid.Column="0" FontSize="12" VerticalAlignment="Bottom">
+        <Grid Grid.Column="0" Grid.Row="1" Margin="5">
+            <StackPanel Width="auto" Height="auto"
+                    Margin="0 0 5 0">
 
-            <TextBox.Resources>
-
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="10"/>
-                </Style>
-
-            </TextBox.Resources>
-
-        </TextBox>
+                <Border Style="{StaticResource LabelBorder}">
+                    <TextBlock Style="{StaticResource LabelText}"  Text="Turma:"/>
+                </Border>
 
 
+                <TextBox  Padding="0" FontSize="15" Width="250" Height="50" HorizontalAlignment="Left">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+        </Grid>
+        
+        <!--Mudamça de Linha-->
+        
+        <Grid Grid.Column="1" Grid.Row="1" Margin="5">
+            <StackPanel Width="auto" Height="auto"
+             Margin="0 0 5 0">
+
+                <Border Style="{StaticResource LabelBorder}">
+                    <TextBlock Style="{StaticResource LabelText}"  Text="Quantidade:"/>
+                </Border>
 
 
+                <TextBox  Padding="0" FontSize="15" Width="250" Height="50" HorizontalAlignment="Left">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+        </Grid>
+        
+        <!--Mudamça de Linha-->
+        
+        <Grid Grid.Column="0" Grid.Row="3" Margin="5">
+            <StackPanel Width="auto" Height="auto"
+             Margin="0 0 5 0">
+
+                <Border Style="{StaticResource LabelBorder}">
+                    <TextBlock Style="{StaticResource LabelText}"  Text="Descrição:"/>
+                </Border>
 
 
-        <TextBlock Text="Quantidade" FontSize="30" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Azure"/>
+                <TextBox  Padding="0" FontSize="15" Width="250" Height="50" HorizontalAlignment="Left">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+        </Grid>
 
-        <TextBox Height="50" Padding="2 15" Grid.Row="1" Grid.Column="1" FontSize="12" VerticalAlignment="Bottom" >
-
-            <TextBox.Resources>
-
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="10"/>
-                </Style>
-
-            </TextBox.Resources>
-
-        </TextBox>
-
-
-
-        <TextBlock Text="Descrição" FontSize="30" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Azure"/>
-        <TextBox Height="50" Padding="2 15"  Grid.Row="3" Grid.Column="0" FontSize="12" VerticalAlignment="Bottom" >
-
-            <TextBox.Resources>
-
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="10"/>
-                </Style>
-
-            </TextBox.Resources>
-
-        </TextBox>
 
 
 
@@ -85,33 +99,43 @@
 
         <Button Grid.Row="4" Grid.Column="0" Height="42" Margin="20,26,71,36" Width="111" BorderBrush="Transparent"  Background="#c6ece1" >
 
-            <TextBlock Text="Salvar" FontSize="25"></TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Salvar" FontSize="25" Margin="5"></TextBlock>
+                <Image Source="/Imagens/salvar.png" Width="20" Margin="5 11 0 5" ></Image>
+            </StackPanel>
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="5"/>
+                    <Setter Property="CornerRadius" Value="9"/>
                 </Style>
             </Button.Resources>
         </Button>
 
         <Button Grid.Row="4" Grid.Column="1" Height="42" Width="115" BorderBrush="Transparent"  Background="#c6ece1" Click="Button_Click">
 
-            <TextBlock Text="Editar" FontSize="25"></TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Editar" FontSize="25" Margin="5"></TextBlock>
+                <Image Source="/Imagens/lapis.png" Width="20" Margin="5 11 0 5" ></Image>
+            </StackPanel>
+           
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="5"/>
+                    <Setter Property="CornerRadius" Value="9"/>
                 </Style>
             </Button.Resources>
         </Button>
 
         <Button Grid.Row="4" Grid.Column="2" Height="42" Width="115" BorderBrush="Transparent"  Background="#c6ece1" Click="Button_Click">
 
-            <TextBlock Text="Excluir" FontSize="25"></TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Excluir" FontSize="25" Margin="5"></TextBlock>
+                <Image Source="/Imagens/lixeira.png" Width="20" Margin="5 11 0 5" ></Image>
+            </StackPanel>
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="5"/>
+                    <Setter Property="CornerRadius" Value="9"/>
                 </Style>
             </Button.Resources>
         </Button>
