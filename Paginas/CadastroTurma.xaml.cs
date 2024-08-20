@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Projeto_Educa_Sonho_Meu.Paginas
 {
     /// <summary>
-    /// Interação lógica para CadastrarAluno.xam
+    /// Interação lógica para CadastroTurma.xam
     /// </summary>
-    public partial class CadastrarAluno : Page
+    public partial class CadastroTurma : Page
     {
-        public CadastrarAluno()
+        public CadastroTurma()
         {
             InitializeComponent();
         }
