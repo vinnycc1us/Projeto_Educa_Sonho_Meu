@@ -9,19 +9,33 @@
       Title="CadastrarAluno">
     
 
-    <Grid  Background="White">
+    <Grid  Background="White" Margin="0,0,-91,-98">
         <!--Esse Grid define em quantas parte a tela sera dividida horizontalmente
     sendo dividido em duas parte, um usando 20% da tela, e a outra usando 80% da tela-->
+        
+        
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="8*"/>
         </Grid.ColumnDefinitions>
+        
+        
+        
+        
         <!--Esse Grid define em quantas parte a tela sera dividida verticalmente
     sendo dividido em duas parte, um sendo proporcional ao Titulo, e a outra usando o resto da tela-->
+       
+        
+        
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="450"/>
         </Grid.RowDefinitions>
+        
+        
         <!--Define a cor de fundo do Titulo da pagina e a fonte-->
+        
         <Grid Background="#b6f4e6" Grid.ColumnSpan="2">
             <TextBlock Text="Cadastrar Alunos" FontSize="20" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
@@ -30,8 +44,8 @@
 
 
 
-        <!-- Label e combobox do page para consertar -->        
-       
+        <!-- Label e combobox do page para consertar -->
+
         <Grid Grid.Column="1" Grid.Row="1" Margin="10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -39,136 +53,500 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            
-            
+
+
             <Grid.RowDefinitions>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
 
 
-            <TextBlock Text="Prioridade" Grid.Row="0" Grid.Column="0"/>
-            <TextBox Grid.Row="0" Grid.Column="1" Margin="5"/>
-            
-            
-            <TextBlock Text="Nome" Grid.Row="1" Grid.Column="0"/>
-            <TextBox Grid.Row="1" Grid.Column="1" Margin="5"/>
-            
-            
-            <TextBlock Text="RG" Grid.Row="2" Grid.Column="0"/>
-            <TextBox Grid.Row="2" Grid.Column="1" Margin="5"/>
-            
-            
-            <TextBlock Text="CPF" Grid.Row="2" Grid.Column="2"/>
-            <TextBox Grid.Row="2" Grid.Column="2" Margin="5"/>
-            
-            
-            <TextBlock Text="Sexo" Grid.Row="3" Grid.Column="0"/>
-            <TextBox Grid.Row="3" Grid.Column="1" Margin="5"/>
-            
-            
-            <TextBlock Text="Data Nascimento" Grid.Row="3" Grid.Column="2"/>
-            <TextBox Grid.Row="3" Grid.Column="2" Margin="5"/>
-            
-            
-            <TextBlock Text="Masculino" Grid.Row="4" Grid.Column="0"/>
-            <TextBlock Text="Diabetico" Grid.Row="4" Grid.Column="1"/>
-            <TextBlock Text="Beneficio" Grid.Row="4" Grid.Column="2"/>
-            <TextBox Grid.Row="4" Grid.Column="2" Margin="5"/>
-            
-            
-            <TextBlock Text="Nacionalidade" Grid.Row="5" Grid.Column="0"/>
-            <TextBox Grid.Row="5" Grid.Column="1" Margin="5"/>
-            
-            
-            <TextBlock Text="Naturalidade" Grid.Row="5" Grid.Column="2"/>
-            <TextBox Grid.Row="5" Grid.Column="2" Margin="5"/>
-            
-            
-            <TextBlock Text="Nis" Grid.Row="5" Grid.Column="0"/>
-            <TextBox Grid.Row="5" Grid.Column="0" Margin="5"/>
-            
-            
-            <TextBlock Text="Brasileiro" Grid.Row="6" Grid.Column="0"/>
-            <TextBlock Text="Cidade" Grid.Row="6" Grid.Column="2"/>
-            <TextBox Grid.Row="6" Grid.Column="2" Margin="5"/>
-            
-            
-            <TextBlock Text="Cep" Grid.Row="6" Grid.Column="0"/>
-            <TextBox Grid.Row="6" Grid.Column="0" Margin="5"/>
-            
-            
-            <TextBlock Text="Estado" Grid.Row="7" Grid.Column="0"/>
-            <TextBox Grid.Row="7" Grid.Column="1" Margin="5"/>
-            
-            
-            <TextBlock Text="Bairro" Grid.Row="7" Grid.Column="2"/>
-            <TextBox Grid.Row="7" Grid.Column="2" Margin="5"/>
-            
-            
-            <TextBlock Text="Logradouro" Grid.Row="8" Grid.Column="2"/>
-            <TextBox Grid.Row="8" Grid.Column="2" Margin="5"/>
-            
-            
-            <TextBlock Text="Rondinia" Grid.Row="8" Grid.Column="0"/>
-            <TextBlock Text="Numero" Grid.Row="8" Grid.Column="1"/>
-            <TextBox Grid.Row="8" Grid.Column="0" Margin="5"/>
-            
-            
-            <TextBlock Text="Escola" Grid.Row="9" Grid.Column="0"/>
-            <TextBox Grid.Row="9" Grid.Column="1" Margin="5"/>
-            
-            
-            <TextBlock Text="Série" Grid.Row="9" Grid.Column="2"/>
-            <TextBox Grid.Row="9" Grid.Column="2" Margin="5"/>
-            
-            
-            <TextBlock Text="EE.EF.M Aulio Ferrei" Grid.Row="10" Grid.Column="0"/>
-            <TextBlock Text="Periodo" Grid.Row="10" Grid.Column="2"/>
-            <TextBox Grid.Row="10" Grid.Column="2" Margin="5"/>
-            
-            
-            <TextBlock Text="Sitima" Grid.Row="11" Grid.Column="0"/>
-            <TextBlock Text="Matutino" Grid.Row="11" Grid.Column="2"/>
-            <TextBlock Text="Parecer Social:" Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="3" Margin="0 10 0 0"/>
-            <TextBlock Text="sdmacki maskom saklorem" Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="3" Margin="0 10 0 0" TextWrapping="Wrap"/>
-            <TextBlock Text="Responsável pelo Aluno" Grid.Row="14" Grid.Column="0" Grid.ColumnSpan="3" Margin="0 10 0 0" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center"/>
-            <TextBlock Text="Nome" Grid.Row="15" Grid.Column="0"/>
-            <TextBox Grid.Row="15" Grid.Column="1" Margin="5"/>
-            
-            
-            <TextBlock Text="RG" Grid.Row="15" Grid.Column="2"/>
-            <TextBox Grid.Row="15" Grid.Column="2" Margin="5"/>
-            
-            <TextBlock Text="CPF" Grid.Row="16" Grid.Column="2"/>
-            <TextBox Grid.Row="16" Grid.Column="2" Margin="5"/>
-            
-            
-            <TextBlock Text="Telefone" Grid.Row="16" Grid.Column="0" Grid.ColumnSpan="2"/>
-            <TextBox Grid.Row="16" Grid.Column="0" Grid.ColumnSpan="2" Margin="5"/>
-            
-            
-            <TextBlock Text="Telefone Fixo" Grid.Row="17" Grid.Column="0"/>
-            <TextBox Grid.Row="17" Grid.Column="1" Margin="5"/>
-            
-            
-            <TextBlock Text="Telefone para Recado" Grid.Row="17" Grid.Column="2"/>
-            <TextBox Grid.Row="17" Grid.Column="2" Margin="5"/>
-            
-            
+            <Grid Grid.Column="0" Grid.Row="0" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="Prioridade:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+            <!--Outro texto-->
+
+            <Grid Grid.Column="0" Grid.Row="1" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="Nome:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+            <!--Outro texto-->
+
+            <Grid Grid.Column="1" Grid.Row="1" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="RG:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+            <!--Outro texto-->
+
+            <Grid Grid.Column="2" Grid.Row="1" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="CPF:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+            <!--Outro Texto-->
+
+            <Grid Grid.Column="3" Grid.Row="1" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="Data Nascimento:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+            <!--Outro texto-->
+
+            <Grid Grid.Column="0" Grid.Row="2" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="Sexo:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+            <!--Outro Texto-->
+
+            <Grid Grid.Column="1" Grid.Row="2" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="Doença:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+
+            <!--outro texto-->
+
+            <Grid Grid.Column="2" Grid.Row="2" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="Benefício:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+
+
+            <Grid Grid.Column="3" Grid.Row="2" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="Nis:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="0" Grid.Row="3" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="Nacionalidade:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+
+            <Grid Grid.Column="1" Grid.Row="3" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="Naturalidade:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="2" Grid.Row="3" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="Cidade:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="36" Grid.Row="3" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="Cep:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="0" Grid.Row="4" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="Estado:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="1" Grid.Row="4" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="Bairro:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="2" Grid.Row="4" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="Logradouro:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="3" Grid.Row="4" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="Numero:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="0" Grid.Row="5" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="Escola:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="1" Grid.Row="5" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="Série:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="2" Grid.Row="5" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="Período:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="0" Grid.Row="6" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="Parecer Social:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+            <Grid Background="#b6f4e6" Grid.ColumnSpan="4" Grid.Row="7" Margin="0 9">
+                <TextBlock Text="Responsavel pelo Aluno" FontSize="20" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </Grid>
+
+            <Grid Grid.Column="0" Grid.Row="8" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="Nome:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+
+            <Grid Grid.Column="1" Grid.Row="8" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="RG:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="2" Grid.Row="8" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="CPF:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="3" Grid.Row="8" Margin="5">
+                <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
+
+                    <Border Style="{StaticResource LabelBorder}">
+                        <TextBlock Style="{StaticResource LabelText}"  Text="Telefone:"/>
+                    </Border>
+
+
+                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+
+            <!-- Botão Salvar do page tem que mudar a cor-->
+            <Button Content="Salvar" FontSize="15" FontWeight="Bold" Grid.Column="1" Grid.Row="11" Margin="0 0 10 10" VerticalAlignment="Bottom" Width="300" Height="auto"/>
+
         </Grid>
 
-        <!-- Botão Salvar do page tem que consertar-->
-        <Button Content="Salvar" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="10" Margin="0 0 10 10" VerticalAlignment="Bottom" Width="300" Height="auto"/>
-    
     </Grid>
 </Page>

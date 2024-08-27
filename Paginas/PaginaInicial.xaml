@@ -30,12 +30,12 @@
         
         <Grid Grid.Row="0" Grid.Column="1">
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Início"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                <Image Source="/Imagens/botao-de-inicio.png" Width="20" Margin="5 11 0 5" ></Image>
+                <!--<TextBlock Text="Início"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>-->
+                <Image Source="/Imagens/SonhoEduca.png" Width="845" Margin="5 11 0 5" ></Image>
             </StackPanel>
         </Grid>
         
-        <Frame Grid.Column="1" x:Name="framePage" NavigationUIVisibility="Hidden"></Frame>
+        <Frame Grid.Column="1" Grid.Row="1"  x:Name="framePage" NavigationUIVisibility="Hidden"></Frame>
 
         <StackPanel Grid.Column="0" Grid.RowSpan="2" VerticalAlignment="Center">
 

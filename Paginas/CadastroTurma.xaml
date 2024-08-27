@@ -111,7 +111,7 @@
             </Button.Resources>
         </Button>
 
-        <Button Grid.Row="4" Grid.Column="1" Height="42" Width="115" BorderBrush="Transparent"  Background="#c6ece1" Click="Button_Click">
+        <Button Grid.Row="4" Grid.Column="1" Height="42" Width="115" BorderBrush="Transparent"  Background="#c6ece1">
 
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Editar" FontSize="25" Margin="5"></TextBlock>
@@ -126,7 +126,7 @@
             </Button.Resources>
         </Button>
 
-        <Button Grid.Row="4" Grid.Column="2" Height="42" Width="115" BorderBrush="Transparent"  Background="#c6ece1" Click="Button_Click">
+        <Button Grid.Row="4" Grid.Column="2" Height="42" Width="115" BorderBrush="Transparent"  Background="#c6ece1" >
 
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Excluir" FontSize="25" Margin="5"></TextBlock>
