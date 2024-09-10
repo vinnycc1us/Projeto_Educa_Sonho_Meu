@@ -45,6 +45,7 @@ CREATE TABLE Aluno (
   nacionalidade_alun VARCHAR(255) NOT NULL,
   data_nascimento_alun date NOT NULL,
   cpf_alun VARCHAR(255) NOT NULL,
+  rg_alun VARCHAR(255) NOT NULL,
   id_sex_fk int,
   doenças_especialidades_alun VARCHAR(255) NOT NULL,
   nis_alun VARCHAR(255) NOT NULL,
