@@ -17,41 +17,46 @@
             <ColumnDefinition Width="677*"/>
         </Grid.ColumnDefinitions>
 
-
         <Border Background="#68d49b" Grid.Row="0"></Border>
 
         <Border Background="#68d49b" Grid.Column="0" Grid.RowSpan="2"></Border>
 
         <Border Grid.Column="1">
-
-
+            <Grid Grid.Row="0" Grid.Column="1">
+                <StackPanel Orientation="Horizontal">
+                    <!--<TextBlock Text="Início"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>-->
+                    <Image Source="/Imagens/SonhoEduca.png" Width="845" Margin="5 11 0 5" ></Image>
+                </StackPanel>
+            </Grid>
         </Border>
-        
-        
-        <Grid Grid.Row="0" Grid.Column="1">
-            <StackPanel Orientation="Horizontal">
-                <!--<TextBlock Text="Início"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>-->
-                <Image Source="/Imagens/SonhoEduca.png" Width="845" Margin="5 11 0 5" ></Image>
-            </StackPanel>
-        </Grid>
-        
+
+            
         <Frame Grid.Column="1" Grid.Row="1"  x:Name="framePage" NavigationUIVisibility="Hidden"></Frame>
 
         <StackPanel Grid.Column="0" Grid.RowSpan="2" VerticalAlignment="Center">
 
             <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
-                     
+
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Início"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Início"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center" />
                     <Image Source="/Imagens/botao-de-inicio.png" Width="20" Margin="5 11 0 5" ></Image>
                 </StackPanel>
-
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                    </Style>
+                </Button.Resources>
             </Button>
 
             <Button BorderBrush="Black" Background="#c6ece1" Cursor="Hand" Margin="5" >
                 <StackPanel>
                     <TextBlock Text="Alunos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
                 </StackPanel>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                    </Style>
+                </Button.Resources>
             </Button>
 
             <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
@@ -59,13 +64,23 @@
                     <TextBlock Text="Cadastrar Alunos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" 
 HorizontalAlignment="Center"/>
                 </StackPanel>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                    </Style>
+                </Button.Resources>
             </Button>
-       
+
             <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
                 <StackPanel>
                     <TextBlock Text="Turmas"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" 
 HorizontalAlignment="Center"/>
                 </StackPanel>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                    </Style>
+                </Button.Resources>
             </Button>
 
             <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
@@ -73,6 +88,11 @@ HorizontalAlignment="Center"/>
                     <TextBlock Text="Funcionários"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" 
 HorizontalAlignment="Center"/>
                 </StackPanel>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                    </Style>
+                </Button.Resources>
             </Button>
 
             <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
@@ -80,6 +100,11 @@ HorizontalAlignment="Center"/>
                     <TextBlock Text="Salas"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" 
 HorizontalAlignment="Center"/>
                 </StackPanel>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                    </Style>
+                </Button.Resources>
             </Button>
 
             <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
@@ -87,6 +112,11 @@ HorizontalAlignment="Center"/>
                     <TextBlock Text="Sonhos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" 
 HorizontalAlignment="Center"/>
                 </StackPanel>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                    </Style>
+                </Button.Resources>
             </Button>
 
             <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
@@ -94,6 +124,11 @@ HorizontalAlignment="Center"/>
                     <TextBlock Text="Estoque Pedagógico"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" 
 HorizontalAlignment="Center"/>
                 </StackPanel>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                    </Style>
+                </Button.Resources>
             </Button>
 
             <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
@@ -101,6 +136,11 @@ HorizontalAlignment="Center"/>
                     <TextBlock Text="Biblioteca"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" 
 HorizontalAlignment="Center"/>
                 </StackPanel>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                    </Style>
+                </Button.Resources>
             </Button>
 
             <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
@@ -108,6 +148,11 @@ HorizontalAlignment="Center"/>
                     <TextBlock Text="Instrumentos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" 
 HorizontalAlignment="Center"/>
                 </StackPanel>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                    </Style>
+                </Button.Resources>
             </Button>
 
             <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
@@ -115,6 +160,11 @@ HorizontalAlignment="Center"/>
                     <TextBlock Text="Projetos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" 
 HorizontalAlignment="Center"/>
                 </StackPanel>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                    </Style>
+                </Button.Resources>
             </Button>
 
             <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
@@ -122,9 +172,12 @@ HorizontalAlignment="Center"/>
                     <TextBlock Text="Recursos Financeiros"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" 
 HorizontalAlignment="Center"/>
                 </StackPanel>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                    </Style>
+                </Button.Resources>
             </Button>
-
         </StackPanel>
-
     </Grid>
 </Window>
