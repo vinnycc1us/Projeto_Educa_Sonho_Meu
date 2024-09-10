@@ -85,7 +85,10 @@ CREATE TABLE Voluntario (
 
 CREATE TABLE Turma (
   id_turm INT PRIMARY KEY AUTO_INCREMENT,
-  Nome VARCHAR(255) NOT NULL
+  nome_turm VARCHAR(255) NOT NULL,
+  quantidade_turm VARCHAR(255) NOT NULL,
+  descricao_turm VARCHAR(255) NOT NULL,
+  ano_turm year NOT NULL
 );
 
 CREATE TABLE Sala (
@@ -99,40 +102,73 @@ CREATE TABLE Sala (
 
 CREATE TABLE Livro (
   id_liv INT PRIMARY KEY AUTO_INCREMENT,
-  Nome VARCHAR(255) NOT NULL
+  nome_liv VARCHAR(255) NOT NULL,
+  quantidade_liv VARCHAR(255) NOT NULL,
+  descricao_liv VARCHAR(255) NOT NULL,
+  valor_liv double NOT NULL,
+  num_paginas_liv int NOT NULL,
+  autor_liv VARCHAR(255) NOT NULL,
+  editora_liv VARCHAR(255) NOT NULL,
+  ano_aplicacao_liv year NOT NULL,
+  ano_impressao_liv year NOT NULL,
+  area_aplicacao_liv VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE Instrumento (
-  InstrumentosID INT PRIMARY KEY AUTO_INCREMENT,
-  Nome VARCHAR(255) NOT NULL
+  id_inst INT PRIMARY KEY AUTO_INCREMENT,
+  nome_inst VARCHAR(255) NOT NULL,
+  quantidade_inst int NOT NULL,
+  descricao_inst VARCHAR(255) NOT NULL,
+  valor_inst double NOT NULL
 );
 
 CREATE TABLE Funcionario (
   id_func INT PRIMARY KEY AUTO_INCREMENT,
-  Nome VARCHAR(255) NOT NULL
+  nome_func VARCHAR(255) NOT NULL,
+  cpf_func VARCHAR(255) NOT NULL,
+  ctps_func VARCHAR(255) NOT NULL,
+  rg_func VARCHAR(255) NOT NULL,
+  funcao_func VARCHAR(255) NOT NULL,
+  sala_func VARCHAR(255),
+  num_telefone_func VARCHAR(255) NOT NULL,
+  id_end_fk int,
+  foreign key (id_end_fk) references Endereco (id_end)
 );
 
 CREATE TABLE Material (
   id_mate INT PRIMARY KEY AUTO_INCREMENT,
-  Nome VARCHAR(255) NOT NULL
+  nome_mate VARCHAR(255) NOT NULL,
+  quantidade_mate int NOT NULL,
+  descricao_mate VARCHAR(255) NOT NULL,
+  valor_mate double NOT NULL,
+  id_sal_fk int,
+  foreign key (id_sal_fk) references Sala (id_sal)
 );
 
 CREATE TABLE Evento (
   id_even INT PRIMARY KEY AUTO_INCREMENT,
-  Nome VARCHAR(255) NOT NULL
+  nome_even VARCHAR(255) NOT NULL,
+  data_even date NOT NULL,
+  id_end_fk int,
+  descricao_even VARCHAR(255) NOT NULL,
+  id_func_fk int,
+  cor_destaque_even VARCHAR(255) NOT NULL,
+  foreign key (id_end_fk) references Endereco (id_end),
+  foreign key (id_func_fk) references Funcionario (id_func)
 );
 
 CREATE TABLE Recurso (
   id_recu INT PRIMARY KEY AUTO_INCREMENT,
-  Nome VARCHAR(255) NOT NULL
+  doador_recu VARCHAR(255) NOT NULL,
+  valor_recu double NOT NULL,
+  destino_recu VARCHAR(255) NOT NULL,
+  data_recu date NOT NULL
 );
 
 CREATE TABLE Despesa (
   id_desp INT PRIMARY KEY AUTO_INCREMENT,
-  Nome VARCHAR(255) NOT NULL
-);
-
-CREATE TABLE Projeto (
-  id_proj INT PRIMARY KEY AUTO_INCREMENT,
-  Nome VARCHAR(255) NOT NULL
+  doador_desp VARCHAR(255) NOT NULL,
+  valor_desp double NOT NULL,
+  destino_desp VARCHAR(255) NOT NULL,
+  data_desp date NOT NULL
 );
