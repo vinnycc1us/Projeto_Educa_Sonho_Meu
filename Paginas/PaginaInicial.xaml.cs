@@ -20,7 +20,12 @@ namespace Projeto_Educa_Sonho_Meu.Paginas
         public PaginaInicial()
         {
             InitializeComponent();
+            Loaded += PaginaInicial_Loaded;
         }
 
+        private void PaginaInicial_Loaded(object sender, RoutedEventArgs e)
+        {
+            framePage.Navigate(new CadastrarAluno());
+        }
     }
 }

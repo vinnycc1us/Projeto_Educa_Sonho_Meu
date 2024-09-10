@@ -23,9 +23,9 @@
 
         <Border Grid.Column="1">
             <Grid Grid.Row="0" Grid.Column="1">
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <!--<TextBlock Text="Início"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>-->
-                    <Image Source="/Imagens/SonhoEduca.png" Width="845" Margin="5 11 0 5" ></Image>
+                    <Image Source="/Imagens/SonhoEduca.png" Width="800" Margin="5 11 0 5" ></Image>
                 </StackPanel>
             </Grid>
         </Border>
@@ -35,18 +35,24 @@
 
         <StackPanel Grid.Column="0" Grid.RowSpan="2" VerticalAlignment="Center">
 
-            <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+            <ComboBox  Width="200" Cursor="">
 
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Início"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center" />
-                    <Image Source="/Imagens/botao-de-inicio.png" Width="20" Margin="5 11 0 5" ></Image>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Início"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center" />
+                        <Image Source="/Imagens/botao-de-inicio.png" Width="20" Margin="5 11 0 5" ></Image>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+            </ComboBox>
+
+            
 
             <Button BorderBrush="Black" Background="#c6ece1" Cursor="Hand" Margin="5" >
                 <StackPanel>
@@ -178,6 +184,7 @@ HorizontalAlignment="Center"/>
                     </Style>
                 </Button.Resources>
             </Button>
+
         </StackPanel>
     </Grid>
 </Window>

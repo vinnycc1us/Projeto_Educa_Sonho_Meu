@@ -9,11 +9,37 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Imagens\" />
+    <None Remove="Imagens\botao-de-inicio.png" />
+    <None Remove="Imagens\lapis.png" />
+    <None Remove="Imagens\lixeira.png" />
+    <None Remove="Imagens\macaca.jpg" />
+    <None Remove="Imagens\salvar.png" />
+    <None Remove="Imagens\SonhoEduca.png" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MySql.Data" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Imagens\botao-de-inicio.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Imagens\lapis.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Imagens\lixeira.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Imagens\macaca.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Imagens\salvar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Imagens\SonhoEduca.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
