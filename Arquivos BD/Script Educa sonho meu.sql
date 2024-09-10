@@ -75,17 +75,26 @@ create table Projeto_Aluno(
 
 CREATE TABLE Voluntario (
   id_volu INT PRIMARY KEY AUTO_INCREMENT,
-  Nome VARCHAR(255) NOT NULL
-);
-
-CREATE TABLE Sala (
-  id_sal INT PRIMARY KEY AUTO_INCREMENT,
-  Nome VARCHAR(255) NOT NULL
+  nome_volu VARCHAR(255) NOT NULL,
+  cpf_volu VARCHAR(255) NOT NULL,
+  rg_volu VARCHAR(255) NOT NULL,
+  numero_telefone_volu VARCHAR(255) NOT NULL,
+  id_end_fk int,
+  foreign key (id_end_fk) references Endereco (id_end)
 );
 
 CREATE TABLE Turma (
   id_turm INT PRIMARY KEY AUTO_INCREMENT,
   Nome VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Sala (
+  id_sal INT PRIMARY KEY AUTO_INCREMENT,
+  nome_sal VARCHAR(255) NOT NULL,
+  localizacao_sal VARCHAR(255) NOT NULL,
+  capacidade_sal VARCHAR(255) NOT NULL,
+  id_turm_fk int,
+  foreign key (id_turm_fk) references Turma (id_turm)
 );
 
 CREATE TABLE Livro (
