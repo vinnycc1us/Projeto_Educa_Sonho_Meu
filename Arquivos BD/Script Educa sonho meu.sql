@@ -121,10 +121,11 @@ CREATE TABLE Funcionario (
   ctps_func VARCHAR(255) NOT NULL,
   rg_func VARCHAR(255) NOT NULL,
   funcao_func VARCHAR(255) NOT NULL,
-  sala_func VARCHAR(255),
+  id_sal_fk int,
   num_telefone_func VARCHAR(255) NOT NULL,
   id_end_fk int,
-  foreign key (id_end_fk) references Endereco (id_end)
+  foreign key (id_end_fk) references Endereco (id_end),
+  foreign key (id_sal_fk) references Sala (id_sal)
 );
 CREATE TABLE Material (
   id_mate INT PRIMARY KEY AUTO_INCREMENT,
