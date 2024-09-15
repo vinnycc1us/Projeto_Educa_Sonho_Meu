@@ -24,5 +24,14 @@ namespace Projeto_Educa_Sonho_Meu.Paginas
         {
             InitializeComponent();
         }
+
+        private void btnCadastrarTurma(object sender, RoutedEventArgs e)
+        {
+            // Instancia a nova janela
+            CadastroTurma cadastroturma = new CadastroTurma();
+            // Navega para a nova página
+            this.NavigationService.Navigate(cadastroturma);
+        }
     }
+
 }

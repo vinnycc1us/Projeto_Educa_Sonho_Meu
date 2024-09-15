@@ -16,21 +16,21 @@ using System.Windows.Shapes;
 namespace Projeto_Educa_Sonho_Meu.Paginas
 {
     /// <summary>
-    /// Interação lógica para CadastroSonhoSaida.xam
+    /// Interação lógica para ConsultarCalendarioAcademico.xam
     /// </summary>
-    public partial class CadastroSonhoSaida : Page
+    public partial class ConsultarCalendarioAcademico : Page
     {
-        public CadastroSonhoSaida()
+        public ConsultarCalendarioAcademico()
         {
             InitializeComponent();
         }
 
-        private void btnCadastrarSonhoSaida(object sender, RoutedEventArgs e)
+        private void btnConsultarCalendarioAcademico(object sender, RoutedEventArgs e)
         {
             // Instancia a nova janela
-            CadastroSonhoSaida cadastroSonhoSaida = new CadastroSonhoSaida();
+            ConsultarCalendarioAcademico consultarCalendarioAcademico = new ConsultarCalendarioAcademico();
             // Navega para a nova página
-            this.NavigationService.Navigate(cadastroSonhoSaida);
+            this.NavigationService.Navigate(consultarCalendarioAcademico);
         }
     }
 }

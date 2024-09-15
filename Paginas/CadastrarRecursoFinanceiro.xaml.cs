@@ -16,21 +16,21 @@ using System.Windows.Shapes;
 namespace Projeto_Educa_Sonho_Meu.Paginas
 {
     /// <summary>
-    /// Interação lógica para CadastroSonhoSaida.xam
+    /// Interação lógica para CadastrarRecursoFinanceiro.xam
     /// </summary>
-    public partial class CadastroSonhoSaida : Page
+    public partial class CadastrarRecursoFinanceiro : Page
     {
-        public CadastroSonhoSaida()
+        public CadastrarRecursoFinanceiro()
         {
             InitializeComponent();
         }
 
-        private void btnCadastrarSonhoSaida(object sender, RoutedEventArgs e)
+        private void btnCadastrarRecursoFinanceiro(object sender, RoutedEventArgs e)
         {
             // Instancia a nova janela
-            CadastroSonhoSaida cadastroSonhoSaida = new CadastroSonhoSaida();
+            CadastrarRecursoFinanceiro cadastrarRecursoFinanceiro = new CadastrarRecursoFinanceiro();
             // Navega para a nova página
-            this.NavigationService.Navigate(cadastroSonhoSaida);
+            this.NavigationService.Navigate(cadastrarRecursoFinanceiro);
         }
     }
 }
