@@ -24,5 +24,12 @@ namespace Projeto_Educa_Sonho_Meu.Paginas
         {
             InitializeComponent();
         }
+        private void btnConsultarAluno(object sender, RoutedEventArgs e)
+        {
+            // Instancia a nova janela
+            ConsultarAluno consultarAluno = new ConsultarAluno();
+            // Navega para a nova página
+            this.NavigationService.Navigate(consultarAluno);
+        }
     }
 }

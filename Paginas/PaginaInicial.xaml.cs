@@ -24,8 +24,23 @@ namespace Projeto_Educa_Sonho_Meu.Paginas
         }
 
         private void PaginaInicial_Loaded(object sender, RoutedEventArgs e)
+        {         
+        }
+
+        private void btnConsultarAluno(object sender, RoutedEventArgs e)
         {
-            framePage.Navigate(new CadastrarAluno());
+            // Instancia a nova janela
+            Window window = new Window();
+            window.Content = new ConsultarAluno();
+            window.ShowDialog();
+        }
+
+        private void btnCadastrarAluno(object sender, RoutedEventArgs e)
+        {
+            // Instancia a nova janela
+            Window window = new Window();
+            window.Content = new CadastrarAluno();
+            window.ShowDialog();
         }
     }
 }

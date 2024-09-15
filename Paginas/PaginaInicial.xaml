@@ -35,24 +35,19 @@
 
         <StackPanel Grid.Column="0" Grid.RowSpan="2" VerticalAlignment="Center">
 
-            <ComboBox  Width="200" Cursor="">
 
-                <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+            <Button Name="ConsultarAluno" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" Click="btnConsultarAluno">
 
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Início"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center" />
-                        <Image Source="/Imagens/botao-de-inicio.png" Width="20" Margin="5 11 0 5" ></Image>
-                    </StackPanel>
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                        </Style>
-                    </Button.Resources>
-                </Button>
-
-            </ComboBox>
-
-            
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Consultar Aluno"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center" />
+                    <Image Source="/Imagens/botao-de-inicio.png" Width="20" Margin="5 11 0 5" ></Image>
+                </StackPanel>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
 
             <Button BorderBrush="Black" Background="#c6ece1" Cursor="Hand" Margin="5" >
                 <StackPanel>
@@ -65,7 +60,7 @@
                 </Button.Resources>
             </Button>
 
-            <Button BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+            <Button Name="CadastarAluno" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" Click="btnCadastrarAluno" >
                 <StackPanel>
                     <TextBlock Text="Cadastrar Alunos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" 
 HorizontalAlignment="Center"/>
