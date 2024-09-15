@@ -31,10 +31,21 @@
         </Border>
 
             
-        <Frame Grid.Column="1" Grid.Row="1"  x:Name="framePage" NavigationUIVisibility="Hidden"></Frame>
+        <Frame Grid.Column="1" Grid.Row="1"  x:Name="framepaginainicial" NavigationUIVisibility="Hidden"></Frame>
 
         <StackPanel Grid.Column="0" Grid.RowSpan="2" VerticalAlignment="Center">
 
+            <Button Name="CadastarAluno" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" Click="btnCadastrarAluno" >
+                <StackPanel>
+                    <TextBlock Text="Cadastrar Alunos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" 
+HorizontalAlignment="Center"/>
+                </StackPanel>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
 
             <Button Name="ConsultarAluno" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" Click="btnConsultarAluno">
 
@@ -52,18 +63,6 @@
             <Button BorderBrush="Black" Background="#c6ece1" Cursor="Hand" Margin="5" >
                 <StackPanel>
                     <TextBlock Text="Alunos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
-
-            <Button Name="CadastarAluno" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" Click="btnCadastrarAluno" >
-                <StackPanel>
-                    <TextBlock Text="Cadastrar Alunos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" 
-HorizontalAlignment="Center"/>
                 </StackPanel>
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
