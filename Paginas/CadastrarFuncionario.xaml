@@ -29,8 +29,8 @@
 
 
         <!--nomes-->
-        
-        <Border Grid.Row="0" Grid.ColumnSpan="4" Background="#b6f4e6" Margin="15" CornerRadius="10 0 0 0" >
+
+        <Border Grid.Row="0" Grid.ColumnSpan="4" Background="#9ceacd" Margin="15" CornerRadius="10 0 0 0" >
             <!--TextBlock Text="Cadastro de Turmas" FontSize="30" Padding="15 0" VerticalAlignment="Center" /-->
             <TextBox Margin="4,4,4,0" Background="Transparent" Text="Cadastro de Funcionario" FontSize="30"/>
         </Border>

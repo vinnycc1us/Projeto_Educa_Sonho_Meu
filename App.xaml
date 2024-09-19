@@ -9,7 +9,7 @@
                 <Setter Property="Padding" Value="5"></Setter>
                 <Setter Property="Margin" Value="0 5"></Setter>
                 <Setter Property="CornerRadius" Value="0 10 0 10"></Setter>
-                <Setter Property="Background" Value="Salmon"></Setter>
+                <Setter Property="Background" Value="#d0ffff"></Setter>
             </Style>
 
             <Style x:Key="LabelText" TargetType="TextBlock">

@@ -8,7 +8,10 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ConsultarSala">
 
-    <Grid>
-        
+    <Grid Background="White">
+        <Border Grid.Row="0" Background="#9ceacd" Margin="15,15,20,385" CornerRadius="10 0 0 0" >
+            <!--TextBlock Text="Cadastro de Turmas" FontSize="30" Padding="15 0" VerticalAlignment="Center" /-->
+            <TextBox Margin="4,4,4,0" Background="Transparent" Text="Consultar Sala" FontSize="30"/>
+        </Border>
     </Grid>
 </Page>
