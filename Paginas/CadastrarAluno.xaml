@@ -9,7 +9,7 @@
       Title="CadastrarAluno">
 
 
-    <Grid  Background="White" Margin="0,10,-282,-355">
+    <Grid  Background="White" Margin="0,10,-302,-391">
         <!--Esse Grid define em quantas parte a tela sera dividida horizontalmente
     sendo dividido em duas parte, um usando 20% da tela, e a outra usando 80% da tela-->
 

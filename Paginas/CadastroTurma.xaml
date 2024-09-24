@@ -97,7 +97,7 @@
 
 
 
-        <Button Grid.Row="4" Grid.Column="0" Height="42" Margin="20,26,71,36" Width="111" BorderBrush="Transparent"  Background="#c6ece1" >
+        <Button Grid.Row="4" Grid.Column="0" Height="42"  Width="111" BorderBrush="Transparent"  Background="#c6ece1" >
 
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Salvar" FontSize="25" Margin="5"></TextBlock>
