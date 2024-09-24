@@ -16,20 +16,13 @@ using System.Windows.Shapes;
 namespace Projeto_Educa_Sonho_Meu.Paginas
 {
     /// <summary>
-    /// Interação lógica para CadastrarEstoquePedagogico.xam
+    /// Interação lógica para CadastrarMaterial.xam
     /// </summary>
-    public partial class CadastrarEstoquePedagogico : Page
+    public partial class CadastrarMaterial : Page
     {
-        public CadastrarEstoquePedagogico()
+        public CadastrarMaterial()
         {
             InitializeComponent();
-        }
-        private void btnCadastrarEstoquePedagogico(object sender, RoutedEventArgs e)
-        {
-            // Instancia a nova janela
-            CadastrarEstoquePedagogico cadastrarEstoquePedagogico = new CadastrarEstoquePedagogico();
-            // Navega para a nova página
-            this.NavigationService.Navigate(cadastrarEstoquePedagogico);
         }
     }
 }

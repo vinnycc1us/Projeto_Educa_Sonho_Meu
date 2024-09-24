@@ -16,21 +16,13 @@ using System.Windows.Shapes;
 namespace Projeto_Educa_Sonho_Meu.Paginas
 {
     /// <summary>
-    /// Interação lógica para ConsultarEstoquePedagogico.xam
+    /// Interação lógica para CadastrarDespesa.xam
     /// </summary>
-    public partial class ConsultarEstoquePedagogico : Page
+    public partial class CadastrarDespesa : Page
     {
-        public ConsultarEstoquePedagogico()
+        public CadastrarDespesa()
         {
             InitializeComponent();
-        }
-
-        private void btnConsultarEstoquePedagogico(object sender, RoutedEventArgs e)
-        {
-            // Instancia a nova janela
-            ConsultarEstoquePedagogico consultarEstoquePedagogico = new ConsultarEstoquePedagogico();
-            // Navega para a nova página
-            this.NavigationService.Navigate(consultarEstoquePedagogico);
         }
     }
 }
