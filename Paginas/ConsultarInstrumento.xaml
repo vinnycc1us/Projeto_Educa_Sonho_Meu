@@ -110,6 +110,6 @@
             </StackPanel>
         </Grid>
 
-        <DataGrid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="6" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="DataGrid_SelectionChanged" Margin="5"/>
+        <DataGrid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="6" d:ItemsSource="{d:SampleData ItemCount=5}" />
     </Grid>
 </Page>

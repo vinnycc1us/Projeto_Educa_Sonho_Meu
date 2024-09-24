@@ -90,7 +90,7 @@
 
         <!--Informações da Turma-->
 
-        <DataGrid Grid.Row="2" Grid.ColumnSpan="6" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="DataGrid_SelectionChanged" Margin="5"/>
+        <DataGrid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" d:ItemsSource="{d:SampleData ItemCount=5}" />
 
         <Button Grid.Row="3" Grid.Column="2" Height="42" Margin="20,26,1,36" Width="111" BorderBrush="Transparent"  Background="#c6ece1" HorizontalAlignment="Right" >
 
