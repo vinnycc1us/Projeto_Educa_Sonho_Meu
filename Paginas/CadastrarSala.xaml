@@ -25,11 +25,13 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Border Grid.Row="0" Grid.ColumnSpan="4" Background="#9ceacd" Margin="20" CornerRadius="10 0 0 0" >
+        <Border Grid.Row="0" Grid.ColumnSpan="6" Background="#9ceacd" Margin="20" CornerRadius="10 0 0 0" >
             <!--TextBlock Text="Cadastro de Turmas" FontSize="30" Padding="15 0" VerticalAlignment="Center" /-->
             <TextBox Margin="4,4,4,0" Background="Transparent" Text="Cadastro de Sala" FontSize="30"/>
         </Border>
 
+        <!--Cadastrar Turma-->
+        
         <Grid Grid.Column="0" Grid.Row="1" Margin="5" Grid.ColumnSpan="2">
             <StackPanel  Height="auto" Margin="5">
 

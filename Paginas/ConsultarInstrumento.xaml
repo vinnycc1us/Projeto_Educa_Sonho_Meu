@@ -9,9 +9,107 @@
       Title="ConsultarInstrumento">
 
     <Grid Background="White">
-        <Border Grid.Row="0" Background="#9ceacd" Margin="15,15,20,385" CornerRadius="10 0 0 0" >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Border Grid.Row="0" Grid.ColumnSpan="8" Background="#9ceacd" Margin="20" CornerRadius="10 0 0 0" >
             <!--TextBlock Text="Cadastro de Turmas" FontSize="30" Padding="15 0" VerticalAlignment="Center" /-->
             <TextBox Margin="4,4,4,0" Background="Transparent" Text="Consultar Instrumentos" FontSize="30"/>
         </Border>
+
+        <!--Consultar Nome-->
+
+        <Grid Grid.Column="0" Grid.Row="1" Margin="5" Grid.ColumnSpan="2">
+            <StackPanel  Height="auto" Margin="5">
+
+                <Border Style="{StaticResource LabelBorder}">
+                    <TextBlock Style="{StaticResource LabelText}"  Text="Nome:"/>
+                </Border>
+
+
+                <TextBox  Padding="10" FontSize="15" Margin="0 0 10 0">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+        </Grid>
+
+        <!--Consultar Quantidade-->
+
+        <Grid Grid.Column="2" Grid.Row="1" Margin="5" Grid.ColumnSpan="2">
+            <StackPanel Height="auto" Margin="5">
+
+                <Border Style="{StaticResource LabelBorder}">
+                    <TextBlock Style="{StaticResource LabelText}" Text="Quantidade:"/>
+                </Border>
+
+                <TextBox  Padding="10" FontSize="15" Margin="0 0 10 0">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+        </Grid>
+
+        <!--Consultar Descrição-->
+
+        <Grid Grid.Column="4" Grid.Row="1" Margin="5" Grid.ColumnSpan="2">
+            <StackPanel Height="auto" Margin="5">
+
+                <Border Style="{StaticResource LabelBorder}">
+                    <TextBlock Style="{StaticResource LabelText}" Text="Descrição:"/>
+                </Border>
+
+                <TextBox  Padding="10" FontSize="15" Margin="0 0 10 0">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+        </Grid>
+
+        <!--Consultar Valor-->
+
+        <Grid Grid.Column="6" Grid.Row="1" Margin="5" Grid.ColumnSpan="2">
+            <StackPanel Height="auto" Margin="5">
+
+                <Border Style="{StaticResource LabelBorder}">
+                    <TextBlock Style="{StaticResource LabelText}" Text="Valor:"/>
+                </Border>
+
+                <TextBox  Padding="10" FontSize="15" Margin="0 0 10 0">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+        </Grid>
+
+        <DataGrid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="6" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="DataGrid_SelectionChanged" Margin="5"/>
     </Grid>
 </Page>

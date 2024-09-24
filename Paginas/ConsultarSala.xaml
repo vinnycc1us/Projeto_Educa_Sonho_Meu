@@ -26,7 +26,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         
-        <Border Grid.Row="0" Grid.ColumnSpan="4"  Background="#9ceacd" Margin="20" CornerRadius="10 0 0 0" >
+        <Border Grid.Row="0" Grid.ColumnSpan="6"  Background="#9ceacd" Margin="20" CornerRadius="10 0 0 0" >
             <!--TextBlock Text="Cadastro de Turmas" FontSize="30" Padding="15 0" VerticalAlignment="Center" /-->
             <TextBox Margin="4,4,4,0" Background="Transparent" Text="Consultar Sala" FontSize="30"/>
         </Border>
