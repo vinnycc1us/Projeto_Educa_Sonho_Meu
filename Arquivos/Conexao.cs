@@ -7,56 +7,58 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System;
 using System.Data.SqlClient;
+using System.Xml.Linq;
 
 namespace Projeto_Educa_Sonho_Meu.Arquivos
 {
     class Conexao
     {
-        private string _servidor = "localhost";
-        private string _porta = "3306";
-        private string _usuario = "root";
-        private string _senha = "root";
-        private string bancoDadosNome = "CadastroCliente_bd";
+        private static string host = "localhost";
 
-        private MySqlConnection connection;
-        private MySqlCommand command;
+        private static string port = "3306";
+
+        private static string user = "root";
+
+        private static string password = "root";
+
+        private static string dbname = "bd_escola";
+
+        private static MySqlConnection connection;
+
+        private static MySqlCommand command;
 
         public Conexao()
-
         {
-
             try
             {
-                connection = new MySqlConnection($"server={_servidor}; database={bancoDadosNome}; port={_porta}; user={_usuario}; password={_senha}");
+                connection = new MySqlConnection($"server={host};database={dbname};port={port};user={user};password={password}");
                 connection.Open();
+
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                throw e;
+                throw ex;
             }
         }
-        public MySqlCommand Comando(string comando)
 
+        public MySqlCommand Query()
         {
-
             try
-
             {
-
                 command = connection.CreateCommand();
-
                 command.CommandType = CommandType.Text;
 
-                command.CommandText = comando;
-
                 return command;
-
             }
-
-            catch (Exception e)
+            catch (Exception ex)
             {
-                throw e;
+                throw ex;
             }
+        }
+
+        public void Close()
+        {
+            connection.Close();
         }
     }
 }
