@@ -187,17 +187,17 @@ namespace Projeto_Educa_Sonho_Meu.Paginas
         private void btnCadastrarEstoquePedagogico(object sender, RoutedEventArgs e)
         {
             // Instancia a nova janela
-            Window window = new Window();
-            window.Content = new CadastrarEstoquePedagogico();
-            framepaginainicial.Navigate(new CadastrarEstoquePedagogico());
+            //Window window = new Window();
+            //window.Content = new CadastrarEstoquePedagogico();
+            //framepaginainicial.Navigate(new CadastrarEstoquePedagogico());
         }
 
         private void btnConsultarEstoquePedagogico(object sender, RoutedEventArgs e)
         {
             // Instancia a nova janela
-            Window window = new Window();
-            window.Content = new ConsultarEstoquePedagogico();
-            framepaginainicial.Navigate(new ConsultarEstoquePedagogico());
+            //Window window = new Window();
+            //window.Content = new ConsultarEstoquePedagogico();
+            //framepaginainicial.Navigate(new ConsultarEstoquePedagogico());
         }
 
         private void btnEstoquePedagogico(object sender, RoutedEventArgs e)
