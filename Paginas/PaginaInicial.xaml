@@ -28,6 +28,9 @@
                     <Image Source="/Imagens/SonhoEduca.png" Width="800" Margin="5 11 0 5" ></Image>
                 </StackPanel>
             </Grid>
+            
+            
+            
         </Border>
 
             
