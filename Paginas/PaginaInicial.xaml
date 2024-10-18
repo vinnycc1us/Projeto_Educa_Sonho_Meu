@@ -36,374 +36,381 @@
             
         <Frame Grid.Column="1" Grid.Row="1"  x:Name="framepaginainicial" NavigationUIVisibility="Hidden"></Frame>
 
-        <StackPanel Grid.Column="0" Grid.RowSpan="2" VerticalAlignment="Center">
+        <ScrollViewer   Grid.Column="0" Grid.RowSpan="2" VerticalAlignment="Center">
+
+            <StackPanel >
 
 
-            <Button Name="NbtnAluno" BorderBrush="Transparent" Background="#b0e0e6" Cursor="Hand" Margin="5" Click="btnAluno"  >
-                <StackPanel>
-                    <TextBlock Text="Alunos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="NbtnAluno" BorderBrush="Transparent" Background="#b0e0e6" Cursor="Hand" Margin="5" Click="btnAluno"  >
+                    <StackPanel>
+                        <TextBlock Text="Alunos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnCadastrarAluno" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" Click="btnCadastrarAluno"  >
-                <StackPanel>
-                    <TextBlock Text="Cadastrar Alunos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnCadastrarAluno" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" Click="btnCadastrarAluno"  >
+                    <StackPanel>
+                        <TextBlock Text="Cadastrar Alunos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnConsultarAluno" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" Click="btnConsultarAluno">
+                <Button Name="nbtnConsultarAluno" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" Click="btnConsultarAluno">
 
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Consultar Alunos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center" />
-                    <Image Source="/Imagens/botao-de-inicio.png" Width="20" Margin="5 11 0 5" ></Image>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Consultar Alunos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center" />
+                        <Image Source="/Imagens/botao-de-inicio.png" Width="20" Margin="5 11 0 5" ></Image>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnTurma" Click="btnTurma" BorderBrush="Black" Background="#b0e0e6" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Turmas"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnTurma" Click="btnTurma" BorderBrush="Black" Background="#b0e0e6" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Turmas"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnCadastrarTurma" Click="btnCadastrarTurma" Visibility="Collapsed" BorderBrush="Black" Background="#c6ece1" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Cadastrar Turmas"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnCadastrarTurma" Click="btnCadastrarTurma" Visibility="Collapsed" BorderBrush="Black" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Cadastrar Turmas"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnConsultarTurma" Click="btnConsultarTurma" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Consultar Turmas"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnConsultarTurma" Click="btnConsultarTurma" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Consultar Turmas"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="Funcionario" Click="btnFuncionario" BorderBrush="Transparent" Background="#b0e0e6" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Funcionários"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="Funcionario" Click="btnFuncionario" BorderBrush="Transparent" Background="#b0e0e6" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Funcionários"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnCadastrarFuncionario" Click="btnCadastrarFuncionario" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Cadastrar Funcionários"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnCadastrarFuncionario" Click="btnCadastrarFuncionario" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Cadastrar Funcionários"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnConsultarFuncionario" Click="btnConsultarFuncionario" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Consultar Funcionarios"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnConsultarFuncionario" Click="btnConsultarFuncionario" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Consultar Funcionarios"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="Sala" Click="btnSala" BorderBrush="Transparent" Background="#b0e0e6" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Salas"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="Sala" Click="btnSala" BorderBrush="Transparent" Background="#b0e0e6" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Salas"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnCadastrarSala" Click="btnCadastrarSala" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Cadastrar Salas"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnCadastrarSala" Click="btnCadastrarSala" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Cadastrar Salas"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnConsultarSala" Click="btnConsultarSala" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Consultar Salas"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnConsultarSala" Click="btnConsultarSala" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Consultar Salas"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="Sonho" Click="btnSonho" BorderBrush="Transparent" Background="#b0e0e6" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Sonhos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="Sonho" Click="btnSonho" BorderBrush="Transparent" Background="#b0e0e6" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Sonhos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnCadastrarSonhoEntrada" Click="btnCadastrarSonhoEntrada" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Cadastrar Entrada de Sonhos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnCadastrarSonhoEntrada" Click="btnCadastrarSonhoEntrada" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Cadastrar Entrada de Sonhos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnCadastrarSonhoSaida" Click="btnCadastrarSonhoSaida" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Cadastrar Saida de Sonhos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnCadastrarSonhoSaida" Click="btnCadastrarSonhoSaida" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Cadastrar Saida de Sonhos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="EstoquePedagogico" Click="btnEstoquePedagogico" BorderBrush="Transparent" Background="#b0e0e6" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Estoques Pedagógicos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="EstoquePedagogico" Click="btnEstoquePedagogico" BorderBrush="Transparent" Background="#b0e0e6" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Estoques Pedagógicos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnCadastrarEstoquePedagogico" Click="btnCadastrarEstoquePedagogico" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Cadastrar Estoques Pedagógicos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnCadastrarEstoquePedagogico" Click="btnCadastrarEstoquePedagogico" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Cadastrar Estoques Pedagógicos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnConsultarEstoquePedagogico" Click="btnConsultarEstoquePedagogico" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Consultar Estoques Pedagógicos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnConsultarEstoquePedagogico" Click="btnConsultarEstoquePedagogico" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Consultar Estoques Pedagógicos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="NbtnBiblioteca" Click="btnBiblioteca" BorderBrush="Transparent" Background="#b0e0e6" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Bibliotecas"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="NbtnBiblioteca" Click="btnBiblioteca" BorderBrush="Transparent" Background="#b0e0e6" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Bibliotecas"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnCadastrarBiblioteca" Click="btnCadastrarBiblioteca" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Cadastrar Bibliotecas"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnCadastrarBiblioteca" Click="btnCadastrarBiblioteca" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Cadastrar Bibliotecas"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnConsultarBiblioteca" Click="btnConsultarBiblioteca" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Consultar Bibliotecas"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnConsultarBiblioteca" Click="btnConsultarBiblioteca" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Consultar Bibliotecas"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="Instrumento" Click="btnInstrumento" BorderBrush="Transparent" Background="#b0e0e6" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Instrumentos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="Instrumento" Click="btnInstrumento" BorderBrush="Transparent" Background="#b0e0e6" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Instrumentos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnCadastrarInstrumento" Click="btnCadastrarInstrumento" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Cadastrar Instrumentos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnCadastrarInstrumento" Click="btnCadastrarInstrumento" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Cadastrar Instrumentos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnConsultarInstrumento" Click="btnConsultarInstrumento" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Consultar Instrumentos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnConsultarInstrumento" Click="btnConsultarInstrumento" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Consultar Instrumentos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnProjeto" Click="btnProjeto" BorderBrush="Transparent" Background="#b0e0e6" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text=" Projetos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnProjeto" Click="btnProjeto" BorderBrush="Transparent" Background="#b0e0e6" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text=" Projetos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnCadastrarProjeto" Click="btnCadastrarProjeto" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Cadastrar Projetos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnCadastrarProjeto" Click="btnCadastrarProjeto" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Cadastrar Projetos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnConsultarProjeto" Click="btnConsultarProjeto" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Consultar Projetos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnConsultarProjeto" Click="btnConsultarProjeto" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Consultar Projetos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnRecursoFinanceiro" Click="btnRecursoFinanceiro"  BorderBrush="Transparent" Background="#b0e0e6" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Recursos Financeiros"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnRecursoFinanceiro" Click="btnRecursoFinanceiro"  BorderBrush="Transparent" Background="#b0e0e6" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Recursos Financeiros"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnCadastrarRecursoFinanceiro" Click="btnCadastrarRecursoFinanceiro" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Cadastrar Recursos Financeiros"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnCadastrarRecursoFinanceiro" Click="btnCadastrarRecursoFinanceiro" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Cadastrar Recursos Financeiros"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnConsultarRecursoFinanceiro" Click="btnConsultarRecursoFinanceiro" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Consultar Recursos Financeiros"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnConsultarRecursoFinanceiro" Click="btnConsultarRecursoFinanceiro" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Consultar Recursos Financeiros"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnCalendarioAcademico" Click="btnCalendarioAcademico"  BorderBrush="Transparent" Background="#b0e0e6" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Calendários Acadêmicos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnCalendarioAcademico" Click="btnCalendarioAcademico"  BorderBrush="Transparent" Background="#b0e0e6" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Calendários Acadêmicos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnCadastrarCalendarioAcademico" Click="btnCadastrarCalendarioAcademico" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Cadastrar Calendários Acadêmicos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnCadastrarCalendarioAcademico" Click="btnCadastrarCalendarioAcademico" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Cadastrar Calendários Acadêmicos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-            <Button Name="nbtnConsultarCalendarioAcademico" Click="btnConsultarCalendarioAcademico" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
-                <StackPanel>
-                    <TextBlock Text="Consultar Calendários Acadêmicos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
+                <Button Name="nbtnConsultarCalendarioAcademico" Click="btnConsultarCalendarioAcademico" Visibility="Collapsed" BorderBrush="Transparent" Background="#c6ece1" Cursor="Hand" Margin="5" >
+                    <StackPanel>
+                        <TextBlock Text="Consultar Calendários Acadêmicos"  FontSize="15" FontFamily="Segoe UI" Padding="0 10 6 5" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-        </StackPanel>
+            </StackPanel>
+
+        </ScrollViewer>
+
+
+      
     </Grid>
 </Window>
