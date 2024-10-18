@@ -15,7 +15,7 @@ CREATE TABLE Responsavel (
   nome_completo_resp VARCHAR(255) NOT NULL,
   cpf_resp VARCHAR(255) NOT NULL,
   rg_resp VARCHAR(255) NOT NULL,
-  orga_expeditor_resp VARCHAR(255) NOT NULL,
+  orgao_expeditor_resp VARCHAR(255) NOT NULL,
   telefone_resp varchar(255),
   telefone_alternativo_resp varchar(255),
   telefone_fixo_resp varchar(255),
