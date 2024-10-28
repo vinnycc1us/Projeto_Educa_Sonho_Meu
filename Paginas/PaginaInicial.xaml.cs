@@ -23,6 +23,14 @@ namespace Projeto_Educa_Sonho_Meu.Paginas
             Loaded += PaginaInicial_Loaded;
         }
 
+        private void btnDirecionarPaginaInicial(object sender, RoutedEventArgs e)
+        {
+            // Instancia a nova janela
+            PaginaInicial paginaInicial = new PaginaInicial();
+            // Navega para a nova página
+            this.NavigationService.Navigate(paginaInicial);
+        }
+
         private void PaginaInicial_Loaded(object sender, RoutedEventArgs e)
         {
             framepaginainicial.Navigate(new CadastrarAluno());
