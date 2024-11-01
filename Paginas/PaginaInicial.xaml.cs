@@ -1,28 +1,33 @@
 ﻿using System;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Projeto_Educa_Sonho_Meu.Paginas
 {
-    public partial class PaginaInicial : Window
+    /// <summary>
+    /// Interação lógica para PaginaInicial.xam
+    /// </summary>
+    public partial class PaginaInicial : Page
     {
         public PaginaInicial()
         {
             InitializeComponent();
-            Loaded += PaginaInicial_Loaded;
+        }     
+        private void PaginaInicial_Loaded(object sender, RoutedEventArgs e)
+        {
+            framepaginainicial.Navigate(new CadastrarAluno());
         }
-
         private void btnDirecionarPaginaInicial(object sender, RoutedEventArgs e)
         {
             // Instancia a nova janela
@@ -30,12 +35,6 @@ namespace Projeto_Educa_Sonho_Meu.Paginas
             // Navega para a nova página
             this.NavigationService.Navigate(paginaInicial);
         }
-
-        private void PaginaInicial_Loaded(object sender, RoutedEventArgs e)
-        {
-            framepaginainicial.Navigate(new CadastrarAluno());
-        }
-
         private void btnCadastrarAluno(object sender, RoutedEventArgs e)
         {
             // Instancia a nova janela
@@ -48,7 +47,7 @@ namespace Projeto_Educa_Sonho_Meu.Paginas
         {
             // Instancia a nova janela
             Window window = new Window();
-            window.Content = new ConsultarAluno();         
+            window.Content = new ConsultarAluno();
             framepaginainicial.Navigate(new ConsultarAluno());
         }
 
@@ -379,5 +378,4 @@ namespace Projeto_Educa_Sonho_Meu.Paginas
             }
         }
     }
-
 }

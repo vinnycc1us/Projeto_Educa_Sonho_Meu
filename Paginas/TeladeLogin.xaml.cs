@@ -10,16 +10,15 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Projeto_Educa_Sonho_Meu.Paginas
 {
     /// <summary>
-    /// Interação lógica para TeladeLogin.xam
+    /// Lógica interna para TeladeLogin.xaml
     /// </summary>
-    public partial class TeladeLogin : Page
-    {
+    public partial class TeladeLogin : Window
+    {    
         public TeladeLogin()
         {
             InitializeComponent();
@@ -27,10 +26,10 @@ namespace Projeto_Educa_Sonho_Meu.Paginas
 
         private void btnDirecionarPaginaInicial(object sender, RoutedEventArgs e)
         {
-            // Instancia a nova janela
+            PaginaInicial paginaInicial = new PaginaInicial();
             Window window = new Window();
-            window.Content = new PaginaInicial();
-            framepaginainicial.Navigate(new PaginaInicial());
+            window.Content = paginaInicial;
+            window.Show();
         }
     }
 }
