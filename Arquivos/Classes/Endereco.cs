@@ -23,5 +23,9 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             this.numero_end = numero_end;
             this.cep_end = cep_end;
         }
+
+        public Endereco()
+        {
+        }
     }
 }

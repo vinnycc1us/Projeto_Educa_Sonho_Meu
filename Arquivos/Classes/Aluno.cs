@@ -47,5 +47,9 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             this.parecer_social_alun = parecer_social;
             this.nivel_prioridade_alun = nivel_prioridade_alun;
         }
+
+        public Aluno()
+        {
+        }
     }
 }

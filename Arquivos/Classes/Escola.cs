@@ -17,5 +17,9 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             this.nome_esc = nome_esc;
             this.id_end_fk = id_end_fk;
         }
+
+        public Escola()
+        {
+        }
     }
 }

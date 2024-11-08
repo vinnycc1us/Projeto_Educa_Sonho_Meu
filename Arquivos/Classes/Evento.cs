@@ -22,5 +22,9 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             this.id_end_fk = id_end_fk;
             this.descricao_even = descricao_even;
         }
+
+        public Evento()
+        {
+        }
     }
 }

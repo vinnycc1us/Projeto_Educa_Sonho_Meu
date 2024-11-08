@@ -22,5 +22,9 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             this.destino_desp = destino_desp;
             this.data_desp = data_desp;
         }
+
+        public Despesas()
+        {
+        }
     }
 }
