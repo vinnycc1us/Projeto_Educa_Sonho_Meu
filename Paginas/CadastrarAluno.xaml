@@ -9,7 +9,7 @@
       Title="CadastrarAluno">
 
 
-    <Grid  Background="White" Margin="0,10,-302,-391">
+    <Grid  Background="#f0ffff" Margin="0,10,-302,-391">
         <!--Esse Grid define em quantas parte a tela sera dividida horizontalmente
     sendo dividido em duas parte, um usando 20% da tela, e a outra usando 80% da tela-->
 
@@ -36,7 +36,7 @@
 
         <!--Define a cor de fundo do Titulo da pagina e a fonte-->
 
-        <Border Grid.Row="0" Grid.ColumnSpan="4" Background="#9ceacd" Margin="15" CornerRadius="10 0 0 0" >
+        <Border Grid.Row="0" Grid.ColumnSpan="4" Background="#b3ffec" Margin="15" CornerRadius="10 0 0 0" >
             <!--TextBlock Text="Cadastro de Turmas" FontSize="30" Padding="15 0" VerticalAlignment="Center" /-->
             <TextBox Margin="4,4,4,0" Background="Transparent" Text="Cadastro de Aluno" FontSize="30"/>
         </Border>
@@ -52,7 +52,7 @@
         <!-- Label e combobox do page para consertar -->
 
         <Grid Grid.Row="1" Margin="10,10,33,-327">
-            <Grid.ColumnDefinitions>
+            <Grid.ColumnDefinitions >
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -71,7 +71,7 @@
             </Grid.RowDefinitions>
 
 
-            <Grid Grid.Column="0" Grid.Row="0" Margin="5">
+            <Grid Grid.Column="0" Grid.Row="0" Margin="5" Background="#f0ffff">
                 <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
 
                     <Border Style="{StaticResource LabelBorder}">
@@ -91,7 +91,7 @@
 
             <!--Outro texto-->
 
-            <Grid Grid.Column="0" Grid.Row="1" Margin="5">
+            <Grid Grid.Column="0" Grid.Row="1" Margin="5" >
                 <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
 
                     <Border Style="{StaticResource LabelBorder}">
