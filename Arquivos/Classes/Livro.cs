@@ -8,7 +8,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
 {
     internal class Livro
     {
-         public int id_liv { get; set; }
+        public int id_liv { get; set; }
         public string nome_liv { get; set; }
         public int quantidade_liv { get; set; }
         public string descricao_liv { get; set; }

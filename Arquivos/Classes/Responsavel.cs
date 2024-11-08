@@ -16,7 +16,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
         public string telefone_resp { get; set; }
         public string telefone_alternativo_resp { get; set; }
         public string telefone_fixo_resp { get; set; }
-        string telefone_recado_resp { get; set; }
+        public string telefone_recado_resp { get; set; }
 
         public Responsavel(string nome_completo_resp, string cpf_resp, string rg_resp, string orgao_expeditor_resp, 
             string telefone_resp, string telefone_alternativo_resp, string telefone_fixo_resp, string telefone_recado_resp)
