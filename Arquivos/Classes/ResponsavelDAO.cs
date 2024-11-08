@@ -18,7 +18,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 var comando = _conn.Query();
 
                 comando.CommandText = "INSERT INTO responsavel VALUES " +
-                "(null, @nome_completo, @cpf, @rg, @orgao_expedidor, @telefone, @telefone_alternativo, @telefone_fixo, @telefone_recado)";
+                "(null, @nome_completo, @cpf, @rg, @orgao_expeditor, @telefone, @telefone_alternativo, @telefone_fixo, @telefone_recado)";
 
 
                 comando.Parameters.AddWithValue("@nome", obj.nome_completo_resp);
@@ -48,23 +48,25 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
         {
             try
             {
-                var lista = new List<responsavel>();
+                var lista = new List<Responsavel>();
                 var comando = _conn.Query();
 
-                comando.CommandText = "SELECT * FROM responsavel, Escola WHERE responsavel.id_esc_fk = Escola.id_esc";
-
+                
                 MySqlDataReader reader = comando.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    var responsavel = new responsavel();
+                    var responsavel = new Responsavel();
 
-                    responsavel.Id = reader.GetInt32("id_cur");
-                    responsavel.Nome = DAOHelper.GetString(reader, "nome_cur");
-                    responsavel.Descricao = DAOHelper.GetString(reader, "descricao_cur");
-                    responsavel.Turno = DAOHelper.GetString(reader, "turno_cur");
-                    responsavel.Escola.Id = reader.GetInt32("id_esc_fk");
-                    responsavel.Escola.NomeFantasia = DAOHelper.GetString(reader, "nome_fantasia_esc");
+                    responsavel.id_resp = reader.GetInt32("id_resp");
+                    responsavel.nome_completo_resp = DAOHelper.GetString(reader, "nome_completo_resp");
+                    responsavel.cpf_resp = DAOHelper.GetString(reader, "cpf_resp");
+                    responsavel.rg_resp = DAOHelper.GetString(reader, "rg_resp");
+                    responsavel.orgao_expeditor_resp = reader.GetString("orgao_expeditor_resp");
+                    responsavel.telefone_resp = DAOHelper.GetString(reader, "telefoe_resp");
+                    responsavel.telefone_alternativo_resp = DAOHelper.GetString(reader, "telefone-alternativo_resp");
+                    responsavel.telefone_fixo_resp = DAOHelper.GetString(reader, "telefone_fixo_resp");
+                    responsavel.telefone_recado_resp = DAOHelper.GetString(reader, "telefone_recado_resp");
 
                     lista.Add(responsavel);
                 }
@@ -86,9 +88,9 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "DELETE FROM responsavel WHERE id_cur = @id";
+                comando.CommandText = "DELETE FROM responsavel WHERE id_resp = @id";
 
-                comando.Parameters.AddWithValue("@id", obj.Id);
+                comando.Parameters.AddWithValue("@id", obj.id_resp);
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -110,22 +112,23 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "UPDATE Escola SET " +
-                "nome_fantasia_esc = @nome, razao_social_esc = @razao, cnpj_esc = @cnpj, insc_estadual_esc = @inscricao," +
-                " tipo_esc = @tipo, data_criacao_esc = @data_criacao, responsavel_esc = @resp " +
-                "WHERE id_esc = @id";
+                comando.CommandText = "UPDATE Responsavel SET " +
+                "nome_completo_resp = @nome-completo, cpf_resp = @cpf, rg_resp = @rg, orgao-expeditor_resp = @orgao_expeditor," +
+                " telefone_resp = @telefone, telefone_alternativo_resp = @telefone_alternativo, telefone_fixo_resp = @telefone_fixo, telefone_recado_resp = @telefone_recado " +
+                "WHERE id_resp = @id";
 
-                /*
-                comando.Parameters.AddWithValue("@nome", escola.NomeFantasia);
-                comando.Parameters.AddWithValue("@razao", escola.RazaoSocial);
-                comando.Parameters.AddWithValue("@cnpj", escola.Cnpj);
-                comando.Parameters.AddWithValue("@inscricao", escola.InscEstadual);
-                comando.Parameters.AddWithValue("@tipo", escola.Tipo);
-                comando.Parameters.AddWithValue("@data_criacao", escola.DataCriacao?.ToString("yyyy-MM-dd"));
-                comando.Parameters.AddWithValue("@resp", escola.Responsavel);
+                
+                comando.Parameters.AddWithValue("@nome", obj.nome_completo_resp);
+                comando.Parameters.AddWithValue("@cpf", obj.cpf_resp);
+                comando.Parameters.AddWithValue("@rg", obj.rg_resp);
+                comando.Parameters.AddWithValue("@orgao_expeditor", obj.orgao_expeditor_resp);
+                comando.Parameters.AddWithValue("@telefone", obj.telefone_resp);
+                comando.Parameters.AddWithValue("@telefone_alternativo", obj.telefone_alternativo_resp);
+                comando.Parameters.AddWithValue("@telefone_fixo", obj.telefone_fixo_resp);
+                comando.Parameters.AddWithValue("@telefone_recado", obj.telefone_recado_resp);
 
-                comando.Parameters.AddWithValue("@id", escola.Id);
-                */
+                comando.Parameters.AddWithValue("@id", obj.id_resp);
+                
 
                 var resultado = comando.ExecuteNonQuery();
 
