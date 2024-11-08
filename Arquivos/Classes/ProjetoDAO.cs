@@ -20,10 +20,10 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 comando.CommandText = "INSERT INTO projeto VALUES " +
                 "(null, @nome, @coordenador, @descricao, @ano_inicio);";
 
-                comando.Parameters.AddWithValue("@nome", projeto.nome_proj);
-                comando.Parameters.AddWithValue("@coordenador", projeto.coordenador_proj);
-                comando.Parameters.AddWithValue("@descricao", projeto.descricao_proj);
-                comando.Parameters.AddWithValue("@ano_inicio", projeto.ano_inicio_proj);
+                comando.Parameters.AddWithValue("@nome", projeto.Nome);
+                comando.Parameters.AddWithValue("@coordenador", projeto.Coordenador);
+                comando.Parameters.AddWithValue("@descricao", projeto.Descricao);
+                comando.Parameters.AddWithValue("@ano_inicio", projeto.Ano_inicio);
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -39,11 +39,11 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             }
         }
 
-        public List<projeto> List()
+        public List<Projeto> List()
         {
             try
             {
-                var lista = new List<projeto>();
+                var lista = new List<Projeto>();
                 var comando = _conn.Query();
 
                 comando.CommandText = "SELECT * FROM projeto";
@@ -52,19 +52,13 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
 
                 while (reader.Read())
                 {
-                    var projeto = new projeto();
+                    var projeto = new Projeto();
 
-                    projeto.Id = reader.GetInt32("id_esc");
-                    projeto.NomeFantasia = DAOHelper.GetString(reader, "nome_fantasia_esc");
-                    projeto.RazaoSocial = DAOHelper.GetString(reader, "razao_social_esc");
-                    projeto.Cnpj = DAOHelper.GetString(reader, "cnpj_esc");
-                    projeto.InscEstadual = DAOHelper.GetString(reader, "insc_estadual_esc");
-                    projeto.Tipo = DAOHelper.GetString(reader, "tipo_esc");
-                    projeto.Email = DAOHelper.GetString(reader, "email_esc");
-                    projeto.Telefone = DAOHelper.GetString(reader, "telefone_esc");
-                    projeto.Responsavel = DAOHelper.GetString(reader, "responsavel_esc");
-                    projeto.ResponsavelTelefone = DAOHelper.GetString(reader, "responsavel_telefone_esc");
-                    projeto.DataCriacao = DAOHelper.GetDateTime(reader, "data_criacao_esc");
+                    projeto.Id = reader.GetInt32("id_proj");
+                    projeto.Nome = DAOHelper.GetString(reader, "nome_proj");
+                    projeto.Coordenador = DAOHelper.GetString(reader, "coordenador_proj");
+                    projeto.Descricao = DAOHelper.GetString(reader, "descricao_proj");
+                    projeto.Ano_inicio = reader.GetInt32("ano_inicio_proj");
 
                     lista.Add(projeto);
                 }
@@ -80,7 +74,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             }
         }
 
-        public void Delete(projeto projeto)
+        public void Delete(Projeto projeto)
         {
             try
             {
@@ -105,7 +99,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
         }
 
 
-        public void Update(projeto projeto)
+        public void Update(Projeto projeto)
         {
             try
             {
@@ -116,13 +110,10 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 " tipo_esc = @tipo, data_criacao_esc = @data_criacao, responsavel_esc = @resp " +
                 "WHERE id_esc = @id";
 
-                comando.Parameters.AddWithValue("@nome", projeto.NomeFantasia);
-                comando.Parameters.AddWithValue("@razao", projeto.RazaoSocial);
-                comando.Parameters.AddWithValue("@cnpj", projeto.Cnpj);
-                comando.Parameters.AddWithValue("@inscricao", projeto.InscEstadual);
-                comando.Parameters.AddWithValue("@tipo", projeto.Tipo);
-                comando.Parameters.AddWithValue("@data_criacao", projeto.DataCriacao?.ToString("yyyy-MM-dd"));
-                comando.Parameters.AddWithValue("@resp", projeto.Responsavel);
+                comando.Parameters.AddWithValue("@nome", projeto.Nome);
+                comando.Parameters.AddWithValue("@razao", projeto.Coordenador);
+                comando.Parameters.AddWithValue("@cnpj", projeto.Descricao);
+                comando.Parameters.AddWithValue("@inscricao", projeto.Ano_inicio);
 
                 comando.Parameters.AddWithValue("@id", projeto.Id);
 

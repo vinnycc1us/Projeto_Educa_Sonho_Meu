@@ -6,21 +6,25 @@ using System.Threading.Tasks;
 
 namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
 {
-    internal class Projeto
+    public class Projeto
     {
-        public int id_proj {  get; set; }
-        public string nome_proj {  get; set; }
-        public string coordenador_proj { get; set; }
-        public string descricao_proj {  get; set; }
-        public int ano_inicio_proj { get; set; }
+        public int Id {  get; set; }
+        public string Nome {  get; set; }
+        public string Coordenador { get; set; }
+        public string Descricao {  get; set; }
+        public int Ano_inicio { get; set; }
 
         public Projeto(int id_proj, string nome_proj, string coordenador_proj, string descricao_proj, int ano_inicio_proj)
         {
-            this.id_proj = id_proj;
-            this.nome_proj = nome_proj;
-            this.coordenador_proj = coordenador_proj;
-            this.descricao_proj = descricao_proj;
-            this.ano_inicio_proj = ano_inicio_proj;
+            this.Id = id_proj;
+            this.Nome = nome_proj;
+            this.Coordenador = coordenador_proj;
+            this.Descricao = descricao_proj;
+            this.Ano_inicio = ano_inicio_proj;
+        }
+
+        public Projeto()
+        {
         }
     }
 }
