@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="CadastrarMaterial">
 
-    <Grid Background="White">
+    <Grid Background="#f0ffff">
         <Grid.ColumnDefinitions >
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>

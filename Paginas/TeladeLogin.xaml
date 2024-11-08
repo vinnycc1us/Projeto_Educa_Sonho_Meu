@@ -25,7 +25,7 @@
                 </StackPanel>
             </Border>
 
-            <Border Background="#68d49b" Grid.Column="1" Grid.RowSpan="3"></Border>
+            <Border Background="#f0ffff" Grid.Column="1" Grid.RowSpan="3"></Border>
 
             <StackPanel Grid.Column="1" Grid.Row="1">
                 <Button Name="NbtnDirecionarPaginaInicial" BorderBrush="Transparent" Background="#b0e0e6" Cursor="Hand" Margin="5" Click="btnDirecionarPaginaInicial" VerticalAlignment="Center"   >

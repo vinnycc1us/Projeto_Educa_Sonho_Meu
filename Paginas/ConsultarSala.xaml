@@ -9,7 +9,7 @@
       Title="ConsultarSala">
 
 
-    <Grid Background="White">
+    <Grid Background="#f0ffff">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
