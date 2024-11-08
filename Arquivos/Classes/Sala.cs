@@ -13,6 +13,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
         public string nome_sal { get; set; }
         public string localizacao_sal { get; set; }
         public string capacidade_sal {get; set; }
+        public Turma turma {  get; set; }
         public int id_turma_fk {get; set; }
 
         public Sala(string nome_sal, string localizacao_sal, string capacidade_sal, int id_turm_fk)

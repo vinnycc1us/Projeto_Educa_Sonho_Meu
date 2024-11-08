@@ -44,24 +44,23 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
         {
             try
             {
-                var lista = new List<sala>();
+                var lista = new List<Sala>();
                 var comando = _conn.Query();
 
-                comando.CommandText = "SELECT * FROM sala, Escola WHERE sala.id_esc_fk = Escola.id_esc";
+                comando.CommandText = "SELECT * FROM sala, Turma WHERE sala.id_turma_fk = Turma.id_turm";
 
                 MySqlDataReader reader = comando.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    var sala = new sala();
+                    var sala = new Sala();
 
-                    sala.Id = reader.GetInt32("id_cur");
-                    sala.Nome = DAOHelper.GetString(reader, "nome_cur");
-                    sala.Descricao = DAOHelper.GetString(reader, "descricao_cur");
-                    sala.Turno = DAOHelper.GetString(reader, "turno_cur");
-                    sala.Escola.Id = reader.GetInt32("id_esc_fk");
-                    sala.Escola.NomeFantasia = DAOHelper.GetString(reader, "nome_fantasia_esc");
-
+                    sala.id_sal = reader.GetInt32("id_sal");
+                    sala.nome_sal = DAOHelper.GetString(reader, "nome_sal");
+                    sala.localizacao_sal = DAOHelper.GetString(reader, "localizacao_sal");
+                    sala.capacidade_sal = DAOHelper.GetString(reader, "capacidade_sal");
+                    sala.turma.id_turm = reader.GetInt32("id_turma_fk");
+                   
                     lista.Add(sala);
                 }
 
@@ -82,9 +81,9 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "DELETE FROM sala WHERE id_cur = @id";
+                comando.CommandText = "DELETE FROM sala WHERE id_sal = @id";
 
-                comando.Parameters.AddWithValue("@id", obj.Id);
+                comando.Parameters.AddWithValue("@id", obj.id_sal);
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -106,22 +105,19 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "UPDATE Escola SET " +
-                "nome_fantasia_esc = @nome, razao_social_esc = @razao, cnpj_esc = @cnpj, insc_estadual_esc = @inscricao," +
-                " tipo_esc = @tipo, data_criacao_esc = @data_criacao, responsavel_esc = @resp " +
-                "WHERE id_esc = @id";
+                comando.CommandText = "UPDATE Sala SET " +
+                "nome_sal = @nome, localizacao-sal = @localizacao, capacidade_sal = @capacidade" +
+                "WHERE id_sal = @id";
 
-                /*
-                comando.Parameters.AddWithValue("@nome", escola.NomeFantasia);
-                comando.Parameters.AddWithValue("@razao", escola.RazaoSocial);
-                comando.Parameters.AddWithValue("@cnpj", escola.Cnpj);
-                comando.Parameters.AddWithValue("@inscricao", escola.InscEstadual);
-                comando.Parameters.AddWithValue("@tipo", escola.Tipo);
-                comando.Parameters.AddWithValue("@data_criacao", escola.DataCriacao?.ToString("yyyy-MM-dd"));
-                comando.Parameters.AddWithValue("@resp", escola.Responsavel);
+                
+                comando.Parameters.AddWithValue("@nome", obj.nome_sal);
+                comando.Parameters.AddWithValue("@razao", obj.localizacao_sal);
+                comando.Parameters.AddWithValue("@cnpj", obj.capacidade_sal);
+                comando.Parameters.AddWithValue("@inscricao", obj.id_turma_fk);
+             
 
-                comando.Parameters.AddWithValue("@id", escola.Id);
-                */
+                comando.Parameters.AddWithValue("@id", obj.id_sal);
+                
 
                 var resultado = comando.ExecuteNonQuery();
 

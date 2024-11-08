@@ -148,10 +148,10 @@ CREATE TABLE Evento (
   foreign key (id_func_fk) references Funcionario (id_func)
 );
 CREATE TABLE Recurso (
-  id_recu INT PRIMARY KEY AUTO_INCREMENT,
-  doador_recu VARCHAR(255) NOT NULL,
-  valor_recu double NOT NULL,
-  destino_recu VARCHAR(255) NOT NULL,
+  Id INT PRIMARY KEY AUTO_INCREMENT,
+  Doador VARCHAR(255) NOT NULL,
+  Valor double NOT NULL,
+  Destino VARCHAR(255) NOT NULL,
   data_recu date NOT NULL
 );
 CREATE TABLE Despesa (

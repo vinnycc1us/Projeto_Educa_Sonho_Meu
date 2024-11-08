@@ -8,19 +8,19 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
 {
     public class Recursos
     {
-        public int id_recu {get; set;}
-        public string doador_recu {  get; set;} 
-        public double valor_recu { get;set;}
-        public string destino_recu { get; set;}
-        public DateTime date_recu { get; set;}
+        public int Id {get; set;}
+        public string Doador {  get; set;} 
+        public double Valor { get;set;}
+        public string Destino { get; set;}
+        public DateTime Date { get; set;}
 
-        public Recursos(int id_recu, string doador_recu, double valor_recu, string destino_recu, DateTime date_recu)
+        public Recursos(int Id, string Doador, double Valor, string Destino, DateTime Date)
         {
-            this.id_recu = id_recu;
-            this.doador_recu = doador_recu;
-            this.valor_recu = valor_recu;
-            this.destino_recu = destino_recu;
-            this.date_recu = date_recu;
+            this.Id = Id;
+            this.Doador = Doador;
+            this.Valor = Valor;
+            this.Destino = Destino;
+            this.Date = Date;
         }
 
         public Recursos()

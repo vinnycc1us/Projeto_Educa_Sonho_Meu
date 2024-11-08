@@ -21,10 +21,10 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 "(null, @doador, @valor, @destino, @date)";
 
 
-                comando.Parameters.AddWithValue("@doador", obj.doador_recu);
-                comando.Parameters.AddWithValue("@valor", obj.valor_recu);
-                comando.Parameters.AddWithValue("@destino", obj.destino_recu);
-                comando.Parameters.AddWithValue("@date", obj.date_recu);
+                comando.Parameters.AddWithValue("@doador", obj.Doador);
+                comando.Parameters.AddWithValue("@valor", obj.Valor);
+                comando.Parameters.AddWithValue("@destino", obj.Destino);
+                comando.Parameters.AddWithValue("@date", obj.Date);
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -54,11 +54,11 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 {
                     var recursos = new Recursos();
 
-                    recursos.id_recu = reader.GetInt32("id_recu");
-                    recursos.doador_recu = DAOHelper.GetString(reader, "doador_recu");
-                    recursos.valor_recu = DAOHelper.GetDouble(reader, "valor_recu");
-                    recursos.destino_recu = DAOHelper.GetString(reader, "destino_recu");
-                    recursos.date_recu = reader.GetDateTime("date_recu");
+                    recursos.Id = reader.GetInt32("Id");
+                    recursos.Doador = DAOHelper.GetString(reader, "Doador");
+                    recursos.Valor = DAOHelper.GetDouble(reader, "Valor");
+                    recursos.Destino = DAOHelper.GetString(reader, "Destino");
+                    recursos.Date = reader.GetDateTime("Date");
                    
                     lista.Add(recursos);
                 }
@@ -80,9 +80,9 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "DELETE FROM recursos WHERE id_recu = @id";
+                comando.CommandText = "DELETE FROM recursos WHERE Id = @id";
 
-                comando.Parameters.AddWithValue("@id", obj.id_recu);
+                comando.Parameters.AddWithValue("@id", obj.Id);
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -104,22 +104,19 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "UPDATE Escola SET " +
-                "nome_fantasia_esc = @nome, razao_social_esc = @razao, cnpj_esc = @cnpj, insc_estadual_esc = @inscricao," +
-                " tipo_esc = @tipo, data_criacao_esc = @data_criacao, responsavel_esc = @resp " +
-                "WHERE id_recu = @id";
+                comando.CommandText = "UPDATE Recursos SET " +
+                "Doador = @doador, Valor = @valor, Destino = @destino," +
+                " Date = @date" + "WHERE Id = @id";
 
-                /*
-                comando.Parameters.AddWithValue("@nome", escola.NomeFantasia);
-                comando.Parameters.AddWithValue("@razao", escola.RazaoSocial);
-                comando.Parameters.AddWithValue("@cnpj", escola.Cnpj);
-                comando.Parameters.AddWithValue("@inscricao", escola.InscEstadual);
-                comando.Parameters.AddWithValue("@tipo", escola.Tipo);
-                comando.Parameters.AddWithValue("@data_criacao", escola.DataCriacao?.ToString("yyyy-MM-dd"));
-                comando.Parameters.AddWithValue("@resp", escola.Responsavel);
+                           
+                comando.Parameters.AddWithValue("@doador", obj.Doador);
+                comando.Parameters.AddWithValue("@cnpj", obj.Valor);
+                comando.Parameters.AddWithValue("@inscricao", obj.Destino);
+                comando.Parameters.AddWithValue("@tipo", obj.Date);
+;
 
-                comando.Parameters.AddWithValue("@id", escola.Id);
-                */
+                comando.Parameters.AddWithValue("@id", obj.Id);
+                
 
                 var resultado = comando.ExecuteNonQuery();
 
