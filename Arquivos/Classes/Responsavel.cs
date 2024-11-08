@@ -30,5 +30,9 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             this.telefone_fixo_resp = telefone_fixo_resp;
             this.telefone_recado_resp = telefone_recado_resp;
         }
+
+        public Responsavel()
+        {
+        }
     }
 }

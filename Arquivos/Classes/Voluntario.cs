@@ -23,5 +23,9 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             this.numero_telefone_volu = numero_telefone_volu;
             this.id_end_fk = id_end_fk;
         }
+
+        public Voluntario()
+        {
+        }
     }
 }

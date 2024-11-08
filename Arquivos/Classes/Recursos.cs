@@ -22,6 +22,10 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             this.destino_recu = destino_recu;
             this.date_recu = date_recu;
         }
+
+        public Recursos()
+        {
+        }
     }
  
 }

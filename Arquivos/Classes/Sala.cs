@@ -22,5 +22,9 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             this.capacidade_sal = capacidade_sal;
             this.id_turma_fk = id_turma_fk;
         }
+
+        public Sala()
+        {
+        }
     }
 }

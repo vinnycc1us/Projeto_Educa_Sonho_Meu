@@ -47,21 +47,19 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 var lista = new List<Recursos>();
                 var comando = _conn.Query();
 
-                comando.CommandText = "SELECT * FROM recursos, Escola WHERE recursos.id_esc_fk = Escola.id_esc";
 
                 MySqlDataReader reader = comando.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    var recursos = new recursos();
+                    var recursos = new Recursos();
 
-                    recursos.Id = reader.GetInt32("id_cur");
-                    recursos.Nome = DAOHelper.GetString(reader, "nome_cur");
-                    recursos.Descricao = DAOHelper.GetString(reader, "descricao_cur");
-                    recursos.Turno = DAOHelper.GetString(reader, "turno_cur");
-                    recursos.Escola.Id = reader.GetInt32("id_esc_fk");
-                    recursos.Escola.NomeFantasia = DAOHelper.GetString(reader, "nome_fantasia_esc");
-
+                    recursos.id_recu = reader.GetInt32("id_recu");
+                    recursos.doador_recu = DAOHelper.GetString(reader, "doador_recu");
+                    recursos.valor_recu = DAOHelper.GetDouble(reader, "valor_recu");
+                    recursos.destino_recu = DAOHelper.GetString(reader, "destino_recu");
+                    recursos.date_recu = reader.GetDateTime("date_recu");
+                   
                     lista.Add(recursos);
                 }
 
@@ -82,9 +80,9 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "DELETE FROM recursos WHERE id_cur = @id";
+                comando.CommandText = "DELETE FROM recursos WHERE id_recu = @id";
 
-                comando.Parameters.AddWithValue("@id", obj.Id);
+                comando.Parameters.AddWithValue("@id", obj.id_recu);
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -109,7 +107,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 comando.CommandText = "UPDATE Escola SET " +
                 "nome_fantasia_esc = @nome, razao_social_esc = @razao, cnpj_esc = @cnpj, insc_estadual_esc = @inscricao," +
                 " tipo_esc = @tipo, data_criacao_esc = @data_criacao, responsavel_esc = @resp " +
-                "WHERE id_esc = @id";
+                "WHERE id_recu = @id";
 
                 /*
                 comando.Parameters.AddWithValue("@nome", escola.NomeFantasia);

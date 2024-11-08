@@ -21,5 +21,9 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             this.descricao_turm = descricao_turm;
             this.ano_turm = ano_turm;
         }
+
+        public Turma()
+        {
+        }
     }
 }
