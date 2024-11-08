@@ -14,7 +14,8 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
         public string descricao_inst { get; set; }
         public double valor_inst { get; set; }
 
-        public Instrumento(string nome_inst, int quantidade_inst, string descricao_inst, double valor_inst)
+        public Instrumento(string nome_inst, int quantidade_inst, string descricao_inst, double valor_inst
+            )
         {
             this.nome_inst = nome_inst;
             this.quantidade_inst = quantidade_inst;
