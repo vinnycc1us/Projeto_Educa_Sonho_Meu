@@ -9,19 +9,19 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
 {
     internal class Sala
     {
-        public int id_sal {  get; set; }
-        public string nome_sal { get; set; }
-        public string localizacao_sal { get; set; }
-        public string capacidade_sal {get; set; }
-        public Turma turma {  get; set; }
-        public int id_turma_fk {get; set; }
+        public int Id {  get; set; }
+        public string Nome { get; set; }
+        public string Localizacao { get; set; }
+        public string Capacidade {get; set; }
+        public Turma Turma {  get; set; }
+        public int Id_Turm_Fk {get; set; }
 
-        public Sala(string nome_sal, string localizacao_sal, string capacidade_sal, int id_turm_fk)
+        public Sala(string Nome, string Localizacao, string Capacidade, int Id_fk)
         {
-            this.nome_sal = nome_sal;
-            this.localizacao_sal = localizacao_sal;
-            this.capacidade_sal = capacidade_sal;
-            this.id_turma_fk = id_turma_fk;
+            this.Nome = Nome;
+            this.Localizacao = Localizacao;
+            this.Capacidade = Capacidade;
+            this.Id_Turm_Fk = Id_Turm_Fk;
         }
 
         public Sala()

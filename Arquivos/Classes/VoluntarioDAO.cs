@@ -21,11 +21,11 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 "(null, @nome, @cpf, @rg, @numero_telefone, @id_end_fk)";
 
 
-                comando.Parameters.AddWithValue("@nome", obj.nome_volu);
-                comando.Parameters.AddWithValue("@descricao", obj.cpf_volu);
-                comando.Parameters.AddWithValue("@carga", obj.rg_volu);
-                comando.Parameters.AddWithValue("@turno", obj.numero_telefone_volu);
-                comando.Parameters.AddWithValue("@turno", obj.id_end_fk);
+                comando.Parameters.AddWithValue("@nome", obj.Nome);
+                comando.Parameters.AddWithValue("@cpf", obj.Cpf);
+                comando.Parameters.AddWithValue("@rg", obj.Rg);
+                comando.Parameters.AddWithValue("@numero_telefone", obj.Numero_Telefone);
+                comando.Parameters.AddWithValue("@id_end_fk", obj.Id_End_Fk);
                
 
                 var resultado = comando.ExecuteNonQuery();
@@ -46,23 +46,23 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
         {
             try
             {
-                var lista = new List<voluntario>();
+                var lista = new List<Voluntario>();
                 var comando = _conn.Query();
 
-                comando.CommandText = "SELECT * FROM voluntario, Escola WHERE voluntario.id_esc_fk = Escola.id_esc";
+                comando.CommandText = "SELECT * FROM voluntario, Endereco WHERE voluntario.id_end_fk = Endereco.id_end";
 
                 MySqlDataReader reader = comando.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    var voluntario = new voluntario();
+                    var voluntario = new Voluntario();
 
-                    voluntario.Id = reader.GetInt32("id_cur");
-                    voluntario.Nome = DAOHelper.GetString(reader, "nome_cur");
-                    voluntario.Descricao = DAOHelper.GetString(reader, "descricao_cur");
-                    voluntario.Turno = DAOHelper.GetString(reader, "turno_cur");
-                    voluntario.Escola.Id = reader.GetInt32("id_esc_fk");
-                    voluntario.Escola.NomeFantasia = DAOHelper.GetString(reader, "nome_fantasia_esc");
+                    voluntario.Id = reader.GetInt32("id_volu");
+                    voluntario.Nome = DAOHelper.GetString(reader, "nome_volu");
+                    voluntario.Cpf = DAOHelper.GetString(reader, "cpf_volu");
+                    voluntario.Rg = DAOHelper.GetString(reader, "rg_volu");
+                    voluntario.Numero_Telefone = reader.GetInt32("numero_telefone_volu");
+                    voluntario.Endereco.id_end = reader.GetInt32("id_end");
 
                     lista.Add(voluntario);
                 }
@@ -84,7 +84,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "DELETE FROM voluntario WHERE id_cur = @id";
+                comando.CommandText = "DELETE FROM voluntario WHERE id_volu = @id";
 
                 comando.Parameters.AddWithValue("@id", obj.Id);
 
@@ -108,22 +108,19 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "UPDATE Escola SET " +
-                "nome_fantasia_esc = @nome, razao_social_esc = @razao, cnpj_esc = @cnpj, insc_estadual_esc = @inscricao," +
-                " tipo_esc = @tipo, data_criacao_esc = @data_criacao, responsavel_esc = @resp " +
-                "WHERE id_esc = @id";
+                comando.CommandText = "UPDATE Voluntario SET " +
+                "nome_volu = @nome, cpf_volu = @cpf, rg_volu = @rg, numero_telefone_turm = @numero_telefone," +
+                " id_edn_fk = @id_end_fk" + "WHERE id_volu = @id";
 
-                /*
-                comando.Parameters.AddWithValue("@nome", escola.NomeFantasia);
-                comando.Parameters.AddWithValue("@razao", escola.RazaoSocial);
-                comando.Parameters.AddWithValue("@cnpj", escola.Cnpj);
-                comando.Parameters.AddWithValue("@inscricao", escola.InscEstadual);
-                comando.Parameters.AddWithValue("@tipo", escola.Tipo);
-                comando.Parameters.AddWithValue("@data_criacao", escola.DataCriacao?.ToString("yyyy-MM-dd"));
-                comando.Parameters.AddWithValue("@resp", escola.Responsavel);
+                
+                comando.Parameters.AddWithValue("@nome", obj.Nome);
+                comando.Parameters.AddWithValue("@razao", obj.Cpf);
+                comando.Parameters.AddWithValue("@cnpj", obj.Rg);
+                comando.Parameters.AddWithValue("@inscricao", obj.Numero_Telefone);
+                comando.Parameters.AddWithValue("@tipo", obj.Id_End_Fk);
 
-                comando.Parameters.AddWithValue("@id", escola.Id);
-                */
+                comando.Parameters.AddWithValue("@id", obj.Id);
+                
 
                 var resultado = comando.ExecuteNonQuery();
 

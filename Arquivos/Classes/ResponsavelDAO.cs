@@ -22,13 +22,13 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
 
 
                 comando.Parameters.AddWithValue("@nome", obj.Nome_Completo);
-                comando.Parameters.AddWithValue("@descricao", obj.Cpf);
-                comando.Parameters.AddWithValue("@carga", obj.Rg);
-                comando.Parameters.AddWithValue("@turno", obj.Orgao_Expeditor);
-                comando.Parameters.AddWithValue("@turno", obj.Telefone);
-                comando.Parameters.AddWithValue("@turno", obj.Telefone_Alternativo);
-                comando.Parameters.AddWithValue("@turno", obj.Telefone_Fixo);
-                comando.Parameters.AddWithValue("@turno", obj.telefone_recado_resp);
+                comando.Parameters.AddWithValue("@cpf", obj.Cpf);
+                comando.Parameters.AddWithValue("@rg", obj.Rg);
+                comando.Parameters.AddWithValue("@orgao_expeditor", obj.Orgao_Expeditor);
+                comando.Parameters.AddWithValue("@telefone", obj.Telefone);
+                comando.Parameters.AddWithValue("@telefone_alternativo", obj.Telefone_Alternativo);
+                comando.Parameters.AddWithValue("@telefone_fixo", obj.Telefone_Fixo);
+                comando.Parameters.AddWithValue("@telefone_recado", obj.Telefone_Recado);
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -58,15 +58,15 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 {
                     var responsavel = new Responsavel();
 
-                    responsavel.Id = reader.GetInt32("Id");
-                    responsavel.Nome_Completo = DAOHelper.GetString(reader, "Nome_Completo");
-                    responsavel.Cpf = DAOHelper.GetString(reader, "Cpf");
-                    responsavel.Rg = DAOHelper.GetString(reader, "Rg");
-                    responsavel.Orgao_Expeditor = reader.GetString("Orgao_Expeditor");
+                    responsavel.Id = reader.GetInt32("id_resp");
+                    responsavel.Nome_Completo = DAOHelper.GetString(reader, "nome_completo_resp");
+                    responsavel.Cpf = DAOHelper.GetString(reader, "cpf_resp");
+                    responsavel.Rg = DAOHelper.GetString(reader, "rg_resp");
+                    responsavel.Orgao_Expeditor = reader.GetString("orgao_expeditor_resp");
                     responsavel.Telefone = DAOHelper.GetString(reader, "telefoe_resp");
                     responsavel.Telefone_Alternativo = DAOHelper.GetString(reader, "telefone-alternativo_resp");
-                    responsavel.Telefone_Fixo = DAOHelper.GetString(reader, "Telefone_Fixo");
-                    responsavel.telefone_recado_resp = DAOHelper.GetString(reader, "telefone_recado_resp");
+                    responsavel.Telefone_Fixo = DAOHelper.GetString(reader, "telefone_fixo_resp");
+                    responsavel.Telefone_Recado = DAOHelper.GetString(reader, "Telefone_Recado");
 
                     lista.Add(responsavel);
                 }
@@ -114,7 +114,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
 
                 comando.CommandText = "UPDATE Responsavel SET " +
                 "Nome_Completo = @nome-completo, Cpf = @cpf, Rg = @rg, orgao-expeditor_resp = @orgao_expeditor," +
-                " Telefone = @telefone, Telefone_Alternativo = @telefone_alternativo, Telefone_Fixo = @telefone_fixo, telefone_recado_resp = @telefone_recado " +
+                " Telefone = @telefone, Telefone_Alternativo = @telefone_alternativo, Telefone_Fixo = @telefone_fixo, Telefone_Recado = @telefone_recado " +
                 "WHERE Id = @id";
 
                 
@@ -125,7 +125,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 comando.Parameters.AddWithValue("@telefone", obj.Telefone);
                 comando.Parameters.AddWithValue("@telefone_alternativo", obj.Telefone_Alternativo);
                 comando.Parameters.AddWithValue("@telefone_fixo", obj.Telefone_Fixo);
-                comando.Parameters.AddWithValue("@telefone_recado", obj.telefone_recado_resp);
+                comando.Parameters.AddWithValue("@telefone_recado", obj.Telefone_Recado);
 
                 comando.Parameters.AddWithValue("@id", obj.Id);
                 

@@ -18,13 +18,13 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 var comando = _conn.Query();
 
                 comando.CommandText = "INSERT INTO sala VALUES " +
-                "(null, @nome, @localizacao, @capacidade, @id_turma_fk)";
+                "(null, @nome, @localizacao, @capacidade, @Id_Turm_Fk)";
 
 
-                comando.Parameters.AddWithValue("@nome", obj.nome_sal);
-                comando.Parameters.AddWithValue("@descricao", obj.localizacao_sal);
-                comando.Parameters.AddWithValue("@carga", obj.capacidade_sal);
-                comando.Parameters.AddWithValue("@turno", obj.id_turma_fk);
+                comando.Parameters.AddWithValue("@nome", obj.Nome);
+                comando.Parameters.AddWithValue("@localizacao", obj.Localizacao);
+                comando.Parameters.AddWithValue("@capacidade", obj.Capacidade);
+                comando.Parameters.AddWithValue("@id_turm_fk", obj.Id_Turm_Fk);
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -47,7 +47,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 var lista = new List<Sala>();
                 var comando = _conn.Query();
 
-                comando.CommandText = "SELECT * FROM sala, Turma WHERE sala.id_turma_fk = Turma.id_turm";
+                comando.CommandText = "SELECT * FROM sala, Turma WHERE sala.Id_Turm_Fk = Turma.id_turm";
 
                 MySqlDataReader reader = comando.ExecuteReader();
 
@@ -55,11 +55,11 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 {
                     var sala = new Sala();
 
-                    sala.id_sal = reader.GetInt32("id_sal");
-                    sala.nome_sal = DAOHelper.GetString(reader, "nome_sal");
-                    sala.localizacao_sal = DAOHelper.GetString(reader, "localizacao_sal");
-                    sala.capacidade_sal = DAOHelper.GetString(reader, "capacidade_sal");
-                    sala.turma.id_turm = reader.GetInt32("id_turma_fk");
+                    sala.Id = reader.GetInt32("id_sal");
+                    sala.Nome = DAOHelper.GetString(reader, "nome_sal");
+                    sala.Localizacao = DAOHelper.GetString(reader, "localizacao_sal");
+                    sala.Capacidade = DAOHelper.GetString(reader, "capacidade_sal");
+                    sala.Turma.Id = reader.GetInt32("id_turm_fk");
                    
                     lista.Add(sala);
                 }
@@ -81,9 +81,9 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "DELETE FROM sala WHERE id_sal = @id";
+                comando.CommandText = "DELETE FROM sala WHERE Id = @id";
 
-                comando.Parameters.AddWithValue("@id", obj.id_sal);
+                comando.Parameters.AddWithValue("@id", obj.Id);
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -110,13 +110,12 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 "WHERE id_sal = @id";
 
                 
-                comando.Parameters.AddWithValue("@nome", obj.nome_sal);
-                comando.Parameters.AddWithValue("@razao", obj.localizacao_sal);
-                comando.Parameters.AddWithValue("@cnpj", obj.capacidade_sal);
-                comando.Parameters.AddWithValue("@inscricao", obj.id_turma_fk);
+                comando.Parameters.AddWithValue("@nome", obj.Nome);
+                comando.Parameters.AddWithValue("@localizacao", obj.Localizacao);
+                comando.Parameters.AddWithValue("@capacidade", obj.Capacidade);
              
 
-                comando.Parameters.AddWithValue("@id", obj.id_sal);
+                comando.Parameters.AddWithValue("@id", obj.Id);
                 
 
                 var resultado = comando.ExecuteNonQuery();
