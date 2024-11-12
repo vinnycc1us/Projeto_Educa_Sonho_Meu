@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,106 +10,114 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
 {
     public class EventoDAO
     {
-        private string connectionString;
+        private static Conexao _conn = new Conexao();
 
-        public EventoDAO(string connectionString)
+        public void Insert(Evento evento)
         {
-            this.connectionString = connectionString;
-        }
-
-        public void Inserir(Evento evento)
-        {
-            using (var connection = new MySqlConnection(connectionString))
+            try
             {
-                connection.Open();
-                var command = new MySqlCommand("INSERT INTO Evento (nome_even, data_even, id_end_fk, descricao_even) VALUES (@nome, @data, @idEnd, @descricao)", connection);
-                command.Parameters.AddWithValue("@nome", evento.Nome);
-                command.Parameters.AddWithValue("@data", evento.Data);
-                command.Parameters.AddWithValue("@idEnd", evento.id_end_fk);
-                command.Parameters.AddWithValue("@descricao", evento.Descricao);
+                var comando = _conn.Query();
+                comando.CommandText = "INSERT INTO Evento (nome_even, data_even, id_end_fk, descricao_even) VALUES (@nome, @data, @idEnd, @descricao)";
+                comando.Parameters.AddWithValue("@nome", evento.Nome);
+                comando.Parameters.AddWithValue("@data", evento.Data);
+                comando.Parameters.AddWithValue("@idEnd", evento.id_end_fk);
+                comando.Parameters.AddWithValue("@descricao", evento.Descricao);
 
-                command.ExecuteNonQuery();
-            }
-        }
+                var resultado = comando.ExecuteNonQuery();
 
-        public void Atualizar(Evento evento)
-        {
-            using (var connection = new MySqlConnection(connectionString))
-            {
-                connection.Open();
-                var command = new MySqlCommand("UPDATE Evento SET nome_even = @nome, data_even = @data, id_end_fk = @idEnd, descricao_even = @descricao WHERE id_even = @id", connection);
-                command.Parameters.AddWithValue("@id", evento.Id);
-                command.Parameters.AddWithValue("@nome", evento.Nome);
-                command.Parameters.AddWithValue("@data", evento.Data);
-                command.Parameters.AddWithValue("@idEnd", evento.id_end_fk);
-                command.Parameters.AddWithValue("@descricao", evento.Descricao);
-
-                command.ExecuteNonQuery();
-            }
-        }
-
-        public void Deletar(int id_even)
-        {
-            using (var connection = new MySqlConnection(connectionString))
-            {
-                connection.Open();
-                var command = new MySqlCommand("DELETE FROM Evento WHERE id_even = @id", connection);
-                command.Parameters.AddWithValue("@id", id_even);
-
-                command.ExecuteNonQuery();
-            }
-        }
-
-        public Evento BuscarPorId(int id_even)
-        {
-            using (var connection = new MySqlConnection(connectionString))
-            {
-                connection.Open();
-                var command = new MySqlCommand("SELECT * FROM Evento WHERE id_even = @id", connection);
-                command.Parameters.AddWithValue("@id", id_even);
-
-                using (var reader = command.ExecuteReader())
+                if (resultado == 0)
                 {
-                    if (reader.Read())
-                    {
-                        return new Evento
-                        {
-                            Id = reader.GetInt32("id_even"),
-                            Nome = reader.GetString("nome_even"),
-                            Data = reader.GetDateTime("data_even"),
-                            id_end_fk = reader.GetInt32("id_end_fk"),
-                            Descricao = reader.GetString("descricao_even")
-                        };
-                    }
+                    throw new Exception("Ocorreram erros ao salvar as informações");
                 }
+
             }
-            return null;
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
-        public List<Evento> ListarTodos()
+        public void Update(Evento evento)
         {
-            var eventos = new List<Evento>();
-            using (var connection = new MySqlConnection(connectionString))
-            {
-                connection.Open();
-                var command = new MySqlCommand("SELECT * FROM Evento", connection);
 
-                using (var reader = command.ExecuteReader())
+            try
+            {
+                var comando = _conn.Query();
+                comando.CommandText = "UPDATE Evento SET nome_even = @nome, data_even = @data, id_end_fk = @idEnd, descricao_even = @descricao WHERE id_even = @id";
+                comando.Parameters.AddWithValue("@id", evento.Id);
+                comando.Parameters.AddWithValue("@nome", evento.Nome);
+                comando.Parameters.AddWithValue("@data", evento.Data);
+                comando.Parameters.AddWithValue("@idEnd", evento.id_end_fk);
+                comando.Parameters.AddWithValue("@descricao", evento.Descricao);
+
+                var resultado = comando.ExecuteNonQuery();
+
+                if (resultado == 0)
                 {
-                    while (reader.Read())
-                    {
-                        eventos.Add(new Evento
-                        {
-                            Id = reader.GetInt32("id_even"),
-                            Nome = reader.GetString("nome_even"),
-                            Data = reader.GetDateTime("data_even"),
-                            id_end_fk = reader.GetInt32("id_end_fk"),
-                            Descricao = reader.GetString("descricao_even")
-                        });
-                    }
+                    throw new Exception("Ocorreram erros ao salvar as informações");
                 }
+
             }
-            return eventos;
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void Delete(Evento evento)
+        {
+            try
+            {
+                var comando = _conn.Query();
+
+                comando.CommandText = "DELETE FROM Evento WHERE id_even = @id";
+                comando.Parameters.AddWithValue("@id", evento.Id);
+
+                var resultado = comando.ExecuteNonQuery();
+
+                if (resultado == 0)
+                {
+                    throw new Exception("Ocorreram erros ao salvar as informações.");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<Evento> List()
+        {
+            try
+            {
+                var lista = new List<Evento>();
+                var comando = _conn.Query();
+
+                comando.CommandText = "SELECT * FROM Evento";
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                    {
+                    var evento = new Evento();
+                    evento.Id = reader.GetInt32("id_even");
+                    evento.Nome = DAOHelper.GetString(reader, "nome_even");
+                    evento.Data = DAOHelper.GetDateTime(reader, "data_even");
+                    evento.id_end_fk = reader.GetInt32("id_end_fk");
+                    evento.Descricao = DAOHelper.GetString(reader, "descricao_even");
+                    lista.Add(evento);
+                }
+
+                reader.Close();
+
+                return lista;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }
