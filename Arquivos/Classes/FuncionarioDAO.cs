@@ -18,14 +18,14 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 var comando = _conn.Query();
 
                 comando.CommandText = "INSERT INTO funcionario VALUES " +
-                "(null, @nome, @cpf, @ctps, @rg, @funcao, @id_sal_fk, @num_telefone, @id_end_fk);";
+                "(null, @nome, @cpf, @ctps, @rg, @funcao, @Id_fk, @num_telefone, @id_end_fk);";
 
                 comando.Parameters.AddWithValue("@nome", funcionario.nome_func);
                 comando.Parameters.AddWithValue("@cpf", funcionario.cpf_func);
                 comando.Parameters.AddWithValue("@ctps", funcionario.ctps_func);
                 comando.Parameters.AddWithValue("@rg", funcionario.rg_func);
                 comando.Parameters.AddWithValue("@funcao", funcionario.funcao_func);
-                comando.Parameters.AddWithValue("@id_sal_fk", funcionario.id_sal_fk);
+                comando.Parameters.AddWithValue("@Id_fk", funcionario.Id_fk);
                 comando.Parameters.AddWithValue("@num_telefone", funcionario.num_telefone_func);
                 comando.Parameters.AddWithValue("@id_end_fk", funcionario.id_end_fk);
 

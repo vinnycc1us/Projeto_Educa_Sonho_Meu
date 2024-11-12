@@ -54,11 +54,11 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 {
                     var recursos = new Recursos();
 
-                    recursos.Id = reader.GetInt32("Id");
-                    recursos.Doador = DAOHelper.GetString(reader, "Doador");
-                    recursos.Valor = DAOHelper.GetDouble(reader, "Valor");
-                    recursos.Destino = DAOHelper.GetString(reader, "Destino");
-                    recursos.Date = reader.GetDateTime("Date");
+                    recursos.Id = reader.GetInt32("id_recu");
+                    recursos.Doador = DAOHelper.GetString(reader, "doador_recu");
+                    recursos.Valor = DAOHelper.GetDouble(reader, "valor_recu");
+                    recursos.Destino = DAOHelper.GetString(reader, "destino_recu");
+                    recursos.Date = reader.GetDateTime("date_recu");
                    
                     lista.Add(recursos);
                 }

@@ -8,18 +8,18 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
 {
     internal class Turma
     {
-        public int id_turm { get; set; }
-        public string nome_turm { get; set; }
-        public string quantidade_turm { get; set; }
-        public string descricao_turm { get; set; }
-        public int ano_turm { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string Quantidade { get; set; }
+        public string Descricao { get; set; }
+        public int Ano { get; set; }
 
-        public Turma(string nome_turm, string quantidade_turm, string descricao_turm, int ano_turm)
+        public Turma(string Nome, string Quantidade, string Descricao, int Ano)
         {
-            this.nome_turm = nome_turm;
-            this.quantidade_turm = quantidade_turm;
-            this.descricao_turm = descricao_turm;
-            this.ano_turm = ano_turm;
+            this.Nome = Nome;
+            this.Quantidade = Quantidade;
+            this.Descricao = Descricao;
+            this.Ano = Ano;
         }
 
         public Turma()

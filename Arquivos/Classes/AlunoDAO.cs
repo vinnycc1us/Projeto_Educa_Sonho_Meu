@@ -19,7 +19,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
 
                 comando.CommandText = "INSERT INTO aluno VALUES " +
                 "(null, @nome, @naturalidade, @nacionalidade, @data_nascimento, @cpf, @rg, @id_sex_fk, @doencas_especialidades, @nis, " +
-                "@beneficio, @bolsa_familia, @id_end_fk, @id_resp_fk, @id_esc_fk, @serie, @parecer_social, @nivel_prioridade);";
+                "@beneficio, @bolsa_familia, @id_end_fk, @Id_fk, @id_esc_fk, @serie, @parecer_social, @nivel_prioridade);";
 
                 comando.Parameters.AddWithValue("@nome", aluno.nome_alun);
                 comando.Parameters.AddWithValue("@naturalidade", aluno.naturalidade_alun);
@@ -33,7 +33,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 comando.Parameters.AddWithValue("@beneficio", aluno.beneficio_alun);
                 comando.Parameters.AddWithValue("@bolsa_familia", aluno.bolsa_familia_alun);
                 comando.Parameters.AddWithValue("@id_end_fk", aluno.id_end_fk);
-                comando.Parameters.AddWithValue("@id_resp_fk", aluno.id_resp_fk);
+                comando.Parameters.AddWithValue("@Id_fk", aluno.Id_fk);
                 comando.Parameters.AddWithValue("@id_esc_fk", aluno.id_esc_fk);
                 comando.Parameters.AddWithValue("@serie", aluno.serie_alun);
                 comando.Parameters.AddWithValue("@parecer_social", aluno.parecer_social_alun);

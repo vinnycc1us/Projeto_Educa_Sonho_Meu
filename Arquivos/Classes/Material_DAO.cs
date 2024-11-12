@@ -18,13 +18,13 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 var comando = _conn.Query();
 
                 comando.CommandText = "INSERT INTO material VALUES " +
-                "(null, @nome, @quantidade, @descricao, @valor, @id_sal_fk);";
+                "(null, @nome, @quantidade, @descricao, @valor, @Id_fk);";
 
                 comando.Parameters.AddWithValue("@nome", material.nome_mate);
                 comando.Parameters.AddWithValue("@quantidade", material.quantidade_mate);
                 comando.Parameters.AddWithValue("@descricao", material.descricao_mate);
                 comando.Parameters.AddWithValue("@valor", material.valor_mate);
-                comando.Parameters.AddWithValue("@id_sal_fk", material.id_sal_fk);
+                comando.Parameters.AddWithValue("@Id_fk", material.Id_fk);
 
                 var resultado = comando.ExecuteNonQuery();
 

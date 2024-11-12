@@ -15,6 +15,6 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
         public int quantidade_mate {  get; set; }
         public string descricao_mate {  get; set; }
         public double valor_mate {  get; set; }
-        public int id_sal_fk {  get; set; }
+        public int Id_fk {  get; set; }
     }
 }
