@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
 {
-    internal class Escola
+    public class Escola
     {
-        public int id_esc { get; set; }
-        public string nome_esc {get; set; }
+        public int Id { get; set; }
+        public string Nome {get; set; }
         public int id_end_fk {get; set; }
 
-        public Escola(string nome_esc, int id_end_fk)
+        public Escola(int Id, string nome_esc, int id_end_fk)
         {
-            this.nome_esc = nome_esc;
+            this.Id = Id;
+            this.Nome = nome_esc;
             this.id_end_fk = id_end_fk;
         }
 

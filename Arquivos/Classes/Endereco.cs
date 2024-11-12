@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
 {
-    internal class Endereco
+    public class Endereco
     {
         public int id_end {  get; set; }
         public string uf_end { get; set; }
