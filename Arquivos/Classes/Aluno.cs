@@ -8,44 +8,44 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
 {
     public class Aluno
     {
-        public int id_alun { get; set; }
-        public string nome_alun { get; set; }
-        public string naturalidade_alun { get; set; }
-        public string nacionalidade_alun { get; set; }
-        public DateTime data_nascimento_alun { get; set; }
-        public string cpf_alun {  get; set; }
-        public string rg_alun { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string Naturalidade { get; set; }
+        public string Nacionalidade { get; set; }
+        public DateTime? Data_nascimento { get; set; }
+        public string Cpf {  get; set; }
+        public string Rg { get; set; }
         public int id_sex_fk { get; set; }
-        public string doencas_especialidades_alun {  get; set; }
-        public string nis_alun { get; set; }
-        public string beneficio_alun { get; set; }
-        public string bolsa_familia_alun { get; set; }
+        public string Doencas_especialidades {  get; set; }
+        public string Nis { get; set; }
+        public string Beneficio { get; set; }
+        public string Bolsa_familia { get; set; }
         public int id_end_fk {  get; set; }
         public int Id_fk {  get; set; }
         public int id_esc_fk { get; set; }
-        public string serie_alun { get; set; }
-        public string parecer_social_alun {  get; set; }
-        public int nivel_prioridade_alun { get; set; }
-        public Aluno(int id_alun, string nome_alun, string naturalidade_alun, string nacionalidade_alun, DateTime data_nascimento_alun, string cpf_alun, string rg_alun, int id_sex_fk, string doencas_especialidades, string nis_alun, string beneficio_alun, string bolsa_familia_alun, int id_end_fk, int Id_fk, int id_esc_fk, string serie_alun, string parecer_social, int nivel_prioridade_alun)
+        public string Serie { get; set; }
+        public string Parecer_social {  get; set; }
+        public int Nivel_prioridade { get; set; }
+        public Aluno(int id_alun, string nome_alun, string naturalidade_alun, string nacionalidade_alun, DateTime? data_nascimento_alun, string cpf_alun, string rg_alun, int id_sex_fk, string doencas_especialidades, string nis_alun, string beneficio_alun, string bolsa_familia_alun, int id_end_fk, int id_resp_fk, int id_esc_fk, string serie_alun, string parecer_social, int nivel_prioridade_alun)
         {
-            this.id_alun = id_alun;
-            this.nome_alun = nome_alun;
-            this.naturalidade_alun = naturalidade_alun;
-            this.nacionalidade_alun = nacionalidade_alun;
-            this.data_nascimento_alun = data_nascimento_alun;
-            this.cpf_alun = cpf_alun;
-            this.rg_alun = rg_alun;
+            this.Id = id_alun;
+            this.Nome = nome_alun;
+            this.Naturalidade = naturalidade_alun;
+            this.Nacionalidade = nacionalidade_alun;
+            this.Data_nascimento = data_nascimento_alun;
+            this.Cpf = cpf_alun;
+            this.Rg = rg_alun;
             this.id_sex_fk = id_sex_fk;
-            this.doencas_especialidades_alun = doencas_especialidades;
-            this.nis_alun = nis_alun;
-            this.beneficio_alun = beneficio_alun;
-            this.bolsa_familia_alun = bolsa_familia_alun;
+            this.Doencas_especialidades = doencas_especialidades;
+            this.Nis = nis_alun;
+            this.Beneficio = beneficio_alun;
+            this.Bolsa_familia = bolsa_familia_alun;
             this.id_end_fk = id_end_fk;
             this.Id_fk = Id_fk;
             this.id_esc_fk = id_esc_fk;
-            this.serie_alun = serie_alun;
-            this.parecer_social_alun = parecer_social;
-            this.nivel_prioridade_alun = nivel_prioridade_alun;
+            this.Serie = serie_alun;
+            this.Parecer_social = parecer_social;
+            this.Nivel_prioridade = nivel_prioridade_alun;
         }
 
         public Aluno()

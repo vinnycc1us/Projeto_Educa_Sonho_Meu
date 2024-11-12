@@ -8,19 +8,19 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
 {
     public class Despesas
     {
-        public int id_desp {  get; set; }
-        public string doador_desp { get; set; }
-        public double valor_desp { get; set; }
-        public string destino_desp { get; set; }
-        public DateTime data_desp { get; set; }
+        public int Id {  get; set; }
+        public string Doador { get; set; }
+        public double Valor { get; set; }
+        public string Destino { get; set; }
+        public DateTime? Data { get; set; }
 
-        public Despesas(int id_desp, string doador_desp, double valor_desp, string destino_desp, DateTime data_desp)
+        public Despesas(int id_desp, string doador_desp, double valor_desp, string destino_desp, DateTime? data_desp)
         {
-            this.id_desp = id_desp;
-            this.doador_desp = doador_desp;
-            this.valor_desp = valor_desp;
-            this.destino_desp = destino_desp;
-            this.data_desp = data_desp;
+            this.Id = id_desp;
+            this.Doador = doador_desp;
+            this.Valor = valor_desp;
+            this.Destino = destino_desp;
+            this.Data = data_desp;
         }
 
         public Despesas()
