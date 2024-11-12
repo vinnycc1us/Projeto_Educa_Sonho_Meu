@@ -21,7 +21,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
         public string Beneficio { get; set; }
         public string Bolsa_familia { get; set; }
         public int id_end_fk {  get; set; }
-        public int Id_fk {  get; set; }
+        public int id_resp_fk {  get; set; }
         public int id_esc_fk { get; set; }
         public string Serie { get; set; }
         public string Parecer_social {  get; set; }
@@ -41,7 +41,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             this.Beneficio = beneficio_alun;
             this.Bolsa_familia = bolsa_familia_alun;
             this.id_end_fk = id_end_fk;
-            this.Id_fk = Id_fk;
+            this.id_resp_fk = id_resp_fk;
             this.id_esc_fk = id_esc_fk;
             this.Serie = serie_alun;
             this.Parecer_social = parecer_social;

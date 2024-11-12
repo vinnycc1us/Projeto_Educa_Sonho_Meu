@@ -1,13 +1,14 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
 {
-    internal class AlunoDAO
+    public class AlunoDAO
     {
         private static Conexao _conn = new Conexao();
 
@@ -16,28 +17,24 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             try
             {
                 var comando = _conn.Query();
-
-                comando.CommandText = "INSERT INTO aluno VALUES " +
-                "(null, @nome, @naturalidade, @nacionalidade, @data_nascimento, @cpf, @rg, @id_sex_fk, @doencas_especialidades, @nis, " +
-                "@beneficio, @bolsa_familia, @id_end_fk, @Id_fk, @id_esc_fk, @serie, @parecer_social, @nivel_prioridade);";
-
-                comando.Parameters.AddWithValue("@nome", aluno.nome_alun);
-                comando.Parameters.AddWithValue("@naturalidade", aluno.naturalidade_alun);
-                comando.Parameters.AddWithValue("@nacionalidade", aluno.nacionalidade_alun);
-                comando.Parameters.AddWithValue("@data_nascimento", aluno.data_nascimento_alun);
-                comando.Parameters.AddWithValue("@cpf", aluno.cpf_alun);
-                comando.Parameters.AddWithValue("@rg", aluno.rg_alun);
-                comando.Parameters.AddWithValue("@id_sex_fk", aluno.id_sex_fk);
-                comando.Parameters.AddWithValue("@doencas_especialidades", aluno.doencas_especialidades_alun);
-                comando.Parameters.AddWithValue("@nis", aluno.nis_alun);
-                comando.Parameters.AddWithValue("@beneficio", aluno.beneficio_alun);
-                comando.Parameters.AddWithValue("@bolsa_familia", aluno.bolsa_familia_alun);
-                comando.Parameters.AddWithValue("@id_end_fk", aluno.id_end_fk);
-                comando.Parameters.AddWithValue("@Id_fk", aluno.Id_fk);
-                comando.Parameters.AddWithValue("@id_esc_fk", aluno.id_esc_fk);
-                comando.Parameters.AddWithValue("@serie", aluno.serie_alun);
-                comando.Parameters.AddWithValue("@parecer_social", aluno.parecer_social_alun);
-                comando.Parameters.AddWithValue("@nivel_prioridade", aluno.nivel_prioridade_alun);
+                comando.CommandText = "INSERT INTO Aluno (nome_alun, naturalidade_alun, nacionalidade_alun, data_nascimento_alun, cpf_alun, rg_alun, id_sex_fk, doencas_especialidades_alun, nis_alun, beneficio_alun, bolsa_familia_alun, id_end_fk, id_resp_fk, id_esc_fk, serie_alun, parecer_social_alun, nivel_prioridade_alun) VALUES (@nome, @naturalidade, @nacionalidade, @dataNascimento, @cpf, @rg, @idSex, @doencas, @nis, @beneficio, @bolsaFamilia, @idEnd, @idResp, @idEsc, @serie, @parecerSocial, @nivelPrioridade)";
+                comando.Parameters.AddWithValue("@nome", aluno.Nome);
+                comando.Parameters.AddWithValue("@naturalidade", aluno.Naturalidade);
+                comando.Parameters.AddWithValue("@nacionalidade", aluno.Nacionalidade);
+                comando.Parameters.AddWithValue("@dataNascimento", aluno.Data_nascimento);
+                comando.Parameters.AddWithValue("@cpf", aluno.Cpf);
+                comando.Parameters.AddWithValue("@rg", aluno.Rg);
+                comando.Parameters.AddWithValue("@idSex", aluno.id_sex_fk);
+                comando.Parameters.AddWithValue("@doencas", aluno.Doencas_especialidades);
+                comando.Parameters.AddWithValue("@nis", aluno.Nis);
+                comando.Parameters.AddWithValue("@beneficio", aluno.Beneficio);
+                comando.Parameters.AddWithValue("@bolsaFamilia", aluno.Bolsa_familia);
+                comando.Parameters.AddWithValue("@idEnd", aluno.id_end_fk);
+                comando.Parameters.AddWithValue("@idResp", aluno.id_resp_fk);
+                comando.Parameters.AddWithValue("@idEsc", aluno.id_esc_fk);
+                comando.Parameters.AddWithValue("@serie", aluno.Serie);
+                comando.Parameters.AddWithValue("@parecerSocial", aluno.Parecer_social);
+                comando.Parameters.AddWithValue("@nivelPrioridade", aluno.Nivel_prioridade);
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -53,39 +50,37 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             }
         }
 
-        public List<Escola> List()
+        public void Update(Aluno aluno)
         {
             try
             {
-                var lista = new List<Escola>();
                 var comando = _conn.Query();
+                comando.CommandText = "UPDATE Aluno SET nome_alun = @nome, naturalidade_alun = @naturalidade, nacionalidade_alun = @nacionalidade, data_nascimento_alun = @dataNascimento, cpf_alun = @cpf, rg_alun = @rg, id_sex_fk = @idSex, doencas_especialidades_alun = @doencas, nis_alun = @nis, beneficio_alun = @beneficio, bolsa_familia_alun = @bolsaFamilia, id_end_fk = @idEnd, id_resp_fk = @idResp, id_esc_fk = @idEsc, serie_alun = @serie, parecer_social_alun = @parecerSocial, nivel_prioridade_alun = @nivelPrioridade WHERE id_alun = @id";
+                comando.Parameters.AddWithValue("@id", aluno.Id);
+                comando.Parameters.AddWithValue("@nome", aluno.Nome);
+                comando.Parameters.AddWithValue("@naturalidade", aluno.Naturalidade);
+                comando.Parameters.AddWithValue("@nacionalidade", aluno.Nacionalidade);
+                comando.Parameters.AddWithValue("@dataNascimento", aluno.Data_nascimento);
+                comando.Parameters.AddWithValue("@cpf", aluno.Cpf);
+                comando.Parameters.AddWithValue("@rg", aluno.Rg);
+                comando.Parameters.AddWithValue("@idSex", aluno.id_sex_fk);
+                comando.Parameters.AddWithValue("@doencas", aluno.Doencas_especialidades);
+                comando.Parameters.AddWithValue("@nis", aluno.Nis);
+                comando.Parameters.AddWithValue("@beneficio", aluno.Beneficio);
+                comando.Parameters.AddWithValue("@bolsaFamilia", aluno.Bolsa_familia);
+                comando.Parameters.AddWithValue("@idEnd", aluno.id_end_fk);
+                comando.Parameters.AddWithValue("@idResp", aluno.id_resp_fk);
+                comando.Parameters.AddWithValue("@idEsc", aluno.id_esc_fk);
+                comando.Parameters.AddWithValue("@serie", aluno.Serie);
+                comando.Parameters.AddWithValue("@parecerSocial", aluno.Parecer_social);
+                comando.Parameters.AddWithValue("@nivelPrioridade", aluno.Nivel_prioridade);
 
-                comando.CommandText = "SELECT * FROM Escola";
+                var resultado = comando.ExecuteNonQuery();
 
-                MySqlDataReader reader = comando.ExecuteReader();
-
-                while (reader.Read())
+                if (resultado == 0)
                 {
-                    var aluno = new Escola();
-
-                    aluno.Id = reader.GetInt32("id_esc");
-                    aluno.NomeFantasia = DAOHelper.GetString(reader, "nome_fantasia_esc");
-                    aluno.RazaoSocial = DAOHelper.GetString(reader, "razao_social_esc");
-                    aluno.Cnpj = DAOHelper.GetString(reader, "cnpj_esc");
-                    aluno.InscEstadual = DAOHelper.GetString(reader, "insc_estadual_esc");
-                    aluno.Tipo = DAOHelper.GetString(reader, "tipo_esc");
-                    aluno.Email = DAOHelper.GetString(reader, "email_esc");
-                    aluno.Telefone = DAOHelper.GetString(reader, "telefone_esc");
-                    aluno.Responsavel = DAOHelper.GetString(reader, "responsavel_esc");
-                    aluno.ResponsavelTelefone = DAOHelper.GetString(reader, "responsavel_telefone_esc");
-                    aluno.DataCriacao = DAOHelper.GetDateTime(reader, "data_criacao_esc");
-
-                    lista.Add(aluno);
+                    throw new Exception("Ocorreram erros ao salvar as informações");
                 }
-
-                reader.Close();
-
-                return lista;
 
             }
             catch (Exception ex)
@@ -94,14 +89,13 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             }
         }
 
-        public void Delete(Escola aluno)
+        public void Delete(Aluno aluno)
         {
             try
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "DELETE FROM Escola WHERE id_esc = @id";
-
+                comando.CommandText = "DELETE FROM Aluno WHERE id_alun = @id";
                 comando.Parameters.AddWithValue("@id", aluno.Id);
 
                 var resultado = comando.ExecuteNonQuery();
@@ -118,34 +112,43 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             }
         }
 
-
-        public void Update(Escola aluno)
+        public List<Aluno> List()
         {
             try
             {
+                var lista = new List<Aluno>();
                 var comando = _conn.Query();
 
-                comando.CommandText = "UPDATE Escola SET " +
-                "nome_fantasia_esc = @nome, razao_social_esc = @razao, cnpj_esc = @cnpj, insc_estadual_esc = @inscricao," +
-                " tipo_esc = @tipo, data_criacao_esc = @data_criacao, responsavel_esc = @resp " +
-                "WHERE id_esc = @id";
+                comando.CommandText = "SELECT * FROM Aluno";
+                MySqlDataReader reader = comando.ExecuteReader();
 
-                comando.Parameters.AddWithValue("@nome", aluno.NomeFantasia);
-                comando.Parameters.AddWithValue("@razao", aluno.RazaoSocial);
-                comando.Parameters.AddWithValue("@cnpj", aluno.Cnpj);
-                comando.Parameters.AddWithValue("@inscricao", aluno.InscEstadual);
-                comando.Parameters.AddWithValue("@tipo", aluno.Tipo);
-                comando.Parameters.AddWithValue("@data_criacao", aluno.DataCriacao?.ToString("yyyy-MM-dd"));
-                comando.Parameters.AddWithValue("@resp", aluno.Responsavel);
-
-                comando.Parameters.AddWithValue("@id", aluno.Id);
-
-                var resultado = comando.ExecuteNonQuery();
-
-                if (resultado == 0)
+                while (reader.Read())
                 {
-                    throw new Exception("Ocorreram erros ao salvar as informações");
+                    var aluno = new Aluno();
+                    aluno.Id = reader.GetInt32("id_alun");
+                    aluno.Nome = DAOHelper.GetString(reader, "nome_alun");
+                    aluno.Naturalidade = DAOHelper.GetString(reader, "naturalidade_alun");
+                    aluno.Nacionalidade = DAOHelper.GetString(reader, "nacionalidade_alun");
+                    aluno.Data_nascimento = DAOHelper.GetDateTime(reader, "data_nascimento_alun");
+                    aluno.Cpf = DAOHelper.GetString(reader, "cpf_alun");
+                    aluno.Rg = DAOHelper.GetString(reader, "rg_alun");
+                    aluno.id_sex_fk = reader.GetInt32("id_sex_fk");
+                    aluno.Doencas_especialidades = DAOHelper.GetString(reader, "doencas_especialidades_alun");
+                    aluno.Nis = DAOHelper.GetString(reader, "nis_alun");
+                    aluno.Beneficio = DAOHelper.GetString(reader, "beneficio_alun");
+                    aluno.Bolsa_familia = DAOHelper.GetString(reader, "Bolsa_familia");
+                    aluno.id_end_fk = reader.GetInt32("id_end_fk");
+                    aluno.id_resp_fk = reader.GetInt32("id_resp_fk");
+                    aluno.id_esc_fk = reader.GetInt32("id_esc_fk");
+                    aluno.Serie = DAOHelper.GetString(reader, "Serie");
+                    aluno.Parecer_social = DAOHelper.GetString(reader, "parecer_social_alun");
+                    aluno.Nivel_prioridade = reader.GetInt32("nivel_prioridade_alun");
+                    lista.Add(aluno);
                 }
+
+                reader.Close();
+
+                return lista;
 
             }
             catch (Exception ex)
