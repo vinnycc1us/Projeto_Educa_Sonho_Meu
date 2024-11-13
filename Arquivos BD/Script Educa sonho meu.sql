@@ -162,7 +162,7 @@ CREATE TABLE Despesa (
   data_desp date NOT NULL
 );
 create table Entrada_sonho(
-	id_sonh INT PRIMARY KEY AUTO_INCREMENT,
+  id_sonh INT PRIMARY KEY AUTO_INCREMENT,
   data_sonh date not null,
   valor_sonh double not null,
   descricao_sonh VARCHAR(255) NOT NULL,
