@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/*
+
 namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
 {
     internal class FuncionarioDAO
@@ -145,4 +145,4 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             } 
         }
     }
-} */
+}

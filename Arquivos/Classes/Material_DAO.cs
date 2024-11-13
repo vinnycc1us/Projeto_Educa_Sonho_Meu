@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/*
+
 namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
 {
     internal class Material_DAO
@@ -143,4 +143,3 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
         }
     }
 }
-*/
