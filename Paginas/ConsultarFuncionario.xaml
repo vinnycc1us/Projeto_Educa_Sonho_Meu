@@ -11,88 +11,89 @@
     <Grid Background="#f0ffff">
 
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-
-
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!--PILARES-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            
         </Grid.ColumnDefinitions>
 
-
-        <!--TITULO-->
-        <Border Grid.Row="0" Grid.ColumnSpan="4" Background="#9ceacd" Margin="15 37" CornerRadius="10 0 0 0" >
-            <!--TextBlock Text="Cadastro de Turmas" FontSize="30" Padding="15 0" VerticalAlignment="Center" /-->
-            <TextBox Margin="4,4,4,0" Background="Transparent" Text="Consultar Funcionario" FontSize="30"/>
+        <Border Grid.Row="0" Grid.ColumnSpan="2" Background="#9ceacd" Margin="15" CornerRadius="10 0 0 0">
+            <TextBlock Margin="4,4,4,0" Background="Transparent" Text="Cadastro de Aluno" FontSize="30"/>
         </Border>
 
-
-
-
-        <!--NOME-->
         <Grid Grid.Row="1" Grid.Column="0" Margin="4">
-            <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
-                <Border Style="{StaticResource LabelBorder}">
+            <StackPanel>
+                <Border>
                     <TextBlock Style="{StaticResource LabelText}" Text="Nome:"/>
                 </Border>
-
-                <TextBox  Padding="0" FontSize="15" Width="190" Height="47" HorizontalAlignment="Left">
+                <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                        <GradientStop Color="#FFB0E0E6" Offset="0.0"/>
+                                        <GradientStop Color="#FF4682B4" Offset="1.0"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-
             </StackPanel>
         </Grid>
 
-
-        <!--CPF-->
         <Grid Grid.Row="1" Grid.Column="1" Margin="4">
-            <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
-                <Border Style="{StaticResource LabelBorder}">
+            <StackPanel>
+                <Border>
                     <TextBlock Style="{StaticResource LabelText}" Text="CPF:"/>
                 </Border>
-
-                <TextBox  Padding="0" FontSize="15" Width="190" Height="50" HorizontalAlignment="Left">
+                <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                        <GradientStop Color="#FFB0E0E6" Offset="0.0"/>
+                                        <GradientStop Color="#FF4682B4" Offset="1.0"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
             </StackPanel>
         </Grid>
 
-
-
-
-        <!--BOTÃO-->
-        <Button Grid.Row="6" Grid.Column="1" Height="42" Margin="20,26,1,36" Width="111" BorderBrush="Transparent"  Background="#c6ece1" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
-
+        <Button Grid.Row="2" Grid.Column="1" Height ="42" Margin="20,26,1,36" Width="111" BorderBrush="Transparent" Background="#c6ece1" HorizontalAlignment="Right" VerticalAlignment="Bottom">
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Salvar" FontSize="25" Margin="5"></TextBlock>
-
-                <Image Source="/Imagens/salvar.png" Width="20" Margin="5 11 0 5" ></Image>
+                <TextBlock Text="Salvar" FontSize="25" Margin="5"/>
+                <Image Source="/Imagens/salvar.png" Width="20" Margin="5 11 0 5"/>
             </StackPanel>
-
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="9"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <DataGrid Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" d:ItemsSource="{d:SampleData ItemCount=5}"/>
 
-
+        <DataGrid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="4" AutoGenerateColumns="True" d:ItemsSource="{d:SampleData ItemCount=5}"              
+                  RowHeight="30" AlternatingRowBackground="#f0f8ff" 
+                  Background="#ffffff" BorderBrush="#c0c0c0" BorderThickness="1">
+            <DataGrid.Resources>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Background" Value="#9ceacd"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
     </Grid>
 </Page>

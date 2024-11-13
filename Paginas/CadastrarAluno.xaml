@@ -43,7 +43,7 @@
                         <Border Background="Transparent">
                             <TextBlock Style="{StaticResource LabelText}" Text="Nome:"/>
                         </Border>
-                        <TextBox Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="0 10 0 10"/>
@@ -66,7 +66,7 @@
                         <Border Background="Transparent">
                              <TextBlock Style="{StaticResource LabelText}" Text="RG:"/> 
                         </Border>
-                        <TextBox Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="0 10 0 10"/>
@@ -89,7 +89,7 @@
                         <Border Background="Transparent">
                                <TextBlock Style="{StaticResource LabelText}" Text="CPF:"/> 
                         </Border>
-                        <TextBox Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="0 10 0 10"/>
@@ -112,7 +112,7 @@
                         <Border Background="Transparent">
                               <TextBlock Style="{StaticResource LabelText}" Text="CTPS:"/> 
                         </Border>
-                        <TextBox Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="0 10 0 10"/>
@@ -135,7 +135,7 @@
                         <Border Background="Transparent">
                               <TextBlock Style="{StaticResource LabelText}" Text="Função:"/> 
                         </Border>
-                        <TextBox Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="0 10 0 10"/>
@@ -158,7 +158,7 @@
                         <Border Background="Transparent">
                                <TextBlock Style="{StaticResource LabelText}" Text="Sala:"/> 
                         </Border>
-                        <TextBox Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="0 10 0 10"/>
@@ -181,7 +181,7 @@
                         <Border Background="Transparent">
                                <TextBlock Style="{StaticResource LabelText}" Text="Celular:"/> 
                         </Border>
-                        <TextBox Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="0 10 0 10"/>
@@ -204,7 +204,7 @@
                         <Border Background="Transparent">
                             <TextBlock Style="{StaticResource LabelText}" Text="Numero:"/>
                         </Border>
-                        <TextBox Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="0 10 0 10"/>
@@ -227,7 +227,7 @@
                         <Border Background="Transparent">
                              <TextBlock Style="{StaticResource LabelText}" Text="UF:"/> 
                         </Border>
-                        <TextBox Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="0 10 0 10"/>
@@ -250,7 +250,7 @@
                         <Border Background="Transparent">
                               <TextBlock Style="{StaticResource LabelText}" Text="Cidade:"/> 
                         </Border>
-                        <TextBox Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="0 10 0 10"/>
@@ -273,7 +273,7 @@
                         <Border Background="Transparent">
                              <TextBlock Style="{StaticResource LabelText}" Text="Cep:"/> 
                         </Border>
-                        <TextBox Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="0 10 0 10"/>
@@ -296,7 +296,7 @@
                         <Border Background="Transparent">
                               <TextBlock Style="{StaticResource LabelText}" Text="Bairro:"/> 
                         </Border>
-                        <TextBox Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                        <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="0 10 0 10"/>
@@ -315,7 +315,7 @@
                 </Grid>
 
 
-                <Button Grid.Row="3" Grid.Column="0" Height="42" Width="111" BorderBrush="Transparent" Background="#c6ece1">
+                <Button Grid.Row="2" Grid.Column="0" Height="42" Width="111" BorderBrush="Transparent" Background="#c6ece1" Margin=" 0 100 0 0">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Salvar" FontSize="25" Margin="5"/>
                          <Image Source="/Imagens/salvar.png" Width="20" Margin="5 11 0 5"/> 
