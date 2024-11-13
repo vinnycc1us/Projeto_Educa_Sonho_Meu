@@ -11,157 +11,176 @@
     <Grid Background="#f0ffff">
 
         <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
-
-        <Border Grid.Row="0" Grid.ColumnSpan="6" Background="#9ceacd" Margin="15,15,20,48" CornerRadius="10 0 0 0" >
-            <!--TextBlock Text="Cadastro de Turmas" FontSize="30" Padding="15 0" VerticalAlignment="Center" /-->
-            <TextBox Margin="4,4,4,0" Background="Transparent" Text="Consultar Aluno" FontSize="30"/>
+        <Border Grid.Row="0" Grid.ColumnSpan="3" Background="#9ceacd" Margin="15,15,20,48" CornerRadius="10 0 0 0">
+            <TextBlock Margin="4,4,4,0" Background="Transparent" Text="Consultar Aluno" FontSize="30"/>
         </Border>
 
+        <!-- Nome -->
+        <Grid Grid.Row="1" Margin="5">
+            <StackPanel>
+                <Border>
+                    <TextBlock Style="{StaticResource LabelText}" Text="Nome:"/>
+                </Border>
+                <TextBox Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                        <GradientStop Color="#FFB0E0E6" Offset="0.0"/>
+                                        <GradientStop Color="#FF4682B4" Offset="1.0"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+        </Grid>
 
+        <!-- CPF -->
+        <Grid Grid.Row="1" Grid.Column="1" Margin="5">
+            <StackPanel>
+                <Border>
+                    <TextBlock Style="{StaticResource LabelText}" Text="CPF:"/>
+                </Border>
+                <TextBox Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                        <GradientStop Color="#FFB0E0E6" Offset="0.0"/>
+                                        <GradientStop Color="#FF4682B4" Offset="1.0"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+        </Grid>
 
-        <Grid Grid.Column="0" Grid.Row="1" Margin="5">
-                <StackPanel Width="auto" Height="auto"
-                    Margin="0 0 5 0">
+        <!-- Mãe -->
+        <Grid Grid.Row="1" Grid.Column="2" Margin="5">
+            <StackPanel>
+                <Border>
+                    <TextBlock Style="{StaticResource LabelText}" Text="Mãe:"/>
+                </Border>
+                <TextBox Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                        <GradientStop Color="#FFB0E0E6" Offset="0.0"/>
+                                        <GradientStop Color="#FF4682B4" Offset="1.0"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+        </Grid>
 
-                    <Border Style="{StaticResource LabelBorder}">
-                        <TextBlock Style="{StaticResource LabelText}"  Text="Nome:"/>
-                    </Border>
+        <!-- Contato -->
+        <Grid Grid.Row="2" Grid.Column="0" Margin="5">
+            <StackPanel>
+                <Border>
+                    <TextBlock Style="{StaticResource LabelText}" Text="Contato:"/>
+                </Border>
+                <TextBox Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                        <GradientStop Color="#FFB0E0E6" Offset="0.0"/>
+                                        <GradientStop Color="#FF4682B4" Offset="1.0"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+        </Grid>
 
+        <!-- Turma -->
+        <Grid Grid.Row="2" Grid.Column="1" Margin="5">
+            <StackPanel>
+                <Border>
+                    <TextBlock Style="{StaticResource LabelText}" Text="Turma:"/>
+                </Border>
+                <TextBox Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                        <GradientStop Color="#FFB0E0E6" Offset="0.0"/>
+                                        <GradientStop Color="#FF4682B4" Offset="1.0"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+        </Grid>
 
-                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
-                        <TextBox.Resources>
-                            <Style TargetType="{x:Type Border}">
-                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                            </Style>
-                        </TextBox.Resources>
-                    </TextBox>
-                </StackPanel>
-            </Grid>
-
-
-
-
-
-
-            <Grid Grid.Column="1" Grid.Row="1" Margin="5">
-                <StackPanel Width="auto" Height="auto"
-                    Margin=" 0 0 5 0">
-
-                    <Border Style="{StaticResource LabelBorder}">
-                        <TextBlock Style="{StaticResource LabelText}"  Text="CPF:"/>
-                    </Border>
-
-                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
-                        <TextBox.Resources>
-                            <Style TargetType="{x:Type Border}">
-                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                            </Style>
-                        </TextBox.Resources>
-                    </TextBox>
-                </StackPanel>
-            </Grid>
-
-            <Grid Grid.Column="2" Grid.Row="1" Margin="5">
-                <StackPanel Width="auto" Height="auto"
-                    Margin=" 0 0 5 0">
-
-                    <Border Style="{StaticResource LabelBorder}">
-                        <TextBlock Style="{StaticResource LabelText}"  Text="Mãe:"/>
-                    </Border>
-
-
-                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
-                        <TextBox.Resources>
-                            <Style TargetType="{x:Type Border}">
-                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                            </Style>
-                        </TextBox.Resources>
-                    </TextBox>
-                </StackPanel>
-            </Grid>
-
-            <Grid Grid.Column="3" Grid.Row="1" Margin="5">
-                <StackPanel Width="auto" Height="auto"
-                    Margin=" 0 0 5 0">
-
-                    <Border Style="{StaticResource LabelBorder}">
-                        <TextBlock Style="{StaticResource LabelText}"  Text="Contato:"/>
-                    </Border>
-
-
-                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
-                        <TextBox.Resources>
-                            <Style TargetType="{x:Type Border}">
-                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                            </Style>
-                        </TextBox.Resources>
-                    </TextBox>
-                </StackPanel>
-            </Grid>
-
-            <Grid Grid.Column="4" Grid.Row="1" Margin="5">
-                <StackPanel Width="auto" Height="auto"
-                    Margin=" 0 0 5 0">
-
-                    <Border Style="{StaticResource LabelBorder}">
-                        <TextBlock Style="{StaticResource LabelText}"  Text="Turma:"/>
-                    </Border>
-
-
-                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
-                        <TextBox.Resources>
-                            <Style TargetType="{x:Type Border}">
-                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                            </Style>
-                        </TextBox.Resources>
-                    </TextBox>
-                </StackPanel>
-            </Grid>
-
-            <Grid Grid.Column="5" Grid.Row="1" Margin="5">
-                <StackPanel Width="auto" Height="auto"
-                    Margin=" 0 0 5 0">
-
-                    <Border Style="{StaticResource LabelBorder}">
-                        <TextBlock Style="{StaticResource LabelText}"  Text="Localização:"/>
-                    </Border>
-
-
-                    <TextBox  Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
-                        <TextBox.Resources>
-                            <Style TargetType="{x:Type Border}">
-                                <Setter Property="CornerRadius" Value="0 10 0 10"/>
-                            </Style>
-                        </TextBox.Resources>
-                    </TextBox>
-                </StackPanel>
-            </Grid>
-            <Button Grid.Row="4" Grid.Column="0" Height="45" Margin="5" 
-                Width="auto" BorderBrush="Transparent"  Background="#c6ece1" >
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Salvar" FontSize="25" Margin="5"></TextBlock>
-                </StackPanel>
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="9"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
-       
+        <!-- Localização -->
+        <Grid Grid.Row="2" Grid.Column="2" Margin="5">
+            <StackPanel>
+                <Border>
+                    <TextBlock Style="{StaticResource LabelText}" Text="Localização:"/>
+                </Border>
+                <TextBox Padding="0" FontSize="15" Width="200" Height="50" HorizontalAlignment="Left">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="0 10 0 10"/>
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                        <GradientStop Color="#FFB0E0E6" Offset="0.0"/>
+                                        <GradientStop Color="#FF4682B4" Offset="1.0"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+        </Grid>
+        
+        <Button Grid.Row="3" Grid.Column="0" Height="42" Width="111" BorderBrush="Transparent" Background="#c6ece1">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Salvar" FontSize="25" Margin="5"/>
+                <Image Source="/Imagens/salvar.png" Width="20" Margin="5 11 0 5"/>
+            </StackPanel>
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="9"/>
+                </Style>
+            </Button.Resources>
+        </Button>
     </Grid>
 </Page>

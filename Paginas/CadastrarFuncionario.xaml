@@ -54,7 +54,6 @@
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-
             </StackPanel>
         </Grid>
 
@@ -80,7 +79,7 @@
 
         <!--NUMERO-->
 
-        <Grid Grid.Row="4" Grid.Column="0" Margin="4">
+        <Grid Grid.Row="2" Grid.Column="4" Margin="4">
             <StackPanel Width="auto" Height="auto" Margin="0 0 5 0">
                 <Border Style="{StaticResource LabelBorder}">
                     <TextBlock Style="{StaticResource LabelText}" Text="Numero:"/>
