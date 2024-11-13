@@ -23,7 +23,7 @@
         </Grid.ColumnDefinitions>
 
         <Border Grid.Row="0" Grid.ColumnSpan="3" Background="#9ceacd" Margin="15" CornerRadius="10 0 0 0">
-            <TextBlock Margin="4,4,4,0" Background="Transparent" Text="Cadastro de Aluno" FontSize="30"/>
+            <TextBlock Margin="4,4,4,0" Background="Transparent" Text="Cadastro de Sala" FontSize="30"/>
         </Border>
 
         <!-- Turma -->
