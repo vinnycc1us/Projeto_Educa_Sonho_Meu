@@ -163,11 +163,11 @@ CREATE TABLE Despesa (
 );
 create table Entrada_sonho(
 	id_sonh INT PRIMARY KEY AUTO_INCREMENT,
-    data_sonh date not null,
-    valor_sonh double not null,
-    descricao_sonh VARCHAR(255) NOT NULL,
-    id_alun_fk int,
-    foreign key (id_alun_fk) references Aluno (id_alun),
-    id_turm_fk int,
-    foreign key (id_turm_fk) references Turma (id_turm)
+  data_sonh date not null,
+  valor_sonh double not null,
+  descricao_sonh VARCHAR(255) NOT NULL,
+  id_alun_fk int,
+  foreign key (id_alun_fk) references Aluno (id_alun),
+  id_turm_fk int,
+  foreign key (id_turm_fk) references Turma (id_turm)
 );
