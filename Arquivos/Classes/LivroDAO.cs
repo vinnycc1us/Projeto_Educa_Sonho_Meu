@@ -22,16 +22,16 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 "(null, @nome, @quantidade, @descricao, @valor, @num_paginas, @autor, @editora, @ano_aplicacao, " +
                 "@ano_impressao, @area_aplicacao);";
 
-                comando.Parameters.AddWithValue("@nome", livro.nome_liv);
-                comando.Parameters.AddWithValue("@quantidade", livro.quantidade_liv);
-                comando.Parameters.AddWithValue("@descricao", livro.descricao_liv);
-                comando.Parameters.AddWithValue("@valor", livro.valor_liv);
-                comando.Parameters.AddWithValue("@num_paginas", livro.num_paginas_liv);
-                comando.Parameters.AddWithValue("@autor", livro.autor_liv);
-                comando.Parameters.AddWithValue("@editora", livro.editora_liv);
-                comando.Parameters.AddWithValue("@ano_aplicacao", livro.ano_aplicacao_liv);
-                comando.Parameters.AddWithValue("@ano_impressao", livro.ano_impressao_liv);
-                comando.Parameters.AddWithValue("@area_aplicacao", livro.area_aplicacao_liv);
+                comando.Parameters.AddWithValue("@nome", livro.Nome);
+                comando.Parameters.AddWithValue("@quantidade", livro.Quantidade);
+                comando.Parameters.AddWithValue("@descricao", livro.Descricao);
+                comando.Parameters.AddWithValue("@valor", livro.Valor);
+                comando.Parameters.AddWithValue("@num_paginas", livro.Num_Paginas);
+                comando.Parameters.AddWithValue("@autor", livro.Autor);
+                comando.Parameters.AddWithValue("@editora", livro.Editora);
+                comando.Parameters.AddWithValue("@ano_aplicacao", livro.Ano_Aplicacao);
+                comando.Parameters.AddWithValue("@ano_impressao", livro.Ano_Impressao);
+                comando.Parameters.AddWithValue("@area_aplicacao", livro.Area_Aplicacao);
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -47,11 +47,11 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             }
         }
 
-        public List<livro> List()
+        public List<Livro> List()
         {
             try
             {
-                var lista = new List<livro>();
+                var lista = new List<Livro>();
                 var comando = _conn.Query();
 
                 comando.CommandText = "SELECT * FROM livro";
@@ -60,19 +60,19 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
 
                 while (reader.Read())
                 {
-                    var livro = new livro();
+                    var livro = new Livro();
 
                     livro.Id = reader.GetInt32("id_esc");
-                    livro.NomeFantasia = DAOHelper.GetString(reader, "nome_fantasia_esc");
-                    livro.RazaoSocial = DAOHelper.GetString(reader, "razao_social_esc");
-                    livro.Cnpj = DAOHelper.GetString(reader, "cnpj_esc");
-                    livro.InscEstadual = DAOHelper.GetString(reader, "insc_estadual_esc");
-                    livro.Tipo = DAOHelper.GetString(reader, "tipo_esc");
-                    livro.Email = DAOHelper.GetString(reader, "email_esc");
-                    livro.Telefone = DAOHelper.GetString(reader, "telefone_esc");
-                    livro.Responsavel = DAOHelper.GetString(reader, "responsavel_esc");
-                    livro.ResponsavelTelefone = DAOHelper.GetString(reader, "responsavel_telefone_esc");
-                    livro.DataCriacao = DAOHelper.GetDateTime(reader, "data_criacao_esc");
+                    livro.Nome = DAOHelper.GetString(reader, "nome_fantasia_esc");
+                    livro.Quantidade = reader.GetInt32("razao_social_esc");
+                    livro.Descricao = DAOHelper.GetString(reader, "cnpj_esc");
+                    livro.Valor = reader.GetInt32("insc_estadual_esc");
+                    livro.Num_Paginas = reader.GetInt32("tipo_esc");
+                    livro.Autor = DAOHelper.GetString(reader, "email_esc");
+                    livro.Editora = DAOHelper.GetString(reader, "telefone_esc");
+                    livro.Ano_Aplicacao = reader.GetInt32("responsavel_esc");
+                    livro.Ano_Impressao = reader.GetInt32("responsavel_telefone_esc");
+                    livro.Area_Aplicacao = DAOHelper.GetString(reader, "data_criacao_esc");
 
                     lista.Add(livro);
                 }
@@ -88,13 +88,14 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             }
         }
 
-        public void Delete(livro livro)
+        /*
+        public void Delete(Livro livro)
         {
             try
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "DELETE FROM livro WHERE id_esc = @id";
+                comando.CommandText = "DELETE FROM livro WHERE id_liv = @id";
 
                 comando.Parameters.AddWithValue("@id", livro.Id);
 
@@ -111,26 +112,31 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 throw ex;
             }
         }
+        */
 
+        /*
 
-        public void Update(livro livro)
+        public void Update(Livro livro)
         {
             try
             {
                 var comando = _conn.Query();
 
                 comando.CommandText = "UPDATE livro SET " +
-                "nome_fantasia_esc = @nome, razao_social_esc = @razao, cnpj_esc = @cnpj, insc_estadual_esc = @inscricao," +
-                " tipo_esc = @tipo, data_criacao_esc = @data_criacao, responsavel_esc = @resp " +
+                "nome_liv = @nome, quantidade_liv = @quantidade, descricao_liv = @descricao, valor_çiv = @valor," +
+                " num_paginas_liv = @num_paginas, autor_liv = @autor, editora_liv = @editora, ano_aplicacao_liv = @ano_aplicacao, ano_impressao_liv = @ano_impressao, area_aplicacao_liv = @area_aplicacao" +
                 "WHERE id_esc = @id";
 
-                comando.Parameters.AddWithValue("@nome", livro.NomeFantasia);
-                comando.Parameters.AddWithValue("@razao", livro.RazaoSocial);
-                comando.Parameters.AddWithValue("@cnpj", livro.Cnpj);
-                comando.Parameters.AddWithValue("@inscricao", livro.InscEstadual);
-                comando.Parameters.AddWithValue("@tipo", livro.Tipo);
-                comando.Parameters.AddWithValue("@data_criacao", livro.DataCriacao?.ToString("yyyy-MM-dd"));
-                comando.Parameters.AddWithValue("@resp", livro.Responsavel);
+                comando.Parameters.AddWithValue("@nome", livro.Nome);
+                comando.Parameters.AddWithValue("@quantidade", livro.Quantidade);
+                comando.Parameters.AddWithValue("@descricao", livro.Descricao);
+                comando.Parameters.AddWithValue("@valor", livro.Valor);
+                comando.Parameters.AddWithValue("@num_paginas", livro.Num_Paginas);
+                comando.Parameters.AddWithValue("@autor", livro.Autor);
+                comando.Parameters.AddWithValue("@editora", livro.Editora);
+                comando.Parameters.AddWithValue("@ano_aplicacao", livro.Ano_Aplicacao);
+                comando.Parameters.AddWithValue("@ano_mpressao", livro.Ano_Impressao);
+                comando.Parameters.AddWithValue("@area_aplicacao", livro.Area_Aplicacao);
 
                 comando.Parameters.AddWithValue("@id", livro.Id);
 
@@ -147,5 +153,6 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 throw ex;
             }
         }
+        */
     }
 }

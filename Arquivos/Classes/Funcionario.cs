@@ -9,27 +9,33 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
 {
     public class Funcionario
     {
-        public int id_func {  get; set; }
-        public string nome_func {  get; set; }
-        public string cpf_func { get; set; }
-        public string ctps_func {  get; set; }
-        public string rg_func {  get; set; }
-        public string funcao_func {  get; set; }
-        public int Id_fk {  get; set; }
-        public string num_telefone_func {  get; set; }
-        public int id_end_fk {  get; set; }
+        public int Id {  get; set; }
+        public string Nome {  get; set; }
+        public string Cpf { get; set; }
+        public string Ctps {  get; set; }
+        public string Rg {  get; set; }
+        public string Funcao {  get; set; }
+        public Sala Sala { get; set; }
+        public int Id_Sal_Fk {  get; set; }
+        public string Numero {  get; set; }
+        public Endereco Endereco { get; set; }
+        public int Id_End_Fk {  get; set; }
 
-        public Funcionario(int id_func, string nome_func, string cpf_func, string ctps_func, string rg_func, string funcao_func, int Id_fk, string num_telefone_func, int id_end_fk)
+        public Funcionario(int Id, string Nome, string Cpf, string Ctps, string Rg, string Funcao, int Id_Sal_Fk, string Numero, int Id_End_Fk)
         {
-            this.id_func = id_func;
-            this.nome_func = nome_func;
-            this.cpf_func = cpf_func;
-            this.ctps_func = ctps_func;
-            this.rg_func = rg_func;
-            this.funcao_func = funcao_func;
-            this.Id_fk = Id_fk;
-            this.num_telefone_func = num_telefone_func;
-            this.id_end_fk = id_end_fk;
+            this.Id = Id;
+            this.Nome = Nome;
+            this.Cpf = Cpf;
+            this.Ctps = Ctps;
+            this.Rg = Rg;
+            this.Funcao = Funcao;
+            this.Id_Sal_Fk = Id_Sal_Fk;
+            this.Numero = Numero;
+            this.Id_End_Fk = Id_End_Fk;
+        }
+
+        public Funcionario()
+        {
         }
     }
 }

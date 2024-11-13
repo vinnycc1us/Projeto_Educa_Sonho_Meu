@@ -19,16 +19,16 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 var comando = _conn.Query();
 
                 comando.CommandText = "INSERT INTO funcionario VALUES " +
-                "(null, @nome, @cpf, @ctps, @rg, @funcao, @Id_fk, @num_telefone, @id_end_fk);";
+                "(null, @nome, @cpf, @ctps, @rg, @funcao, @Id_Sal_Fk, @num_telefone, @Id_End_Fk);";
 
-                comando.Parameters.AddWithValue("@nome", funcionario.nome_func);
-                comando.Parameters.AddWithValue("@cpf", funcionario.cpf_func);
-                comando.Parameters.AddWithValue("@ctps", funcionario.ctps_func);
-                comando.Parameters.AddWithValue("@rg", funcionario.rg_func);
-                comando.Parameters.AddWithValue("@funcao", funcionario.funcao_func);
-                comando.Parameters.AddWithValue("@Id_fk", funcionario.Id_fk);
-                comando.Parameters.AddWithValue("@num_telefone", funcionario.num_telefone_func);
-                comando.Parameters.AddWithValue("@id_end_fk", funcionario.id_end_fk);
+                comando.Parameters.AddWithValue("@nome", funcionario.Nome);
+                comando.Parameters.AddWithValue("@cpf", funcionario.Cpf);
+                comando.Parameters.AddWithValue("@ctps", funcionario.Ctps);
+                comando.Parameters.AddWithValue("@rg", funcionario.Rg);
+                comando.Parameters.AddWithValue("@funcao", funcionario.Funcao);
+                comando.Parameters.AddWithValue("@Id_Sal_Fk", funcionario.Id_Sal_Fk);
+                comando.Parameters.AddWithValue("@num_telefone", funcionario.Numero);
+                comando.Parameters.AddWithValue("@Id_End_Fk", funcionario.Id_End_Fk);
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -44,32 +44,30 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             }
         }
         
-        public List<funcionario> List()
+        public List<Funcionario> List()
         {
             try
             {
-                var lista = new List<funcionario>();
+                var lista = new List<Funcionario>();
                 var comando = _conn.Query();
 
-                comando.CommandText = "SELECT * FROM funcionario";
+                comando.CommandText = "SELECT * FROM funcionario, sala WHERE funcionario.Id_Sal_Fk = Sala.id_sal";
+                comando.CommandText = "SELECT * FROM funcionario, endereco WHERE funcionario.Id_End_Fk = Endereco.id_end";
 
                 MySqlDataReader reader = comando.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    var funcionario = new funcionario();
+                    var funcionario = new Funcionario();
 
-                    funcionario.Id = reader.GetInt32("id_esc");
-                    funcionario.NomeFantasia = DAOHelper.GetString(reader, "nome_fantasia_esc");
-                    funcionario.RazaoSocial = DAOHelper.GetString(reader, "razao_social_esc");
-                    funcionario.Cnpj = DAOHelper.GetString(reader, "cnpj_esc");
-                    funcionario.InscEstadual = DAOHelper.GetString(reader, "insc_estadual_esc");
-                    funcionario.Tipo = DAOHelper.GetString(reader, "tipo_esc");
-                    funcionario.Email = DAOHelper.GetString(reader, "email_esc");
-                    funcionario.Telefone = DAOHelper.GetString(reader, "telefone_esc");
-                    funcionario.Responsavel = DAOHelper.GetString(reader, "responsavel_esc");
-                    funcionario.ResponsavelTelefone = DAOHelper.GetString(reader, "responsavel_telefone_esc");
-                    funcionario.DataCriacao = DAOHelper.GetDateTime(reader, "data_criacao_esc");
+                    funcionario.Id = reader.GetInt32("id_func");
+                    funcionario.Nome = DAOHelper.GetString(reader, "nome_func");
+                    funcionario.Cpf = DAOHelper.GetString(reader, "cpf_func");
+                    funcionario.Ctps = DAOHelper.GetString(reader, "ctps_func");
+                    funcionario.Rg = DAOHelper.GetString(reader, "rg_func");
+                    funcionario.Funcao = DAOHelper.GetString(reader, "funcao_func");
+                    funcionario.Sala.Id = reader.GetInt32("id_sal_fk");
+                    funcionario.Endereco.Id = reader.GetInt32("id_end_fk");
 
                     lista.Add(funcionario);
                 }
@@ -85,13 +83,14 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             }
         }
 
-        public void Delete(funcionario funcionario)
+        /*
+        public void Delete(Funcionario funcionario)
         {
             try
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "DELETE FROM funcionario WHERE id_esc = @id";
+                comando.CommandText = "DELETE FROM funcionario WHERE id_func = @id";
 
                 comando.Parameters.AddWithValue("@id", funcionario.Id);
 
@@ -108,26 +107,27 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 throw ex;
             }
         }
+        */
 
 
-        public void Update(funcionario funcionario)
+
+        /*
+        public void Update(Funcionario funcionario)
         {
             try
             {
                 var comando = _conn.Query();
 
                 comando.CommandText = "UPDATE funcionario SET " +
-                "nome_fantasia_esc = @nome, razao_social_esc = @razao, cnpj_esc = @cnpj, insc_estadual_esc = @inscricao," +
-                " tipo_esc = @tipo, data_criacao_esc = @data_criacao, responsavel_esc = @resp " +
-                "WHERE id_esc = @id";
+                "nome_func = @nome, cpf_func = @cpf, ctps_func = @ctps, rg_func = @rg," +
+                " funcao_func = @funcao" + "WHERE id_esc = @id";
 
-                comando.Parameters.AddWithValue("@nome", funcionario.NomeFantasia);
-                comando.Parameters.AddWithValue("@razao", funcionario.RazaoSocial);
-                comando.Parameters.AddWithValue("@cnpj", funcionario.Cnpj);
-                comando.Parameters.AddWithValue("@inscricao", funcionario.InscEstadual);
-                comando.Parameters.AddWithValue("@tipo", funcionario.Tipo);
-                comando.Parameters.AddWithValue("@data_criacao", funcionario.DataCriacao?.ToString("yyyy-MM-dd"));
-                comando.Parameters.AddWithValue("@resp", funcionario.Responsavel);
+                comando.Parameters.AddWithValue("@nome", funcionario.Nome);
+                comando.Parameters.AddWithValue("@cpf", funcionario.Cpf);
+                comando.Parameters.AddWithValue("@ctps", funcionario.Ctps);
+                comando.Parameters.AddWithValue("@rg", funcionario.Rg);
+                comando.Parameters.AddWithValue("@funcao", funcionario.Funcao);
+          
 
                 comando.Parameters.AddWithValue("@id", funcionario.Id);
 
@@ -144,5 +144,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 throw ex;
             } 
         }
+        */
+        
     }
 }

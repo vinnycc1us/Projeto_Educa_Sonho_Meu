@@ -17,9 +17,9 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             try
             {
                 var comando = _conn.Query();
-                comando.CommandText = "INSERT INTO Escola (nome_esc, id_end_fk) VALUES (@nome, @idEnd)";
+                comando.CommandText = "INSERT INTO Escola (nome_esc, Id_End_Fk) VALUES (@nome, @idEnd)";
                 comando.Parameters.AddWithValue("@nome", escola.Nome);
-                comando.Parameters.AddWithValue("@idEnd", escola.id_end_fk);
+                comando.Parameters.AddWithValue("@idEnd", escola.Id_End_Fk);
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -40,10 +40,10 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             try
             {
                 var comando = _conn.Query();
-                comando.CommandText = "UPDATE Escola SET nome_esc = @nome, id_end_fk = @idEnd WHERE id_esc = @id";
+                comando.CommandText = "UPDATE Escola SET nome_esc = @nome, Id_End_Fk = @idEnd WHERE id_esc = @id";
                 comando.Parameters.AddWithValue("@id", escola.Id);
                 comando.Parameters.AddWithValue("@nome", escola.Nome);
-                comando.Parameters.AddWithValue("@idEnd", escola.id_end_fk);
+                comando.Parameters.AddWithValue("@idEnd", escola.Id_End_Fk);
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -98,7 +98,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                     var escola = new Escola();
                     escola.Id = reader.GetInt32("id_esc");
                     escola.Nome = DAOHelper.GetString(reader, "nome_esc");
-                    escola.id_end_fk = reader.GetInt32("id_end_fk");
+                    escola.Id_End_Fk = reader.GetInt32("Id_End_Fk");
                     lista.Add(escola);
                 }
 

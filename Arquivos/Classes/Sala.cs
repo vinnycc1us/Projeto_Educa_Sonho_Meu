@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
 {
-    internal class Sala
+    public class Sala
     {
         public int Id {  get; set; }
         public string Nome { get; set; }
@@ -16,7 +16,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
         public Turma Turma {  get; set; }
         public int Id_Turm_Fk {get; set; }
 
-        public Sala(string Nome, string Localizacao, string Capacidade, int Id_fk)
+        public Sala(string Nome, string Localizacao, string Capacidade, int Id_Sal_Fk)
         {
             this.Nome = Nome;
             this.Localizacao = Localizacao;

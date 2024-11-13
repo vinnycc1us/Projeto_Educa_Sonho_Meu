@@ -18,12 +18,12 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 var comando = _conn.Query();
 
                 comando.CommandText = "INSERT INTO projeto VALUES " +
-                "(null, @nome, @coordenador, @descricao, @ano_inicio);";
+                "(null, @nome, @coordenador, @descricao, @Ano_Inicio);";
 
                 comando.Parameters.AddWithValue("@nome", projeto.Nome);
                 comando.Parameters.AddWithValue("@coordenador", projeto.Coordenador);
                 comando.Parameters.AddWithValue("@descricao", projeto.Descricao);
-                comando.Parameters.AddWithValue("@ano_inicio", projeto.Ano_inicio);
+                comando.Parameters.AddWithValue("@Ano_Inicio", projeto.Ano_Inicio);
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -58,7 +58,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                     projeto.Nome = DAOHelper.GetString(reader, "nome_proj");
                     projeto.Coordenador = DAOHelper.GetString(reader, "coordenador_proj");
                     projeto.Descricao = DAOHelper.GetString(reader, "descricao_proj");
-                    projeto.Ano_inicio = reader.GetInt32("ano_inicio_proj");
+                    projeto.Ano_Inicio = reader.GetInt32("Ano_Inicio_proj");
 
                     lista.Add(projeto);
                 }
@@ -74,13 +74,14 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             }
         }
 
+        /*
         public void Delete(Projeto projeto)
         {
             try
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "DELETE FROM projeto WHERE id_esc = @id";
+                comando.CommandText = "DELETE FROM projeto WHERE id_proj = @id";
 
                 comando.Parameters.AddWithValue("@id", projeto.Id);
 
@@ -98,7 +99,9 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             }
         }
 
+        */
 
+        /*
         public void Update(Projeto projeto)
         {
             try
@@ -111,9 +114,9 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 "WHERE id_esc = @id";
 
                 comando.Parameters.AddWithValue("@nome", projeto.Nome);
-                comando.Parameters.AddWithValue("@razao", projeto.Coordenador);
-                comando.Parameters.AddWithValue("@cnpj", projeto.Descricao);
-                comando.Parameters.AddWithValue("@inscricao", projeto.Ano_inicio);
+                comando.Parameters.AddWithValue("@coordenador", projeto.Coordenador);
+                comando.Parameters.AddWithValue("@descricao", projeto.Descricao);
+                comando.Parameters.AddWithValue("@Ano_Inicio", projeto.Ano_Inicio);
 
                 comando.Parameters.AddWithValue("@id", projeto.Id);
 
@@ -130,5 +133,6 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 throw ex;
             }
         }
+        */
     }
 }

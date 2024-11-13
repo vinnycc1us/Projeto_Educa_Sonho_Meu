@@ -17,7 +17,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             try
             {
                 var comando = _conn.Query();
-                comando.CommandText = "INSERT INTO Aluno (nome_alun, naturalidade_alun, nacionalidade_alun, data_nascimento_alun, cpf_alun, rg_alun, id_sex_fk, doencas_especialidades_alun, nis_alun, beneficio_alun, bolsa_familia_alun, id_end_fk, id_resp_fk, id_esc_fk, serie_alun, parecer_social_alun, nivel_prioridade_alun) VALUES (@nome, @naturalidade, @nacionalidade, @dataNascimento, @cpf, @rg, @idSex, @doencas, @nis, @beneficio, @bolsaFamilia, @idEnd, @idResp, @idEsc, @serie, @parecerSocial, @nivelPrioridade)";
+                comando.CommandText = "INSERT INTO Aluno (nome_alun, naturalidade_alun, nacionalidade_alun, data_nascimento_alun, cpf_alun, rg_alun, id_sex_fk, doencas_especialidades_alun, nis_alun, beneficio_alun, bolsa_familia_alun, Id_End_Fk, id_resp_fk, id_esc_fk, serie_alun, parecer_social_alun, nivel_prioridade_alun) VALUES (@nome, @naturalidade, @nacionalidade, @dataNascimento, @cpf, @rg, @idSex, @doencas, @nis, @beneficio, @bolsaFamilia, @idEnd, @idResp, @idEsc, @serie, @parecerSocial, @nivelPrioridade)";
                 comando.Parameters.AddWithValue("@nome", aluno.Nome);
                 comando.Parameters.AddWithValue("@naturalidade", aluno.Naturalidade);
                 comando.Parameters.AddWithValue("@nacionalidade", aluno.Nacionalidade);
@@ -29,7 +29,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 comando.Parameters.AddWithValue("@nis", aluno.Nis);
                 comando.Parameters.AddWithValue("@beneficio", aluno.Beneficio);
                 comando.Parameters.AddWithValue("@bolsaFamilia", aluno.Bolsa_familia);
-                comando.Parameters.AddWithValue("@idEnd", aluno.id_end_fk);
+                comando.Parameters.AddWithValue("@idEnd", aluno.Id_End_Fk);
                 comando.Parameters.AddWithValue("@idResp", aluno.id_resp_fk);
                 comando.Parameters.AddWithValue("@idEsc", aluno.id_esc_fk);
                 comando.Parameters.AddWithValue("@serie", aluno.Serie);
@@ -55,7 +55,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             try
             {
                 var comando = _conn.Query();
-                comando.CommandText = "UPDATE Aluno SET nome_alun = @nome, naturalidade_alun = @naturalidade, nacionalidade_alun = @nacionalidade, data_nascimento_alun = @dataNascimento, cpf_alun = @cpf, rg_alun = @rg, id_sex_fk = @idSex, doencas_especialidades_alun = @doencas, nis_alun = @nis, beneficio_alun = @beneficio, bolsa_familia_alun = @bolsaFamilia, id_end_fk = @idEnd, id_resp_fk = @idResp, id_esc_fk = @idEsc, serie_alun = @serie, parecer_social_alun = @parecerSocial, nivel_prioridade_alun = @nivelPrioridade WHERE id_alun = @id";
+                comando.CommandText = "UPDATE Aluno SET nome_alun = @nome, naturalidade_alun = @naturalidade, nacionalidade_alun = @nacionalidade, data_nascimento_alun = @dataNascimento, cpf_alun = @cpf, rg_alun = @rg, id_sex_fk = @idSex, doencas_especialidades_alun = @doencas, nis_alun = @nis, beneficio_alun = @beneficio, bolsa_familia_alun = @bolsaFamilia, Id_End_Fk = @idEnd, id_resp_fk = @idResp, id_esc_fk = @idEsc, serie_alun = @serie, parecer_social_alun = @parecerSocial, nivel_prioridade_alun = @nivelPrioridade WHERE id_alun = @id";
                 comando.Parameters.AddWithValue("@id", aluno.Id);
                 comando.Parameters.AddWithValue("@nome", aluno.Nome);
                 comando.Parameters.AddWithValue("@naturalidade", aluno.Naturalidade);
@@ -68,7 +68,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 comando.Parameters.AddWithValue("@nis", aluno.Nis);
                 comando.Parameters.AddWithValue("@beneficio", aluno.Beneficio);
                 comando.Parameters.AddWithValue("@bolsaFamilia", aluno.Bolsa_familia);
-                comando.Parameters.AddWithValue("@idEnd", aluno.id_end_fk);
+                comando.Parameters.AddWithValue("@idEnd", aluno.Id_End_Fk);
                 comando.Parameters.AddWithValue("@idResp", aluno.id_resp_fk);
                 comando.Parameters.AddWithValue("@idEsc", aluno.id_esc_fk);
                 comando.Parameters.AddWithValue("@serie", aluno.Serie);
@@ -137,7 +137,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                     aluno.Nis = DAOHelper.GetString(reader, "nis_alun");
                     aluno.Beneficio = DAOHelper.GetString(reader, "beneficio_alun");
                     aluno.Bolsa_familia = DAOHelper.GetString(reader, "Bolsa_familia");
-                    aluno.id_end_fk = reader.GetInt32("id_end_fk");
+                    aluno.Id_End_Fk = reader.GetInt32("Id_End_Fk");
                     aluno.id_resp_fk = reader.GetInt32("id_resp_fk");
                     aluno.id_esc_fk = reader.GetInt32("id_esc_fk");
                     aluno.Serie = DAOHelper.GetString(reader, "Serie");

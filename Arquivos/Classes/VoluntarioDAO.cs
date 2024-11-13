@@ -18,14 +18,14 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 var comando = _conn.Query();
 
                 comando.CommandText = "INSERT INTO voluntario VALUES " +
-                "(null, @nome, @cpf, @rg, @numero_telefone, @id_end_fk)";
+                "(null, @nome, @cpf, @rg, @numero_telefone, @Id_End_Fk)";
 
 
                 comando.Parameters.AddWithValue("@nome", obj.Nome);
                 comando.Parameters.AddWithValue("@cpf", obj.Cpf);
                 comando.Parameters.AddWithValue("@rg", obj.Rg);
                 comando.Parameters.AddWithValue("@numero_telefone", obj.Numero_Telefone);
-                comando.Parameters.AddWithValue("@id_end_fk", obj.Id_End_Fk);
+                comando.Parameters.AddWithValue("@Id_End_Fk", obj.Id_End_Fk);
                
 
                 var resultado = comando.ExecuteNonQuery();
@@ -49,7 +49,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 var lista = new List<Voluntario>();
                 var comando = _conn.Query();
 
-                comando.CommandText = "SELECT * FROM voluntario, Endereco WHERE voluntario.id_end_fk = Endereco.id_end";
+                comando.CommandText = "SELECT * FROM voluntario, Endereco WHERE voluntario.Id_End_Fk = Endereco.id_end";
 
                 MySqlDataReader reader = comando.ExecuteReader();
 
@@ -62,7 +62,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                     voluntario.Cpf = DAOHelper.GetString(reader, "cpf_volu");
                     voluntario.Rg = DAOHelper.GetString(reader, "rg_volu");
                     voluntario.Numero_Telefone = reader.GetInt32("numero_telefone_volu");
-                    voluntario.Endereco.id_end = reader.GetInt32("id_end");
+                    voluntario.Endereco.Id = reader.GetInt32("id_end");
 
                     lista.Add(voluntario);
                 }
@@ -78,6 +78,8 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             }
         }
 
+
+        /*
         public void Delete(Voluntario obj)
         {
             try
@@ -102,6 +104,9 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             }
         }
 
+        */
+
+        /*
         public void Update(Voluntario obj)
         {
             try
@@ -110,7 +115,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
 
                 comando.CommandText = "UPDATE Voluntario SET " +
                 "nome_volu = @nome, cpf_volu = @cpf, rg_volu = @rg, numero_telefone_turm = @numero_telefone," +
-                " id_edn_fk = @id_end_fk" + "WHERE id_volu = @id";
+                " id_edn_fk = @Id_End_Fk" + "WHERE id_volu = @id";
 
                 
                 comando.Parameters.AddWithValue("@nome", obj.Nome);
@@ -135,5 +140,6 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 throw ex;
             }
         }
+        */
     }
 }

@@ -17,10 +17,10 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             try
             {
                 var comando = _conn.Query();
-                comando.CommandText = "INSERT INTO Evento (nome_even, data_even, id_end_fk, descricao_even) VALUES (@nome, @data, @idEnd, @descricao)";
+                comando.CommandText = "INSERT INTO Evento (nome_even, data_even, Id_End_Fk, descricao_even) VALUES (@nome, @data, @idEnd, @descricao)";
                 comando.Parameters.AddWithValue("@nome", evento.Nome);
                 comando.Parameters.AddWithValue("@data", evento.Data);
-                comando.Parameters.AddWithValue("@idEnd", evento.id_end_fk);
+                comando.Parameters.AddWithValue("@idEnd", evento.Id_End_Fk);
                 comando.Parameters.AddWithValue("@descricao", evento.Descricao);
 
                 var resultado = comando.ExecuteNonQuery();
@@ -43,11 +43,11 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             try
             {
                 var comando = _conn.Query();
-                comando.CommandText = "UPDATE Evento SET nome_even = @nome, data_even = @data, id_end_fk = @idEnd, descricao_even = @descricao WHERE id_even = @id";
+                comando.CommandText = "UPDATE Evento SET nome_even = @nome, data_even = @data, Id_End_Fk = @idEnd, descricao_even = @descricao WHERE id_even = @id";
                 comando.Parameters.AddWithValue("@id", evento.Id);
                 comando.Parameters.AddWithValue("@nome", evento.Nome);
                 comando.Parameters.AddWithValue("@data", evento.Data);
-                comando.Parameters.AddWithValue("@idEnd", evento.id_end_fk);
+                comando.Parameters.AddWithValue("@idEnd", evento.Id_End_Fk);
                 comando.Parameters.AddWithValue("@descricao", evento.Descricao);
 
                 var resultado = comando.ExecuteNonQuery();
@@ -104,7 +104,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                     evento.Id = reader.GetInt32("id_even");
                     evento.Nome = DAOHelper.GetString(reader, "nome_even");
                     evento.Data = DAOHelper.GetDateTime(reader, "data_even");
-                    evento.id_end_fk = reader.GetInt32("id_end_fk");
+                    evento.Id_End_Fk = reader.GetInt32("Id_End_Fk");
                     evento.Descricao = DAOHelper.GetString(reader, "descricao_even");
                     lista.Add(evento);
                 }

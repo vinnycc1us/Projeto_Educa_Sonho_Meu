@@ -8,30 +8,34 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
 {
     internal class Livro
     {
-        public int id_liv { get; set; }
-        public string nome_liv { get; set; }
-        public int quantidade_liv { get; set; }
-        public string descricao_liv { get; set; }
-        public double valor_liv { get; set; }
-        public int num_paginas_liv { get; set; }
-        public string autor_liv { get; set; }
-        public string editora_liv { get; set; }
-        public int ano_aplicacao_liv { get; set; }
-        public int ano_impressao_liv { get; set; }
-        public string area_aplicacao_liv { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public int Quantidade { get; set; }
+        public string Descricao { get; set; }
+        public double Valor { get; set; }
+        public int Num_Paginas { get; set; }
+        public string Autor { get; set; }
+        public string Editora { get; set; }
+        public int Ano_Aplicacao { get; set; }
+        public int Ano_Impressao { get; set; }
+        public string Area_Aplicacao { get; set; }
 
-        public Livro(string nome_liv, int quantidade_liv, string descricao_liv, double valor_liv, int num_paginas_liv, string autor_liv, string editora_liv, int ano_aplicacao_liv, int ano_impressao_liv, string area_aplicacao_liv)
+        public Livro(string Nome, int Quantidade, string Descricao, double Valor, int Num_Paginas, string Autor, string Editora, int Ano_Aplicacao, int Ano_Impressao, string Area_Aplicacao)
         {
-            this.nome_liv = nome_liv;
-            this.quantidade_liv = quantidade_liv;
-            this.descricao_liv = descricao_liv;
-            this.valor_liv = valor_liv;
-            this.num_paginas_liv = num_paginas_liv;
-            this.autor_liv = autor_liv;
-            this.editora_liv = editora_liv;
-            this.ano_aplicacao_liv = ano_aplicacao_liv;
-            this.ano_impressao_liv = ano_impressao_liv;
-            this.area_aplicacao_liv = area_aplicacao_liv;
+            this.Nome = Nome;
+            this.Quantidade = Quantidade;
+            this.Descricao = Descricao;
+            this.Valor = Valor;
+            this.Num_Paginas = Num_Paginas;
+            this.Autor = Autor;
+            this.Editora = Editora;
+            this.Ano_Aplicacao = Ano_Aplicacao;
+            this.Ano_Impressao = Ano_Impressao;
+            this.Area_Aplicacao = Area_Aplicacao;
+        }
+
+        public Livro()
+        {
         }
     }
 }

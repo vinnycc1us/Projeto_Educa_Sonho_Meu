@@ -74,6 +74,8 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             }
         }
 
+
+        /*
         public void Delete(Recursos obj)
         {
             try
@@ -97,7 +99,10 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 throw ex;
             }
         }
+        */
 
+
+        /*
         public void Update(Recursos obj)
         {
             try
@@ -131,6 +136,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 throw ex;
             }
         }
+        */
     }
 }
 

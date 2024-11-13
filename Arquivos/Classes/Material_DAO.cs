@@ -19,13 +19,13 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 var comando = _conn.Query();
 
                 comando.CommandText = "INSERT INTO material VALUES " +
-                "(null, @nome, @quantidade, @descricao, @valor, @Id_fk);";
+                "(null, @nome, @quantidade, @descricao, @valor, @Id_Sal_Fk);";
 
-                comando.Parameters.AddWithValue("@nome", material.nome_mate);
-                comando.Parameters.AddWithValue("@quantidade", material.quantidade_mate);
-                comando.Parameters.AddWithValue("@descricao", material.descricao_mate);
-                comando.Parameters.AddWithValue("@valor", material.valor_mate);
-                comando.Parameters.AddWithValue("@Id_fk", material.Id_fk);
+                comando.Parameters.AddWithValue("@nome", material.Nome);
+                comando.Parameters.AddWithValue("@quantidade", material.Quantidade);
+                comando.Parameters.AddWithValue("@descricao", material.Descricao);
+                comando.Parameters.AddWithValue("@valor", material.Valor);
+                comando.Parameters.AddWithValue("@Id_Sal_Fk", material.Id_Sal_Fk);
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -41,32 +41,26 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             }
         }
 
-        public List<material> List()
+        public List<Material> List()
         {
             try
             {
-                var lista = new List<material>();
+                var lista = new List<Material>();
                 var comando = _conn.Query();
 
-                comando.CommandText = "SELECT * FROM material";
+                comando.CommandText = "SELECT * FROM material, sala WHERE material.Id_SAl_Fk = sala.id_turm";
 
                 MySqlDataReader reader = comando.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    var material = new material();
+                    var material = new Material();
 
                     material.Id = reader.GetInt32("id_esc");
-                    material.NomeFantasia = DAOHelper.GetString(reader, "nome_fantasia_esc");
-                    material.RazaoSocial = DAOHelper.GetString(reader, "razao_social_esc");
-                    material.Cnpj = DAOHelper.GetString(reader, "cnpj_esc");
-                    material.InscEstadual = DAOHelper.GetString(reader, "insc_estadual_esc");
-                    material.Tipo = DAOHelper.GetString(reader, "tipo_esc");
-                    material.Email = DAOHelper.GetString(reader, "email_esc");
-                    material.Telefone = DAOHelper.GetString(reader, "telefone_esc");
-                    material.Responsavel = DAOHelper.GetString(reader, "responsavel_esc");
-                    material.ResponsavelTelefone = DAOHelper.GetString(reader, "responsavel_telefone_esc");
-                    material.DataCriacao = DAOHelper.GetDateTime(reader, "data_criacao_esc");
+                    material.Quantidade = reader.GetInt32("nome_fantasia_esc");
+                    material.Descricao = DAOHelper.GetString(reader, "razao_social_esc");
+                    material.Valor = reader.GetInt32("cnpj_esc");
+                    material.sala.Id = reader.GetInt32("id_sal_fk");
 
                     lista.Add(material);
                 }
@@ -82,13 +76,14 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             }
         }
 
-        public void Delete(material material)
+        /*
+        public void Delete(Material material)
         {
             try
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "DELETE FROM material WHERE id_esc = @id";
+                comando.CommandText = "DELETE FROM material WHERE id_mate = @id";
 
                 comando.Parameters.AddWithValue("@id", material.Id);
 
@@ -105,26 +100,24 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 throw ex;
             }
         }
+        */
 
 
-        public void Update(material material)
+        /*
+        public void Update(Material material)
         {
             try
             {
                 var comando = _conn.Query();
 
                 comando.CommandText = "UPDATE material SET " +
-                "nome_fantasia_esc = @nome, razao_social_esc = @razao, cnpj_esc = @cnpj, insc_estadual_esc = @inscricao," +
-                " tipo_esc = @tipo, data_criacao_esc = @data_criacao, responsavel_esc = @resp " +
+                "nome_mate = @nome, quantidade_mate = @quantidade, descricao_mate = @descricao, valor_mate = @valor," +              
                 "WHERE id_esc = @id";
 
-                comando.Parameters.AddWithValue("@nome", material.NomeFantasia);
-                comando.Parameters.AddWithValue("@razao", material.RazaoSocial);
-                comando.Parameters.AddWithValue("@cnpj", material.Cnpj);
-                comando.Parameters.AddWithValue("@inscricao", material.InscEstadual);
-                comando.Parameters.AddWithValue("@tipo", material.Tipo);
-                comando.Parameters.AddWithValue("@data_criacao", material.DataCriacao?.ToString("yyyy-MM-dd"));
-                comando.Parameters.AddWithValue("@resp", material.Responsavel);
+                comando.Parameters.AddWithValue("@nome", material.Nome);
+                comando.Parameters.AddWithValue("@quantidade", material.Quantidade);
+                comando.Parameters.AddWithValue("@descricao", material.Descricao);
+                comando.Parameters.AddWithValue("@valor", material.Valor);
 
                 comando.Parameters.AddWithValue("@id", material.Id);
 
@@ -141,5 +134,6 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 throw ex;
             }
         }
+        */
     }
 }

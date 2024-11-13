@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
 {
-    internal class Turma
+     public class Turma
     {
         public int Id { get; set; }
         public string Nome { get; set; }

@@ -8,19 +8,23 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
 {
     internal class Instrumento
     {
-        public int id_inst {get;set;}
-        public string nome_inst { get; set; }
-        public int quantidade_inst { get; set; }
-        public string descricao_inst { get; set; }
-        public double valor_inst { get; set; }
+        public int Id {get;set;}
+        public string Nome { get; set; }
+        public int Quantidade { get; set; }
+        public string Descricao { get; set; }
+        public double Valor { get; set; }
 
-        public Instrumento(string nome_inst, int quantidade_inst, string descricao_inst, double valor_inst
+        public Instrumento(string Nome, int Quantidade, string Descricao, double Valor
             )
         {
-            this.nome_inst = nome_inst;
-            this.quantidade_inst = quantidade_inst;
-            this.descricao_inst = descricao_inst;
-            this.valor_inst = valor_inst;
+            this.Nome = Nome;
+            this.Quantidade = Quantidade;
+            this.Descricao = Descricao;
+            this.Valor = Valor;
+        }
+
+        public Instrumento()
+        {
         }
     }
 }

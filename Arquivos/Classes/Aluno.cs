@@ -20,13 +20,13 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
         public string Nis { get; set; }
         public string Beneficio { get; set; }
         public string Bolsa_familia { get; set; }
-        public int id_end_fk {  get; set; }
+        public int Id_End_Fk {  get; set; }
         public int id_resp_fk {  get; set; }
         public int id_esc_fk { get; set; }
         public string Serie { get; set; }
         public string Parecer_social {  get; set; }
         public int Nivel_prioridade { get; set; }
-        public Aluno(int id_alun, string nome_alun, string naturalidade_alun, string nacionalidade_alun, DateTime? data_nascimento_alun, string cpf_alun, string rg_alun, int id_sex_fk, string doencas_especialidades, string nis_alun, string beneficio_alun, string bolsa_familia_alun, int id_end_fk, int id_resp_fk, int id_esc_fk, string serie_alun, string parecer_social, int nivel_prioridade_alun)
+        public Aluno(int id_alun, string nome_alun, string naturalidade_alun, string nacionalidade_alun, DateTime? data_nascimento_alun, string cpf_alun, string rg_alun, int id_sex_fk, string doencas_especialidades, string nis_alun, string beneficio_alun, string bolsa_familia_alun, int Id_End_Fk, int id_resp_fk, int id_esc_fk, string serie_alun, string parecer_social, int nivel_prioridade_alun)
         {
             this.Id = id_alun;
             this.Nome = nome_alun;
@@ -40,7 +40,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             this.Nis = nis_alun;
             this.Beneficio = beneficio_alun;
             this.Bolsa_familia = bolsa_familia_alun;
-            this.id_end_fk = id_end_fk;
+            this.Id_End_Fk = Id_End_Fk;
             this.id_resp_fk = id_resp_fk;
             this.id_esc_fk = id_esc_fk;
             this.Serie = serie_alun;

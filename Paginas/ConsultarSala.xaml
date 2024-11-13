@@ -51,7 +51,7 @@
                   RowHeight="30" AlternatingRowBackground="#f0f8ff" 
                   Background="#ffffff" BorderBrush="#c0c0c0" BorderThickness="1">
             <DataGrid.Resources>
-                <Style TargetType="DataGridColumnHeader">
+                <Style TargetType="DataGrIdolumnHeader">
                     <Setter Property="Background" Value="#9ceacd"/>
                     <Setter Property="Foreground" Value="Black"/>
                 </Style>
