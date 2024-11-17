@@ -28,7 +28,7 @@
             <Border Background="#f0ffff" Grid.Column="1" Grid.RowSpan="3"></Border>
 
             <StackPanel Grid.Column="1" Grid.Row="1">
-                <Button Name="NbtnDirecionarPaginaInicial" BorderBrush="Transparent" Background="#b0e0e6" Cursor="Hand" Margin="5" Click="btnDirecionarPaginaInicial" VerticalAlignment="Center"   >
+                <Button Name="NbtnDirecionarPaginaInicial" BorderBrush="Transparent" Background="#dda562" Cursor="Hand" Margin="5" Click="btnDirecionarPaginaInicial" VerticalAlignment="Center"   >
                     <StackPanel>
                         <TextBlock Text="Ir para a Pagina Inicial"  FontSize="28" FontFamily="Segoe UI" Padding="0 50 25 0"  TextAlignment="Center"/>
                     </StackPanel>
