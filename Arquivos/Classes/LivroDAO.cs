@@ -88,7 +88,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             }
         }
 
-        /*
+        
         public void Delete(Livro livro)
         {
             try
@@ -112,9 +112,9 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 throw ex;
             }
         }
-        */
+        
 
-        /*
+        
 
         public void Update(Livro livro)
         {
@@ -153,6 +153,6 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 throw ex;
             }
         }
-        */
+        
     }
 }

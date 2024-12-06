@@ -75,7 +75,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             }
         }
 
-        /*
+        
         public void Delete(Instrumento instrumento)
         {
             try
@@ -99,9 +99,9 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 throw ex;
             }
         }
-        */
+        
 
-        /*
+        
         public void Update(Instrumento instrumento)
         {
             try
@@ -132,6 +132,6 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 throw ex;
             }
         }
-        */
+        
     }
 }

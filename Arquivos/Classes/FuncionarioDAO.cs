@@ -83,7 +83,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             }
         }
 
-        /*
+        
         public void Delete(Funcionario funcionario)
         {
             try
@@ -107,11 +107,11 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 throw ex;
             }
         }
-        */
+        
 
 
 
-        /*
+        
         public void Update(Funcionario funcionario)
         {
             try
@@ -144,7 +144,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
                 throw ex;
             } 
         }
-        */
+        
         
     }
 }
