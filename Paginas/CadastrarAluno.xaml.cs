@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Projeto_Educa_Sonho_Meu.Arquivos.Classes;
 
 namespace Projeto_Educa_Sonho_Meu.Paginas
 {
@@ -31,6 +32,13 @@ namespace Projeto_Educa_Sonho_Meu.Paginas
             CadastrarAluno cadastrarAluno = new CadastrarAluno();
             // Navega para a nova página
             this.NavigationService.Navigate(cadastrarAluno);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Aluno aluno = new Aluno();
+
+            AlunoDAO.Insert(aluno);
         }
     }
 }

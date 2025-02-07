@@ -12,7 +12,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
     {
         private static Conexao _conn = new Conexao();
 
-        public void Insert(Aluno aluno)
+        public static void Insert(Aluno aluno)
         {
             try
             {
@@ -50,7 +50,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             }
         }
 
-        public void Update(Aluno aluno)
+        public static void Update(Aluno aluno)
         {
             try
             {
@@ -89,7 +89,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             }
         }
 
-        public void Delete(Aluno aluno)
+        public static void Delete(Aluno aluno)
         {
             try
             {
@@ -112,7 +112,7 @@ namespace Projeto_Educa_Sonho_Meu.Arquivos.Classes
             }
         }
 
-        public List<Aluno> List()
+        public static List<Aluno> List()
         {
             try
             {

@@ -43,7 +43,7 @@
                         <Border Background="Transparent">
                             <TextBlock Style="{StaticResource LabelText}" Text="Nome:"/>
                         </Border>
-                        <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left">
+                        <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left" Name="nome">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="0 10 0 10"/>
@@ -66,7 +66,7 @@
                         <Border Background="Transparent">
                              <TextBlock Style="{StaticResource LabelText}" Text="RG:"/> 
                         </Border>
-                        <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left">
+                        <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left" Name="rg">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="0 10 0 10"/>
@@ -89,7 +89,7 @@
                         <Border Background="Transparent">
                                <TextBlock Style="{StaticResource LabelText}" Text="CPF:"/> 
                         </Border>
-                        <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left">
+                        <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left" Name="cpf">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="0 10 0 10"/>
@@ -112,7 +112,7 @@
                         <Border Background="Transparent">
                               <TextBlock Style="{StaticResource LabelText}" Text="CTPS:"/> 
                         </Border>
-                        <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left">
+                        <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left" Name="ctps">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="0 10 0 10"/>
@@ -133,7 +133,7 @@
                 <Grid Grid.Column="0" Grid.Row="1" Margin="5">
                     <StackPanel Margin="0 0 5 0">
                         <Border Background="Transparent">
-                              <TextBlock Style="{StaticResource LabelText}" Text="Função:"/> 
+                              <TextBlock Style="{StaticResource LabelText}" Text="Nis:"/> 
                         </Border>
                         <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left">
                             <TextBox.Resources>
@@ -156,7 +156,7 @@
                 <Grid Grid.Column="1" Grid.Row="1" Margin="5">
                     <StackPanel Margin="0 0 5 0">
                         <Border Background="Transparent">
-                               <TextBlock Style="{StaticResource LabelText}" Text="Sala:"/> 
+                               <TextBlock Style="{StaticResource LabelText}" Text="Bolsa Familia:"/> 
                         </Border>
                         <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left">
                             <TextBox.Resources>
@@ -225,7 +225,7 @@
                 <Grid Grid.Column="0" Grid.Row="2" Margin="5">
                     <StackPanel Margin="0 0 5 0">
                         <Border Background="Transparent">
-                             <TextBlock Style="{StaticResource LabelText}" Text="UF:"/> 
+                             <TextBlock Style="{StaticResource LabelText}" Text="Serie:"/> 
                         </Border>
                         <TextBox Padding="0" FontSize="15" Width="200" Height="40" HorizontalAlignment="Left">
                             <TextBox.Resources>
@@ -315,7 +315,7 @@
                 </Grid>
 
 
-                <Button Grid.Row="2" Grid.Column="0" Height="42" Width="111" BorderBrush="Transparent" Background="#c6ece1" Margin=" 0 100 0 0">
+                <Button Grid.Row="2" Grid.Column="0" Height="42" Width="111" BorderBrush="Transparent" Background="#c6ece1" Margin=" 0 100 0 0" Click="Button_Click">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Salvar" FontSize="25" Margin="5"/>
                          <Image Source="/Imagens/salvar.png" Width="20" Margin="5 11 0 5"/> 
